@@ -21,8 +21,11 @@ set showcmd
 " Define preferred line width
 set textwidth=80
 
+" Define gutter size
+set numberwidth=5
+
 " Show line numbers but only if there's room
-if &columns < (&textwidth + 5)
+if &columns < (&textwidth + &numberwidth)
 	set nonumber
 else
 	set number
