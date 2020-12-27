@@ -52,9 +52,6 @@ filetype plugin indent on
 " Allow backspace key to work as one would expect in the 21st century
 set backspace=indent,eol,start " now can backspace multiple lines
 
-" Allow arrow keys to wrap from line to line
-set whichwrap+=<,>,h,l,[,]
-
 " Allow pressing tab to autocomplete vim commands
 set wildmenu
 set wildmode=longest:full,full
