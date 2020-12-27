@@ -48,3 +48,6 @@ set smartcase
 set autoindent " this is safe to use with filetype based indenting
 filetype plugin indent on
 
+" Allow backspace key to work as one would expect in the 21st century
+set backspace=indent,eol,start " now can backspace multiple lines
+
