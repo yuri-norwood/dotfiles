@@ -37,3 +37,9 @@ set report=0
 " Allways show current file, ruler, mode, etc...
 set laststatus=2
 
+" Highlight all matches of a search phrase
+set hlsearch
+
+" Ignore letter case when searchinga, unless a capital letter is explicit
+set ignorecase
+set smartcase
