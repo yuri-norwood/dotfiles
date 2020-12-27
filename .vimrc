@@ -72,5 +72,5 @@ set colorcolumn=+1
 set foldmethod=marker
 
 " Allow files to define custom rule to be edited by
-set modeline=5
+set modeline modelines=5
 
