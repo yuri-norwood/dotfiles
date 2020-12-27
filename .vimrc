@@ -77,7 +77,8 @@ set modeline modelines=5
 " Wrap lines that span past the terminal window
 set wrap linebreak nolist
 
-" Enable spell checking
+" Enable spell checking (but ignore capitalization errors)
 set spell
 set spelllang=en_nz
+set spellcapcheck=""
 
