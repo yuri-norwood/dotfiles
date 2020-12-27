@@ -43,3 +43,8 @@ set hlsearch
 " Ignore letter case when searchinga, unless a capital letter is explicit
 set ignorecase
 set smartcase
+
+" Indent according to filetype / language syntax
+set autoindent " this is safe to use with filetype based indenting
+filetype plugin indent on
+
