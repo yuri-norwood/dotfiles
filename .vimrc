@@ -5,10 +5,13 @@
 " See:     https://github/yuri-norwood/dotfiles
 "
 
-" Set Encoding (do this first)
-set encoding=utf-8
+" Allow bells and whistles
+set nocompatible
+
+" Allow special characters and symbols
+set encoding=utf-8 " do this before :scriptencoding
 scriptencoding utf-8
 
-" Disable any beeps, flashes, etc on error
+" Prevent anoying flashes and beeps
 set belloff=all
 
