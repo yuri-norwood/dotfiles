@@ -1,10 +1,10 @@
 "
 " Vimrc - Vim Editor Configs
 "
+
 " Author:  Yuri Norwood
 " See:     https://github/yuri-norwood/dotfiles
 "
-
 " Allow bells and whistles
 set nocompatible
 
@@ -30,4 +30,7 @@ if &columns < (&textwidth + &numberwidth)
 else
 	set number
 endif
+
+" Enable report message for all actions
+set report=0
 
