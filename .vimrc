@@ -34,3 +34,6 @@ endif
 " Enable report message for all actions
 set report=0
 
+" Allways show current file, ruler, mode, etc...
+set laststatus=2
+
