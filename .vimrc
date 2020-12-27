@@ -86,6 +86,7 @@ set spelllang=en_nz
 set spellcapcheck=""
 
 " Allow colours to work correctly, regardless of terminal
+syntax on
 set t_Co=256
 set t_ut=""
 set termguicolors
@@ -93,3 +94,9 @@ set background=dark
 
 " Disable parenthesis matching highlight, as it is is extremely annoying
 let g:loaded_matchparen = 1
+
+" Show tabs as special character, NOTE: listchars has a trailing space
+set list
+set listchars=tab:\|\ 
+match Comment /\t/
+
