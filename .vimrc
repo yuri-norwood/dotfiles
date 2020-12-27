@@ -65,3 +65,6 @@ set mousemodel=popup_setpos
 " Make mouse show as I-beam everywhere, since everything is text
 set mouseshape=a:beam
 
+" Show a rule at the end of the &textwidth
+set colorcolumn=+1
+
