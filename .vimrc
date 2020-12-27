@@ -74,3 +74,6 @@ set foldmethod=marker
 " Allow files to define custom rule to be edited by
 set modeline modelines=5
 
+" Wrap lines that span past the terminal window
+set wrap linebreak nolist
+
