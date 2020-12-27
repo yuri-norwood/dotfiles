@@ -40,9 +40,10 @@ set laststatus=2
 " Highlight all matches of a search phrase
 set hlsearch
 
-" Ignore letter case when searchinga, unless a capital letter is explicit
+" Search incrementally and case insensitively (unless explicit capital letter)
 set ignorecase
 set smartcase
+set incsearch
 
 " Indent according to filetype / language syntax
 set autoindent " this is safe to use with filetype based indenting
