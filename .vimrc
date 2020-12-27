@@ -68,3 +68,6 @@ set mouseshape=a:beam
 " Show a rule at the end of the &textwidth
 set colorcolumn=+1
 
+" Allow collapsable reagions
+set foldmethod=marker
+
