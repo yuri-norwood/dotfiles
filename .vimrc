@@ -15,3 +15,6 @@ scriptencoding utf-8
 " Prevent anoying flashes and beeps
 set belloff=all
 
+" Show commands while being typed
+set showcmd
+
