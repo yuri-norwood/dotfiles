@@ -74,3 +74,6 @@ set colorcolumn=+1
 " Allow collapsable reagions
 set foldmethod=marker
 
+" Allow files to define custom rule to be edited by
+set modeline=5
+
