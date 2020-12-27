@@ -9,3 +9,6 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" Disable any beeps, flashes, etc on error
+set belloff=all
+
