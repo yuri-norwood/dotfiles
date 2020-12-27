@@ -72,10 +72,13 @@ set colorcolumn=+1
 set foldmethod=marker
 
 " Allow files to define custom rule to be edited by
-set modeline modelines=5
+set modeline
+set modelines=5
 
 " Wrap lines that span past the terminal window
-set wrap linebreak nolist
+set wrap
+set linebreak
+set nolist
 
 " Enable spell checking (but ignore capitalization errors)
 set spell
