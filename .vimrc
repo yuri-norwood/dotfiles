@@ -12,7 +12,7 @@ set nocompatible
 set encoding=utf-8 " do this before :scriptencoding
 scriptencoding utf-8
 
-" Prevent anoying flashes and beeps
+" Prevent annoying flashes and beeps
 set belloff=all
 
 " Show commands while being typed
@@ -34,7 +34,7 @@ endif
 " Enable report message for all actions
 set report=0
 
-" Allways show current file, ruler, mode, etc...
+" Always show current file, ruler, mode, etc...
 set laststatus=2
 
 " Highlight all matches of a search phrase
@@ -68,7 +68,7 @@ set mouseshape=a:beam
 " Show a rule at the end of the &textwidth
 set colorcolumn=+1
 
-" Allow collapsable reagions
+" Allow collapsible regions
 set foldmethod=marker
 
 " Allow files to define custom rule to be edited by
@@ -76,4 +76,8 @@ set modeline modelines=5
 
 " Wrap lines that span past the terminal window
 set wrap linebreak nolist
+
+" Enable spell checking
+set spell
+set spelllang=en_nz
 
