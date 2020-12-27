@@ -56,3 +56,9 @@ set backspace=indent,eol,start " now can backspace multiple lines
 set wildmenu
 set wildmode=longest:full,full
 
+" Allow mouse copy to ignore line numbers
+set mouse=a
+
+" Allow mouse leftdrag / rightclick / middleclick to behave like a GUI
+set mousemodel=popup_setpos
+
