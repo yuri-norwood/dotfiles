@@ -62,3 +62,6 @@ set mouse=a
 " Allow mouse leftdrag / rightclick / middleclick to behave like a GUI
 set mousemodel=popup_setpos
 
+" Make mouse show as I-beam everywhere, since everything is text
+set mouseshape=a:beam
+
