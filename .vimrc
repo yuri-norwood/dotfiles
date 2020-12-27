@@ -18,3 +18,13 @@ set belloff=all
 " Show commands while being typed
 set showcmd
 
+" Define preferred line width
+set textwidth=80
+
+" Show line numbers but only if there's room
+if &columns < (&textwidth + 5)
+	set nonumber
+else
+	set number
+endif
+
