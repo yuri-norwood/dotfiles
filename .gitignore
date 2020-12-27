@@ -1,6 +1,23 @@
 # Ignore everything...
 **
 
-# ...except dotfiles
+# ...except dotfiles...
 !.**
+
+# ...that are not:
+
+# misc temp
+**.tmp
+**.bak
+
+# history files
+**hst
+**hist**
+**HIST**
+
+# logs
+**.log
+
+# other
+**.viminfo
 
