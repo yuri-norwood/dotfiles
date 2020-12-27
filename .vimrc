@@ -91,3 +91,5 @@ set t_ut=""
 set termguicolors
 set background=dark
 
+" Disable parenthesis matching highlight, as it is is extremely annoying
+let g:loaded_matchparen = 1
