@@ -13,3 +13,6 @@
 [submodule ".vim/pack/yuri/start/codedark"]
 	path = .vim/pack/yuri/start/codedark
 	url = https://github.com/tomasiser/vim-code-dark
+[submodule ".vim/pack/yuri/start/amber"]
+	path = .vim/pack/yuri/start/amber
+	url = https://github.com/camgunz/amber
