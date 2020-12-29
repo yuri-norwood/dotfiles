@@ -16,3 +16,6 @@
 [submodule ".vim/pack/yuri/start/amber"]
 	path = .vim/pack/yuri/start/amber
 	url = https://github.com/camgunz/amber
+[submodule ".vim/pack/yuri/start/github-colors"]
+	path = .vim/pack/yuri/start/github-colors
+	url = https://github.com/cormacrelf/vim-colors-github
