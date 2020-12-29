@@ -86,8 +86,11 @@ set spell
 set spelllang=en_nz
 set spellcapcheck=""
 
-" Allow colours to work correctly, regardless of terminal
+" Setup colourscheme
 syntax on
+colorscheme PaperColor
+
+" Allow colours to work correctly, regardless of terminal
 set t_Co=256
 set t_ut=""
 set termguicolors
