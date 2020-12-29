@@ -19,3 +19,6 @@
 [submodule ".vim/pack/yuri/start/github-colors"]
 	path = .vim/pack/yuri/start/github-colors
 	url = https://github.com/cormacrelf/vim-colors-github
+[submodule ".vim/pack/yuri/start/juvenile"]
+	path = .vim/pack/yuri/start/juvenile
+	url = https://sanctum.geek.nz/code/vim-juvenile.git
