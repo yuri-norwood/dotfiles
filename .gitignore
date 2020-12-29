@@ -18,6 +18,9 @@
 # logs
 **.log
 
+# sensitive information
+**.*credentials?
+
 # other
 **.viminfo
 
