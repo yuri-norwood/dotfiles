@@ -7,3 +7,6 @@
 [submodule ".vim/pack/yuri/start/gitignore"]
 	path = .vim/pack/yuri/start/gitignore
 	url = https://github.com/gisphm/vim-gitignore
+[submodule ".vim/pack/yuri/start/gitgutter"]
+	path = .vim/pack/yuri/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter
