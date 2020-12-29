@@ -50,7 +50,8 @@ set autoindent " this is safe to use with filetype based indenting
 filetype plugin indent on
 
 " Allow backspace key to work as one would expect in the 21st century
-set backspace=indent,eol,start " now can backspace multiple lines
+set backspace=indent,eol,start " allow backspace to cross lines
+set whichwrap=b,s,<,>,[,]      " allow left/right arrows to cross lines
 
 " Allow pressing tab to autocomplete vim commands
 set wildmenu
