@@ -3,6 +3,7 @@
 
 # ...except dotfiles...
 !.**
+!.*/**
 
 # ...that are not:
 

@@ -1,3 +1,3 @@
-[submodule ".vim/pack/yuri/syntax-extra"]
-	path = .vim/pack/yuri/syntax-extra
+[submodule ".vim/pack/yuri/start/syntax-extra"]
+	path = .vim/pack/yuri/start/syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra
