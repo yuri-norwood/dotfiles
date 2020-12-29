@@ -10,3 +10,6 @@
 [submodule ".vim/pack/yuri/start/gitgutter"]
 	path = .vim/pack/yuri/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule ".vim/pack/yuri/start/codedark"]
+	path = .vim/pack/yuri/start/codedark
+	url = https://github.com/tomasiser/vim-code-dark
