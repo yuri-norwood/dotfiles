@@ -88,7 +88,7 @@ set spellcapcheck=""
 
 " Setup colourscheme
 syntax on
-colorscheme PaperColor
+colorscheme github
 
 " Allow colours to work correctly, regardless of terminal
 set t_Co=256
