@@ -30,3 +30,5 @@ ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 You can tell a lot about a hacker by their `.profile`, if you see something you
 like, please help yourself :)
 
+See [LICENSE](.github/LICENSE) for terms.
+
