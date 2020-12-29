@@ -25,3 +25,8 @@ git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 ```
 
+## License
+
+You can tell a lot about a hacker by their `.profile`, if you see something you
+like, please help yourself :)
+
