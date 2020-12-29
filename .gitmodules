@@ -4,3 +4,6 @@
 [submodule ".vim/pack/yuri/start/papercolor"]
 	path = .vim/pack/yuri/start/papercolor
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule ".vim/pack/yuri/start/gitignore"]
+	path = .vim/pack/yuri/start/gitignore
+	url = https://github.com/gisphm/vim-gitignore
