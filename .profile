@@ -17,3 +17,6 @@ export PATH="${PATH}:${HOME}/bin"
 # Set EDITOR to the best available vi clone
 export EDITOR="$(command -v vim || command -v vi 2>/dev/null)"
 
+# Set PAGER to prevent use of more(1)
+export PAGER=less
+
