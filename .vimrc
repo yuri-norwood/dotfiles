@@ -47,6 +47,10 @@ set incsearch
 
 " Indent according to filetype / language syntax
 set autoindent " this is safe to use with filetype based indenting
+set tabstop=8
+set softtabstop=0
+set shiftwidth=8
+set noexpandtab
 filetype plugin indent on
 
 " Allow backspace key to work as one would expect in the 21st century
