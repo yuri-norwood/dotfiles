@@ -1,9 +1,12 @@
 #!/bin/sh
-# shellcheck disable=SC2155
+# shellcheck disable=SC2155,SC1090
 
 #
 # ~/.profile
 #
+
+# Include alias definitions
+. ~/.aliases
 
 # Set the prompt to a dollar sign
 export PS1="\$ "
