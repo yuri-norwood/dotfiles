@@ -22,3 +22,6 @@
 [submodule ".vim/pack/yuri/start/juvenile"]
 	path = .vim/pack/yuri/start/juvenile
 	url = https://sanctum.geek.nz/code/vim-juvenile.git
+[submodule ".vim/pack/yuri/start/yaml"]
+	path = .vim/pack/yuri/start/yaml
+	url = https://github.com/stephpy/vim-yaml
