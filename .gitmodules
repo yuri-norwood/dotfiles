@@ -25,3 +25,6 @@
 [submodule ".vim/pack/yuri/start/yaml"]
 	path = .vim/pack/yuri/start/yaml
 	url = https://github.com/stephpy/vim-yaml
+[submodule ".vim/pack/yuri/start/pgn-syntax"]
+	path = .vim/pack/yuri/start/pgn-syntax
+	url = https://github.com/yuri-norwood/pgn-syntax-vim
