@@ -9,7 +9,17 @@
 . ~/.aliases
 
 # Set the prompt to a dollar sign
-export PS1='$(case "$PWD" in "$HOME") echo "~" ;; "/") echo "/" ;; *) echo "${PWD##*/}" ;; esac) $ '
+_PS1_DIR() {
+	case "$PWD" in
+		"$HOME")
+			echo "~" ;;
+		"/")
+			echo "/" ;;
+		*)
+			echo "${PWD##*/}" ;;
+	esac
+}
+export PS1='$(_PS1_DIR) $ '
 
 # Set additional directories to PATH
 export PATH="${PATH}:${HOME}/bin"
