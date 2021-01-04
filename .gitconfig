@@ -8,6 +8,9 @@
 [pull]
 	rebase = true
 
+[fetdch]
+	prune = true
+
 [color]
 	diff = true
 	status = true
