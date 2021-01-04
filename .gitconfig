@@ -11,6 +11,9 @@
 [fetdch]
 	prune = true
 
+[remote.origin]
+	prune = true
+
 [color]
 	diff = true
 	status = true
