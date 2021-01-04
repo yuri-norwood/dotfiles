@@ -8,3 +8,19 @@
 [pull]
 	rebase = true
 
+[color]
+	diff = true
+	status = true
+	branch = true
+	interactive = true
+	ui = true
+	pager = true
+	branch = true
+	decorate = true
+	grep = true
+	showBranch = true
+
+[diff]
+	colorMoved = zebra
+	colorMovedWS = no
+
