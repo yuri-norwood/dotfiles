@@ -28,5 +28,5 @@
 
 [diff]
 	colorMoved = zebra
-	colorMovedWS = no
+	colorMovedWS = allow-indentation-change
 
