@@ -22,7 +22,15 @@
 
 # sensitive information
 **.*credentials?
+**.*auth*
 
 # other
 **.viminfo
+**.Xdefaults
+**.cshrc
+**.cvsrc
+**.login
+**.mailrc
+**.ssh
+**.xsession-errors
 
