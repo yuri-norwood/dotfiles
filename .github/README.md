@@ -13,6 +13,7 @@ git init
 git remote add origin https://github.com/yuri-norwood/dotfilesa.git
 git fetch
 git checkout origin/main -ft
+git submodules update --init --recursive
 ```
 
 Alternatively, if you don't want to overwrite any existing files, or just want
