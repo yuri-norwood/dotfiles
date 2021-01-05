@@ -5,3 +5,28 @@
 [credential]
 	helper = cache --timeout 30000
 
+[pull]
+	rebase = true
+
+[fetdch]
+	prune = true
+
+[remote.origin]
+	prune = true
+
+[color]
+	diff = true
+	status = true
+	branch = true
+	interactive = true
+	ui = true
+	pager = true
+	branch = true
+	decorate = true
+	grep = true
+	showBranch = true
+
+[diff]
+	colorMoved = zebra
+	colorMovedWS = allow-indentation-change
+

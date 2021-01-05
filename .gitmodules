@@ -28,3 +28,18 @@
 [submodule ".vim/pack/yuri/start/pgn-syntax"]
 	path = .vim/pack/yuri/start/pgn-syntax
 	url = https://github.com/yuri-norwood/pgn-syntax-vim
+[submodule ".vim/pack/yuri/start/challenger-deep"]
+	path = .vim/pack/yuri/start/challenger-deep
+	url = https://github.com/challenger-deep-theme/vim
+[submodule ".vim/pack/yuri/start/one"]
+	path = .vim/pack/yuri/start/one
+	url = https://github.com/rakr/vim-one
+[submodule ".vim/pack/yuri/start/iceberg"]
+	path = .vim/pack/yuri/start/iceberg
+	url = https://github.com/cocopon/iceberg.vim
+[submodule ".vim/pack/yuri/start/gotham"]
+	path = .vim/pack/yuri/start/gotham
+	url = https://github.com/whatyouhide/vim-gotham
+[submodule ".vim/pack/yuri/start/toast"]
+	path = .vim/pack/yuri/start/toast
+	url = https://github.com/jsit/toast.vim
