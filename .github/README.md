@@ -10,7 +10,7 @@ this can be done using git:
 ```sh
 cd "$HOME"
 git init
-git remote add origin https://github.com/yuri-norwood/dotfilesa.git
+git remote add origin https://github.com/yuri-norwood/dotfiles.git
 git fetch
 git checkout origin/main -ft
 git submodules update --init --recursive
