@@ -8,7 +8,7 @@
 [pull]
 	rebase = true
 
-[fetdch]
+[fetch]
 	prune = true
 
 [remote.origin]
