@@ -1,6 +1,6 @@
 language: shell
 
-sudo: true
+sudo: false
 
 git:
   - submodules: false
@@ -9,7 +9,7 @@ install:
   - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
   - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
   - wget -qO- https://github.com/koalaman/shellcheck/releases/download/latest/shellcheck-latest.linux.x86_64.tar.xz | tar -xJv
-  - sudo cp shellcheck-latest/shellcheck .
+  - cp shellcheck-latest/shellcheck .
   - ./shellcheck --version
 
 jobs:
