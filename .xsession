@@ -1,5 +1,5 @@
 #!/bin/ah
-# shellcheck: disable=SC1090
+# shellcheck disable=SC1090
 
 . ~/.profile
 . ~/.xinitrc
