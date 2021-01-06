@@ -8,8 +8,8 @@ jobs:
     - stage: shellcheck
       install:
         - wget -qO- https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz | tar -xJv
-          cp shellcheck-stable/shellcheck /usr/bin
-          shellcheck --version
+        - cp shellcheck-stable/shellcheck /usr/bin
+        - shellcheck --version
       script: shellcheck .profile
     - script: shellcheck .kshrc
     - script: shellcheck .aliases
