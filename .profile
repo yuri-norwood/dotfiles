@@ -33,3 +33,6 @@ export PAGER=less
 # Set ENV to provide shell specific settings
 export ENV="${HOME}/.kshrc"
 
+# Integrate settings
+xrdb -merge ~/.Xresources
+
