@@ -5,10 +5,16 @@ git:
 
 jobs:
   include:
-    before_script:
-      - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
-      - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
-    script: shellcheck .profile
-    script: shellcheck .kshrc
-    script: shellcheck .aliases
-    script: /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
+    - stage: shellcheck
+      script: shellcheck .profile
+    - script: shellcheck .kshrc
+    - script: shellcheck .aliases
+    - stage: vimlint
+      before_script:
+        - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
+        - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
+      script: /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
+
+stages:
+  - shellcheck
+  - vimlint
