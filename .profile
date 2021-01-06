@@ -43,5 +43,5 @@ export PAGER=less
 export ENV="${HOME}/.kshrc"
 
 # Integrate settings
-try xrdb -merge ~/.Xresources
+try xrdb -merge "${HOME}/.Xresources"
 
