@@ -5,7 +5,7 @@ git:
 
 jobs:
   include:
-    - stage: shellchck
+    - stage: shellcheck
       script: shellcheck .profile
     - script: shellcheck .kshrc
     - script: shellcheck .aliases
