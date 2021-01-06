@@ -9,6 +9,8 @@ jobs:
       script: shellcheck .profile
     - script: shellcheck .kshrc
     - script: shellcheck .aliases
+    - script: shellcheck .xinitrc
+    - script: shellcheck .xsession
     - stage: vimlint
       before_script:
         - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
