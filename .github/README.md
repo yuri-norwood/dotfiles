@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles [![Build Status](https://travis-ci.com/yuri-norwood/dotfiles.svg?branch=main)](https://travis-ci.com/yuri-norwood/dotfiles)
 
 Configuration files and various customizations.
 
