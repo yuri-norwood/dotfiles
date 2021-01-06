@@ -1,5 +1,4 @@
 #!/bin/sh
-# shellcheck disable=SC2155,SC1090
 
 #
 # ~/.profile

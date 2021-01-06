@@ -1,20 +1,26 @@
 language: shell
 
+sudo: false
+
 git:
   - submodules: false
+
+install:
+  - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
+  - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
+  - wget -qO- https://github.com/koalaman/shellcheck/releases/download/latest/shellcheck-latest.linux.x86_64.tar.xz | tar -xJv
+  - cp shellcheck-latest/shellcheck .
+  - ./shellcheck --version
 
 jobs:
   include:
     - stage: shellcheck
-      script: shellcheck .profile
-    - script: shellcheck .kshrc
-    - script: shellcheck .aliases
-    - script: shellcheck .xinitrc
-    - script: shellcheck .xsession
+      script: ./shellcheck .profile
+    - script: ./shellcheck .kshrc
+    - script: ./shellcheck .aliases
+    - script: ./shellcheck .xinitrc
+    - script: ./shellcheck .xsession
     - stage: vimlint
-      before_script:
-        - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
-        - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
       script: /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
 
 stages:
