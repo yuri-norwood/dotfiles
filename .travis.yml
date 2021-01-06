@@ -9,6 +9,6 @@ jobs:
   include:
     language: shell
     script: shellcheck .profile
+    script: shellcheck .kshrc
     script: shellcheck .aliases
     script: /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
-
