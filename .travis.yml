@@ -1,25 +1,14 @@
+language: shell
+
 git:
   - submodules: false
 
 jobs:
   include:
-    language: shell
-    script: shellcheck .profile
-
-jobs:
-  include:
-    language: shell
-    script: shellcheck .kshrc
-
-jobs:
-  include:
-    language: shell
-    script: shellcheck .aliases
-
-jobs:
-  include:
-    language: shell
     before_script:
       - git clone https://github.com/syngan/vim-vimlint    /tmp/vim-vimlint
       - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
+    script: shellcheck .profile
+    script: shellcheck .kshrc
+    script: shellcheck .aliases
     script: /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .vimrc
