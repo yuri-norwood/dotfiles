@@ -4,10 +4,15 @@
 # ~/.profile
 #
 
-# Include alias definitions
-. ~/.aliases
+# Helper to prevent errors on missing tools
+try() {
+	if [ -x "$(command -v "$1")" ]
+	then
+		echo "$@" | sh
+	fi
+}
 
-# Set the prompt to a dollar sign
+# Helper to calculate PS1
 _PS1_DIR() {
 	case "$PWD" in
 		"$HOME")
@@ -18,6 +23,11 @@ _PS1_DIR() {
 			echo "${PWD##*/}" ;;
 	esac
 }
+
+# Include alias definitions
+. ~/.aliases
+
+# Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
 # Set additional directories to PATH
@@ -33,5 +43,5 @@ export PAGER=less
 export ENV="${HOME}/.kshrc"
 
 # Integrate settings
-xrdb -merge ~/.Xresources
+try xrdb -merge "${HOME}/.Xresources"
 
