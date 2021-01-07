@@ -1,0 +1,8 @@
+/**
+ * Based on http://surf.suckless.org/stylesheets/startpage
+ */
+#bottom-result-container #spon_links,
+#bottom-result-container #sponsored_csa1,
+#bottom-result-container #sponsored_csa2 {
+  display: none !important;
+}
