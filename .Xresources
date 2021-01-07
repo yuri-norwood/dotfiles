@@ -4,7 +4,7 @@ xterm*saveLines      : 2000
 xterm*termName       : xterm-color
 xterm*foreground     : rgb:a8/a8/a8
 xterm*background     : rgb:00/00/00
-xterm*color0         : rgb:a8/a8/a8
+xterm*color0         : rgb:00/00/00
 xterm*color1         : rgb:a8/00/00
 xterm*color2         : rgb:00/a8/00
 xterm*color3         : rgb:a8/54/00
