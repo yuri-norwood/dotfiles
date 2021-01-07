@@ -1,4 +1,6 @@
-# dotfiles [![Build Status](https://travis-ci.com/yuri-norwood/dotfiles.svg?branch=main)](https://travis-ci.com/yuri-norwood/dotfiles)
+# dotfiles
+[![Build Status](https://travis-ci.com/yuri-norwood/dotfiles.svg?branch=main)](https://travis-ci.com/yuri-norwood/dotfiles)
+[![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 
 Configuration files and various customizations.
 
@@ -32,4 +34,3 @@ You can tell a lot about a hacker by their `.profile`, if you see something you
 like, please help yourself :)
 
 See [LICENSE](LICENSE) for terms.
-
