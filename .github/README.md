@@ -1,6 +1,7 @@
 # dotfiles
 [![Build Status](https://travis-ci.com/yuri-norwood/dotfiles.svg?branch=main)](https://travis-ci.com/yuri-norwood/dotfiles)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![GitHub repo size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 
 Configuration files and various customizations.
 
