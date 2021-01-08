@@ -43,6 +43,3 @@
 [submodule ".vim/pack/yuri/start/toast"]
 	path = .vim/pack/yuri/start/toast
 	url = https://github.com/jsit/toast.vim
-[submodule ".vim/pack/yuri/start/wakatime"]
-	path = .vim/pack/yuri/start/wakatime
-	url = https://github.com/wakatime/vim-wakatime
