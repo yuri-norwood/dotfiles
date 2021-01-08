@@ -1,5 +1,6 @@
 # dotfiles
 [![Build Status](https://travis-ci.com/yuri-norwood/dotfiles.svg?branch=main)](https://travis-ci.com/yuri-norwood/dotfiles)
+[![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![GitHub repo size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/w/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
