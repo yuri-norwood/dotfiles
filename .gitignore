@@ -24,9 +24,6 @@
 **.*credentials?
 **.*auth*
 
-# wakatime data files
-**.wakatime.*
-
 # other
 **.viminfo
 **.Xdefaults
