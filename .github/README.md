@@ -37,7 +37,7 @@ repo.
 
 ```sh
 cd "$HOME"
-git pull --recurse-submodules
+git pull --recurse-submodules -j8
 ```
 
 ## License
