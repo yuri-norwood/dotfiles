@@ -19,7 +19,7 @@ git init
 git remote add origin https://github.com/yuri-norwood/dotfiles.git
 git fetch
 git checkout origin/main -ft
-git submodule update --init --recursive
+git submodule update --init --recursive -j8
 ```
 
 Alternatively, if you don't want to overwrite any existing files, or just want
@@ -38,3 +38,4 @@ You can tell a lot about a hacker by their `.profile`, if you see something you
 like, please help yourself :)
 
 See [LICENSE](LICENSE) for terms.
+
