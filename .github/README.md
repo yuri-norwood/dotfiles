@@ -32,6 +32,14 @@ git clone --recursive -j8 https://github.com/yuri-norwood/dotfiles.git ~/.dotfil
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 ```
 
+To update the submodules, add the `--recurse-submodules` flag when you pull your
+repo.
+
+```sh
+cd "$HOME"
+git pull --recurse-submodules -j8
+```
+
 ## License
 
 You can tell a lot about a hacker by their `.profile`, if you see something you
