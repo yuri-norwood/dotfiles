@@ -38,3 +38,15 @@ end_of_line  = lf
 indent_style = space
 indent_size  = 4
 end_of_line  = crlf
+
+# VS solution files
+[*.sln]
+indent_style = tab
+
+# VS project files
+[*.csproj]
+indent_size = 2
+
+# XML
+[*.xml]
+indent_size = 2
