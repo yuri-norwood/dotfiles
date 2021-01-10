@@ -14,3 +14,15 @@ insert_final_newline     = true
 [*.{md,yml,json}]
 indent_style = space
 indent_size  = 2
+
+# Makefiles
+[{M,m}akefile]
+indent_style = tab
+indent_size  = 8
+end_of_line = lf
+
+# Makefile includes
+[*.mk]
+indent_style = tab
+indent_size  = 8
+end_of_line  = lf
