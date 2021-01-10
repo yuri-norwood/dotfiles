@@ -108,3 +108,6 @@ set list
 set listchars=tab:\|\ 
 match Comment /\t/
 
+" Ensure editor config plugin works with fugitive plugin
+let g:EditorConfig_exclude_patterns = [ 'fugitive://.*' ]
+
