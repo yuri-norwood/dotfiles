@@ -1,5 +1,4 @@
-## Pull Request template
-Resolves #
+## Resolves #.
 
 ### Changes
 1. Describe changes
