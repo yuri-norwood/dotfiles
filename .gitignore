@@ -23,6 +23,7 @@
 # sensitive information
 **.*credentials?
 **.*auth*
+.config/gh/hosts.yml
 
 # other
 **.viminfo
