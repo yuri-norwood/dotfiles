@@ -1,0 +1,16 @@
+# Protocol for git operations. Supported values: ssh, https
+git_protocol: https
+
+# Editor to use. If blank, will refer to environment.
+editor:
+
+# Interactive prompt. Supported values: enabled, disabled
+prompt: enabled
+
+# Pager to process command output. e.g. "less", use "cat" to disable the pager.
+pager: cat
+
+# Define shortcuts
+aliases:
+    co: pr checkout
+
