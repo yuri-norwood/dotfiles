@@ -1,0 +1,9 @@
+# Ignore all...
+*
+
+# ...except the config...
+!*.config.yml
+
+# ...and the gitignore (duh)...
+!*.gitignore
+
