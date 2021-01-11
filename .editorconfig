@@ -121,6 +121,10 @@ csharp_style_var_elsewhere             = true:suggestion
 csharp_style_var_for_built_in_types    = true:suggestion
 csharp_style_var_when_type_is_apparent = true:warning
 
+; Enforce braces on blocks but allow declared using
+csharp_prefer_braces 				 = true:warning
+csharp_prefer_simple_using_statement = true:suggestion
+
 ; Manage specific IDE refactoring settings
 dotnet_diagnostic.IDE0058.severity = none
 dotnet_diagnostic.IDE0055.severity = none
