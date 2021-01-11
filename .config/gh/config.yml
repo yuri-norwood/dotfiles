@@ -8,7 +8,7 @@ editor:
 prompt: enabled
 
 # Pager to process command output. e.g. "less", use "cat" to disable the pager.
-pager:
+pager: cat
 
 # Define shortcuts
 aliases:
