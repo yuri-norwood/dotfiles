@@ -199,6 +199,9 @@ dotnet_diagnostic.RCS1007.severity  = warning
 
 ; Manage specific CA refactoring settings
 dotnet_diagnostic.CA1041.severity = warning
+dotnet_diagnostic.CA1054.severity = warning
+dotnet_diagnostic.CA1055.severity = warning
+dotnet_diagnostic.CA1056.severity = warning
 
 ; New line preferences
 csharp_new_line_before_catch                          = true
