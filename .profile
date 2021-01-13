@@ -42,6 +42,9 @@ export PAGER=less
 # Set ENV to provide shell specific settings
 export ENV="${HOME}/.kshrc"
 
+# Fixing misbehaving Java applications
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
 
