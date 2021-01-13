@@ -211,6 +211,7 @@ dotnet_diagnostic.CA3007.severity = warning
 dotnet_diagnostic.CA2200.severity = warning
 dotnet_diagnostic.CA2201.severity = warning
 dotnet_diagnostic.CA2208.severity = warning
+dotnet_diagnostic.CA2234.severity = warning
 
 ; New line preferences
 csharp_new_line_before_catch                          = true
