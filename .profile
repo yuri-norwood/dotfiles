@@ -45,6 +45,10 @@ export ENV="${HOME}/.kshrc"
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Set dotnet home directory and disable phone home telemetry
+export DOTNET_ROOT="$HOME/.dotnet"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
 
