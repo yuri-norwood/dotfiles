@@ -30,9 +30,6 @@ _PS1_DIR() {
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
-# Set additional directories to PATH
-export PATH="${PATH}:${HOME}/bin:${DOTNET_ROOT}/tools"
-
 # Set EDITOR to the best available vi clone
 export EDITOR="$(command -v vim || command -v vi 2>/dev/null)"
 
@@ -50,6 +47,9 @@ export DOTNET_ROOT="${HOME}/.dotnet"
 export NUGET_PACKAGES="${HOME}/.nuget/packages"
 export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
+
+# Set additional directories to PATH
+export PATH="${PATH}:${HOME}/bin:${DOTNET_ROOT}/tools"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
