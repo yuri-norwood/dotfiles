@@ -44,12 +44,13 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Set dotnet directories and privacy settings
 export DOTNET_ROOT="${HOME}/.dotnet"
+export DOTNET_TOOLS="${DOTNET}/tools"
 export NUGET_PACKAGES="${HOME}/.nuget/packages"
 export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
 # Set additional directories to PATH
-export PATH="${PATH}:${HOME}/bin:${DOTNET_ROOT}/tools"
+export PATH="${PATH}:${HOME}/bin:${DOTNET_TOOLS}"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
