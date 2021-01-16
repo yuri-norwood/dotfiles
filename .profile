@@ -50,7 +50,7 @@ export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
 # Set additional directories to PATH
-export PATH="${PATH}:${HOME}/bin:${DOTNET_TOOLS}"
+export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
