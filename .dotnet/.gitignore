@@ -1,0 +1,7 @@
+# Ignore all dotnet files
+*
+
+# But track the git ignore and git keep files
+!.gitignore
+!.gitkeep
+
