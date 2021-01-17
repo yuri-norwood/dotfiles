@@ -52,6 +52,9 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 # Set pfetch startup script
 export PF_SOURCE="${HOME}/.pfetchrc"
 
+# Set Golang environment
+export GOROOT="/usr/local/go"
+
 # Set PATH to include ~/.tools submodules
 for tool in $(echo "${HOME}/.tools/*/")
 do
@@ -59,7 +62,7 @@ do
 done
 
 # Set additional directories to PATH
-export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}"
+export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}:${GOROOT}"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
