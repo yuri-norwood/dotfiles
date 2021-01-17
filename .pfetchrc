@@ -7,8 +7,7 @@
 # Which information to display.
 # NOTE: If 'ascii' will be used, it must come first.
 # Default: first example below
-# Valid: space separated string
-# Values: ascii title os host kernel uptime pkgs memory
+# Valid: ascii title os host kernel uptime pkgs memory
 PF_INFO="ascii title os host kernel uptime pkgs memory"
 
 # Separator between info name and info data.
