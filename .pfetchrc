@@ -1,0 +1,47 @@
+#!/bin/sh
+
+#
+# Generated from the README of the pfetch repo.
+#
+
+# Which information to display.
+# NOTE: If 'ascii' will be used, it must come first.
+# Default: first example below
+# Valid: ascii title os host kernel uptime pkgs memory
+PF_INFO="ascii title os host kernel uptime pkgs memory"
+
+# Separator between info name and info data.
+# Default: unset
+# Valid: string
+PF_SEP=
+
+# Enable/Disable colors in output:
+# Default: 1
+# Valid: 1 (enabled), 0 (disabled)
+PF_COLOR=1
+
+# Color of info names:
+# Default: unset (auto)
+# Valid: 0-9
+PF_COL1=
+
+# Color of info data:
+# Default: unset (auto)
+# Valid: 0-9
+PF_COL2=
+
+# Color of title data:
+# Default: unset (auto)
+# Valid: 0-9
+PF_COL3=
+
+# Alignment padding.
+# Default: unset (auto)
+# Valid: int
+PF_ALIGN=
+
+# Which ascii art to use.
+# Default: unset (auto)
+# Valid: string
+PF_ASCII=
+
