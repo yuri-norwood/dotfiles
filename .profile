@@ -54,15 +54,16 @@ export PF_SOURCE="${HOME}/.pfetchrc"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
+export GOPATH="${HOME}/.bin/go"
 
-# Set PATH to include ~/.tools submodules
-for tool in $(echo "${HOME}/.tools/*/")
+# Set PATH to include executable submodules
+for module in ${HOME}/.bin/*/ ${HOME}/.tools/*/
 do
-	PATH="${PATH}:${tool}"
+	PATH="${PATH}:${module}"
 done
 
 # Set additional directories to PATH
-export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}:${GOROOT}/bin"
+export PATH="${PATH}:${DOTNET_TOOLS}:${GOROOT}/bin:${GOPATH}/bin"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"

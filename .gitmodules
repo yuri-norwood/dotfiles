@@ -55,3 +55,6 @@
 [submodule ".bin"]
 	path = .bin
 	url = https://github.com/yuri-norwood/scripts
+[submodule ".bin/scripts"]
+	path = .bin/scripts
+	url = https://github.com/yuri-norwood/scripts
