@@ -52,6 +52,12 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 # Set pfetch startup script
 export PF_SOURCE="${HOME}/.pfetchrc"
 
+# Set PATH to include ~/.tools submodules
+for tool in $(echo "${HOME}/.tools/*/")
+do
+	PATH="${PATH}:${tool}"
+done
+
 # Set additional directories to PATH
 export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}"
 

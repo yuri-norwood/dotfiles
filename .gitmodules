@@ -49,6 +49,9 @@
 [submodule ".vim/pack/yuri/start/editorconfig"]
 	path = .vim/pack/yuri/start/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".tools/pfetch"]
+	path = .tools/pfetch
+	url = https://github.com/dylanaraps/pfetch
 [submodule ".bin"]
 	path = .bin
 	url = https://github.com/yuri-norwood/scripts
