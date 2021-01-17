@@ -57,7 +57,7 @@ export GOROOT="/usr/local/go"
 export GOPATH="${HOME}/.bin/go"
 
 # Set PATH to include executable submodules
-for module in ${HOME}/.bin/*/ ${HOME}/.tools/*/
+for module in ${HOME}/.bin/*/
 do
 	PATH="${PATH}:${module}"
 done
