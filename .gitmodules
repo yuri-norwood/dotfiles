@@ -52,3 +52,6 @@
 [submodule ".tools/pfetch"]
 	path = .tools/pfetch
 	url = https://github.com/dylanaraps/pfetch
+[submodule ".bin"]
+	path = .bin
+	url = https://github.com/yuri-norwood/scripts
