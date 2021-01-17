@@ -63,7 +63,7 @@ do
 done
 
 # Set additional directories to PATH
-export PATH="${PATH}:${HOME}/.bin:${DOTNET_TOOLS}:${GOROOT}/bin:${GOPATH}/bin"
+export PATH="${PATH}:${DOTNET_TOOLS}:${GOROOT}/bin:${GOPATH}/bin"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
