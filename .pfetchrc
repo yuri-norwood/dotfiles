@@ -14,7 +14,7 @@ PF_INFO="ascii title os host kernel uptime pkgs memory"
 # Separator between info name and info data.
 # Default: unset
 # Valid: string
-PF_SEP=":"
+PF_SEP=""
 
 # Enable/Disable colors in output:
 # Default: 1
