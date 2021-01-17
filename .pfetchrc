@@ -44,5 +44,5 @@ PF_ALIGN=""
 # Which ascii art to use.
 # Default: unset (auto)
 # Valid: string
-PF_ASCII="openbsd"
+PF_ASCII=""
 
