@@ -13,7 +13,7 @@ PF_INFO="ascii title uptime pkgs memory shell editor palette"
 # Separator between info name and info data.
 # Default: unset
 # Valid: string
-PF_SEP=
+#PF_SEP=
 
 # Enable/Disable colors in output:
 # Default: 1
@@ -23,25 +23,25 @@ PF_COLOR=1
 # Color of info names:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL1=
+#PF_COL1=
 
 # Color of info data:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL2=
+#PF_COL2=
 
 # Color of title data:
 # Default: unset (auto)
 # Valid: 0-9
-PF_COL3=
+#PF_COL3=
 
 # Alignment padding.
 # Default: unset (auto)
 # Valid: int
-PF_ALIGN=
+#PF_ALIGN=
 
 # Which ascii art to use.
 # Default: unset (auto)
 # Valid: string
-PF_ASCII=
+#PF_ASCII=
 
