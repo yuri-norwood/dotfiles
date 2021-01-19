@@ -30,8 +30,9 @@ _PS1_DIR() {
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
-# Set EDITOR to the best available vi clone
-export EDITOR="$(command -v vim || command -v vi 2>/dev/null)"
+# Set editor commands.
+export VISUAL="$(command -v vim 2>/dev/null)"
+export EDITOR="$(command -v vi  2>/dev/null)"
 
 # Set PAGER to prevent use of more(1)
 export PAGER=less
