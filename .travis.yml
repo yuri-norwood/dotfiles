@@ -19,7 +19,7 @@ jobs:
     - script: ./shellcheck .xinitrc
     - script: ./shellcheck .xsession
     - stage: vimlint
-      script: ./.build/lib/vim-vimlint/bin/vimlint.sh -l ./.build/lib/vim-vimlint -p ./.build/lib/vim-vimlparser -v .vimrc
+      script: ./.build/lib/vimlint/bin/vimlint.sh -l ./.build/lib/vimlint -p ./.build/lib/vimlparser -v .vimrc
 
 stages:
   - shellcheck
