@@ -58,3 +58,9 @@
 [submodule ".bin/scripts"]
 	path = .bin/scripts
 	url = https://github.com/yuri-norwood/scripts
+[submodule ".build/lib/vimlint"]
+	path = .build/lib/vimlint
+	url = https://github.com/syngan/vim-vimlint
+[submodule ".build/lib/vimparser"]
+	path = .build/lib/vimparser
+	url = https://github.com/ynkdir/vim-vimlparser
