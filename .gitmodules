@@ -62,5 +62,5 @@
 	path = .build/lib/vimlint
 	url = https://github.com/syngan/vim-vimlint
 [submodule ".build/lib/vimparser"]
-	path = .build/lib/vimparser
+	path = .build/lib/vimlparser
 	url = https://github.com/ynkdir/vim-vimlparser
