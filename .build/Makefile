@@ -17,6 +17,7 @@ test_linters: test_vimlint test_shellcheck
 
 test_vimlint: ${VIMLINT}
 	${VIMLINT} ../.vimrc
+	${VIMLINT} ../.exrc
 
 test_shellcheck: ${SHELLCHECK}
 	${SHELLCHECK} ../.profile
