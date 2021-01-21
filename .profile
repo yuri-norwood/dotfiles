@@ -6,9 +6,9 @@
 
 # Helper to prevent errors on missing tools
 try() {
-	if [ -x "$(command -v "$1")" ]
+	if command -v "$1" >/dev/null 2>&1
 	then
-		echo "$@" | sh
+		"$@"
 	fi
 }
 
