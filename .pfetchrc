@@ -52,9 +52,7 @@ PF_COLOR=1
 #HOSTNAME=
 
 # Which editor to display.
-#VISUAL=
-# or
-#EDITOR=
+VISUAL="${VISUAL##*/}"
 
 # Which shell to display.
 #SHELL=
