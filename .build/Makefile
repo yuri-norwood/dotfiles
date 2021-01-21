@@ -6,7 +6,7 @@
 
 include config.mk
 
-test: build ${TESTS:%=test_%}
+test: build test_linters
 
 build: ${BIN}
 
@@ -46,5 +46,5 @@ lib/shellcheck:
 	mkdir -p $@
 	wget -qO- ${SHELLCHECK_RELEASE} | tar -xJvC $@
 
-.PHONY: clean build test
+.PHONY: clean build test test_linters test_vimlint test_shellcheck
 
