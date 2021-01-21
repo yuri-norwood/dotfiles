@@ -11,7 +11,7 @@ test: build test_linters
 build: ${BIN}
 
 clean:
-	rm -rf ${BIN}
+	rm -rf ${BIN} lib/shellcheck
 
 test_linters: test_vimlint test_shellcheck
 
@@ -20,16 +20,16 @@ test_vimlint: ${VIMLINT}
 	${VIMLINT} ../.exrc
 
 test_shellcheck: ${SHELLCHECK}
-	${SHELLCHECK} ../.profile
+	${SHELLCHECK} ../.profile  -e SC1090,SC2155
 	${SHELLCHECK} ../.kshrc
 	${SHELLCHECK} ../.aliases
-	${SHELLCHECK} ../.xinitrc
-	${SHELLCHECK} ../.xsession
+	${SHELLCHECK} ../.xinitrc  -e SC1090
+	${SHELLCHECK} ../.xsession -e SC1090
 	${SHELLCHECK} ../.pfetchrc -e SC2034
 
-${VIMLINT}: bin/% : lib/%
+${VIMLINT}: lib/vimlint
 	echo "#!/bin/sh" > $@
-	echo './$</bin/vimlint.sh -l ./$< -p ./lib/vimlparser -v $$@' >> $@
+	echo './lib/vimlint/bin/vimlint.sh -l ./lib/vimlint -p ./lib/vimlparser -v $$@' >> $@
 	chmod +x $@
 
 lib/vimlint: lib/vimlparser
@@ -38,14 +38,24 @@ lib/vimlint: lib/vimlparser
 lib/vimlparser:
 	git submodule update --remote $@
 
-${SHELLCHECK}: bin/% : lib/%
-	cp $</shellcheck-latest/shellcheck $@
+${SHELLCHECK}: lib/shellcheck
+	cp ./lib/shellcheck/shellcheck-${SHELLCHECK_VERSION}/shellcheck $@
 	chmod +x $@
 	$@ --version
 
 lib/shellcheck:
 	mkdir -p $@
-	wget -qO- ${SHELLCHECK_RELEASE} | tar -xJvC $@
+	curl -L -o - ${SHELLCHECK_RELEASE} | xzcat - | tar -xvf - -C $@
+	@if [ "$$(uname)" = "OpenBSD" ] ; \
+	then \
+		if [ -x "$$(command -v shellcheck)" ] ; \
+		then \
+			cp "$$(command -v shellcheck)" $@/shellcheck-${SHELLCHECK_VERSION}/shellcheck; \
+		else \
+			echo "Install shellcheck manually on OpenBSD" 1>&2; \
+			doas pkg_add shellcheck ; \
+		fi ; \
+	fi
 
 .PHONY: clean build test test_linters test_vimlint test_shellcheck
 
