@@ -24,6 +24,7 @@ test_shellcheck: ${CHELLCHECK}
 	${SHELLCHECK} ../.aliases
 	${SHELLCHECK} ../.xinitrc
 	${SHELLCHECK} ../.xsession
+	${SHELLCHECK} ../.pfetchrc
 
 ${VIMLINT}: bin/% : lib/%
 	echo "#!/bin/sh" > $@
