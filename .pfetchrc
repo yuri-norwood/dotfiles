@@ -45,3 +45,18 @@ PF_COLOR=1
 # Valid: string
 #PF_ASCII=
 
+# Which username to display.
+#USER=
+
+# Which hostname to display.
+#HOSTNAME=
+
+# Which editor to display.
+VISUAL="${VISUAL##*/}"
+
+# Which shell to display.
+#SHELL=
+
+# Which desktop environment to display.
+#XDG_CURRENT_DESKTOP=
+
