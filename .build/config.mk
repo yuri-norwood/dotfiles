@@ -13,3 +13,5 @@ SHELLCHECK_RELEASE = ${SHELLCHECK_GIT_URL}/releases/download/${SHELLCHECK_VERSIO
 BIN = ${VIMLINT} ${SHELLCHECK}
 LIB = ${BIN:bin/%=lib/%} lib/vimlparser
 
+TESTS = vimlint shellcheck
+

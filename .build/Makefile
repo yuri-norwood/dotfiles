@@ -6,18 +6,24 @@
 
 include config.mk
 
-test: build
-	${VIMLINT}    ../.vimrc
-	${SHELLCHECK} ../.profile
-	${SHELLCHECK} ../.kshrc
-	${SHELLCHECK} ../.aliases
-	${SHELLCHECK} ../.xinitrc
-	${SHELLCHECK} ../.xsession
+test: build ${TESTS:%=test_%}
 
 build: ${BIN}
 
 clean:
 	rm -rf ${BIN}
+
+test_linters: test_vimlint test_shellcheck
+
+test_vimlint: ${VIMLINT}
+	${VIMLINT} ../.vimrc
+
+test_shellcheck: ${CHELLCHECK}
+	${SHELLCHECK} ../.profile
+	${SHELLCHECK} ../.kshrc
+	${SHELLCHECK} ../.aliases
+	${SHELLCHECK} ../.xinitrc
+	${SHELLCHECK} ../.xsession
 
 ${VIMLINT}: bin/% : lib/%
 	echo "#!/bin/sh" > $@
