@@ -1,0 +1,6 @@
+# Ignore generated scripts
+*
+
+# Track gitignore
+!.gitignore
+
