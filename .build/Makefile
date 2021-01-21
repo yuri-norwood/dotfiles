@@ -18,7 +18,7 @@ test_linters: test_vimlint test_shellcheck
 test_vimlint: ${VIMLINT}
 	${VIMLINT} ../.vimrc
 
-test_shellcheck: ${CHELLCHECK}
+test_shellcheck: ${SHELLCHECK}
 	${SHELLCHECK} ../.profile
 	${SHELLCHECK} ../.kshrc
 	${SHELLCHECK} ../.aliases
