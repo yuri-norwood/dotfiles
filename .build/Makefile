@@ -6,7 +6,7 @@
 
 include config.mk
 
-test: build ${TESTS:%=test_%}
+test: build test_linters
 
 build: ${BIN}
 
@@ -17,8 +17,9 @@ test_linters: test_vimlint test_shellcheck
 
 test_vimlint: ${VIMLINT}
 	${VIMLINT} ../.vimrc
+	${VIMLINT} ../.exrc
 
-test_shellcheck: ${CHELLCHECK}
+test_shellcheck: ${SHELLCHECK}
 	${SHELLCHECK} ../.profile
 	${SHELLCHECK} ../.kshrc
 	${SHELLCHECK} ../.aliases
@@ -46,5 +47,5 @@ lib/shellcheck:
 	mkdir -p $@
 	wget -qO- ${SHELLCHECK_RELEASE} | tar -xJvC $@
 
-.PHONY: clean build test
+.PHONY: clean build test test_linters test_vimlint test_shellcheck
 
