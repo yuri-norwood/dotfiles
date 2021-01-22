@@ -11,7 +11,7 @@ test: build test_linters
 build: ${BIN}
 
 clean:
-	rm -rf ${BIN}
+	rm -rf ${BIN} lib/shellcheck
 
 test_linters: test_vimlint test_shellcheck
 
@@ -27,9 +27,9 @@ test_shellcheck: ${SHELLCHECK}
 	${SHELLCHECK} ../.xsession
 	${SHELLCHECK} ../.pfetchrc -e SC2034
 
-${VIMLINT}: bin/% : lib/%
+${VIMLINT}: lib/vimlint
 	echo "#!/bin/sh" > $@
-	echo './$</bin/vimlint.sh -l ./$< -p ./lib/vimlparser -v $$@' >> $@
+	echo './lib/vimlint/bin/vimlint.sh -l ./lib/vimlint -p ./lib/vimlparser -v $$@' >> $@
 	chmod +x $@
 
 lib/vimlint: lib/vimlparser
@@ -38,14 +38,14 @@ lib/vimlint: lib/vimlparser
 lib/vimlparser:
 	git submodule update --remote $@
 
-${SHELLCHECK}: bin/% : lib/%
-	cp $</shellcheck-latest/shellcheck $@
+${SHELLCHECK}: lib/shellcheck
+	cp ./lib/shellcheck/shellcheck-latest/shellcheck $@
 	chmod +x $@
 	$@ --version
 
 lib/shellcheck:
 	mkdir -p $@
-	wget -qO- ${SHELLCHECK_RELEASE} | tar -xJvC $@
+	curl -L -o - ${SHELLCHECK_RELEASE} | xzcat - | tar -xvf - -C $@
 
 .PHONY: clean build test test_linters test_vimlint test_shellcheck
 
