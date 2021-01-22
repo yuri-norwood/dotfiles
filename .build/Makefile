@@ -20,11 +20,11 @@ test_vimlint: ${VIMLINT}
 	${VIMLINT} ../.exrc
 
 test_shellcheck: ${SHELLCHECK}
-	${SHELLCHECK} ../.profile
+	${SHELLCHECK} ../.profile  -e SC1090,SC2155
 	${SHELLCHECK} ../.kshrc
 	${SHELLCHECK} ../.aliases
-	${SHELLCHECK} ../.xinitrc
-	${SHELLCHECK} ../.xsession
+	${SHELLCHECK} ../.xinitrc  -e SC1090
+	${SHELLCHECK} ../.xsession -e SC1090
 	${SHELLCHECK} ../.pfetchrc -e SC2034
 
 ${VIMLINT}: lib/vimlint
