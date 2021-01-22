@@ -39,13 +39,23 @@ lib/vimlparser:
 	git submodule update --remote $@
 
 ${SHELLCHECK}: lib/shellcheck
-	cp ./lib/shellcheck/shellcheck-latest/shellcheck $@
+	cp ./lib/shellcheck/shellcheck-${SHELLCHECK_VERSION}/shellcheck $@
 	chmod +x $@
 	$@ --version
 
 lib/shellcheck:
 	mkdir -p $@
 	curl -L -o - ${SHELLCHECK_RELEASE} | xzcat - | tar -xvf - -C $@
+	@if [ "$$(uname)" = "OpenBSD" ] ; \
+	then \
+		if [ -x "$$(command -v shellcheck)" ] ; \
+		then \
+			cp "$$(command -v shellcheck)" $@/shellcheck-${SHELLCHECK_VERSION}/shellcheck; \
+		else \
+			echo "Install shellcheck manually on OpenBSD" 1>&2; \
+			doas pkg_add shellcheck ; \
+		fi ; \
+	fi
 
 .PHONY: clean build test test_linters test_vimlint test_shellcheck
 
