@@ -1,0 +1,4 @@
+# Ignore temp and private files
+cache*
+cookies*
+
