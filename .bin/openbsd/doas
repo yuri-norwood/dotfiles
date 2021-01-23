@@ -4,3 +4,8 @@
 # A wrapper for doas(1)
 #
 
+# Locate true path of doas executable
+DOAS="/usr/bin/doas"
+
+exec "$DOAS"
+
