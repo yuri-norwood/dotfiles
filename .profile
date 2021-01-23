@@ -50,21 +50,28 @@ export NUGET_PACKAGES="${HOME}/.nuget/packages"
 export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
+# Add dotnet tools to PATH
+PATH="${PATH}:${DOTNET_TOOLS}"
+
 # Set pfetch startup script
 export PF_SOURCE="${HOME}/.pfetchrc"
+
+# Add pfetch to PATH
+PATH="${PATH}:.bin/pfetch"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOPATH="${HOME}/.bin/go"
 
-# Set PATH to include executable submodules
-for module in "${HOME}"/.bin/*/
-do
-	PATH="${PATH}:${module}"
-done
+# Add go lang tools to PATH
+PATH="${PATH}:${GOPATH}/bin"
+PATH="${PATH}:${GOROOT}/bin"
 
-# Set additional directories to PATH
-export PATH="${PATH}:${DOTNET_TOOLS}:${GOROOT}/bin:${GOPATH}/bin"
+# Add scripts to PATH
+PATH="${PATH}:.bin/scripts"
+
+# Export finalised PATH
+export PATH
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
