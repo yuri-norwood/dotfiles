@@ -26,6 +26,7 @@ _PS1_DIR() {
 
 # Helper to add executables to $PATH
 path_add() {
+	# shellcheck disable=SC2068
 	for MODULE in $@
 	do
 		if [ -d "${MODULE}" ]
