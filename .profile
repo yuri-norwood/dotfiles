@@ -28,7 +28,10 @@ _PS1_DIR() {
 path_add() {
 	for MODULE in $@
 	do
-		export PATH="${PATH}:${MODULE}"
+		if [ -d "${MODULE}" ]
+		then
+			export PATH="${PATH}:${MODULE}"
+		fi
 	done
 }
 
@@ -75,7 +78,10 @@ export GOPATH="${HOME}/.bin/go"
 path_add "${GOPATH}/bin"
 path_add "${GOROOT}/bin"
 
-# Add scripts to PATH
+# Add OS specific scripts to PATH
+path_add "${HOME}/$(uname | tr '[:upper:]' '[:lower:]')"
+
+# Add general / universal scripts to PATH
 path_add "${HOME}/.bin/scripts"
 
 # Integrate settings
