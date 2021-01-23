@@ -75,11 +75,10 @@ export GOROOT="/usr/local/go"
 export GOPATH="${HOME}/.bin/go"
 
 # Add go lang tools to PATH
-path_add "${GOPATH}/bin"
-path_add "${GOROOT}/bin"
+path_add "${GOPATH}/bin" "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
-path_add "${HOME}/$(uname | tr '[:upper:]' '[:lower:]')"
+path_add "${HOME}/.bin/$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Add general / universal scripts to PATH
 path_add "${HOME}/.bin/scripts"
