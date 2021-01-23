@@ -24,6 +24,14 @@ _PS1_DIR() {
 	esac
 }
 
+# Helper to add executables to $PATH
+path_add() {
+	for MODULE in $@
+	do
+		export PATH="${PATH}:${MODULE}"
+	done
+}
+
 # Include alias definitions
 . ~/.aliases
 
@@ -51,27 +59,24 @@ export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
 # Add dotnet tools to PATH
-PATH="${PATH}:${DOTNET_TOOLS}"
+path_add "${DOTNET_TOOLS}"
 
 # Set pfetch startup script
 export PF_SOURCE="${HOME}/.pfetchrc"
 
 # Add pfetch to PATH
-PATH="${PATH}:.bin/pfetch"
+path_add "${HOME}/.bin/pfetch"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOPATH="${HOME}/.bin/go"
 
 # Add go lang tools to PATH
-PATH="${PATH}:${GOPATH}/bin"
-PATH="${PATH}:${GOROOT}/bin"
+path_add "${GOPATH}/bin"
+path_add "${GOROOT}/bin"
 
 # Add scripts to PATH
-PATH="${PATH}:.bin/scripts"
-
-# Export finalised PATH
-export PATH
+path_add "${HOME}/.bin/scripts"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
