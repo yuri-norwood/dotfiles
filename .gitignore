@@ -10,6 +10,7 @@
 # misc temp
 **.tmp
 **.bak
+**cache**
 
 # history files
 **hst
@@ -33,4 +34,5 @@
 **.mailrc
 **.ssh
 **.xsession-errors
+**.templateengine
 

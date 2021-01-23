@@ -4,8 +4,14 @@
 # Korn shell configuration
 #
 
-# Early return if the ksh(1) instance isn't interactive
-[[ $- = *i* ]] || return
+# Catch non-ksh sessions
+case "$0" in
+	# Early return if the ksh(1) instance isn't interactive
+	*ksh*) [[ $- = *i* ]] || return ;;
+
+	# Early return if not run by ksh(1)
+	*) return ;;
+esac
 
 # Configure history
 HISTFILE="${HOME}/.history.ksh"
