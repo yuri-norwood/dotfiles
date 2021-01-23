@@ -31,7 +31,7 @@ path_add() {
 	do
 		if [ -d "${MODULE}" ]
 		then
-			export PATH="${PATH}:${MODULE}"
+			export PATH="${MODULE}:${PATH}"
 		fi
 	done
 }
