@@ -1,3 +1,0 @@
-# Overload all C files and headers
-**.c linguist-language=C
-**.h linguist-language=C
