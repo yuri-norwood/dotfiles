@@ -108,6 +108,19 @@ set list
 set listchars=tab:\|\ 
 match Comment /\t/
 
+" Allow special sequences to be collapsed inline
+set conceallevel =1
+
 " Ensure editor config plugin works with fugitive plugin
 let g:EditorConfig_exclude_patterns = [ 'fugitive://.*' ]
+
+" Configure pangloss/javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow  = 1
+
+augroup javascript_plugin_folding
+	autocmd!
+	autocmd FileType javascript setlocal foldmethod=syntax
+augroup END
 
