@@ -199,7 +199,8 @@ dotnet_diagnostic.RCS1236.severity  = suggestion
 dotnet_diagnostic.RCS1247.severity  = warning
 dotnet_diagnostic.RCS1248.severity  = suggestion
 dotnet_diagnostic.RCS1007.severity  = warning
-dotnet_diagnostic.RCS1228.severity = warning
+dotnet_diagnostic.RCS1228.severity  = warning
+dotnet_diagnostic.RCS1079.severity  = none
 
 ; Manage specific CA refactoring settings
 dotnet_diagnostic.CA1041.severity = warning
