@@ -4,6 +4,8 @@
 # A wrapper for doas(1)
 #
 
+set -e
+
 # Set true path of doas executable
 DOAS="/usr/bin/doas"
 
@@ -22,7 +24,7 @@ fi
 
 if [ ! -f "$CONFIG" ]
 then
-	echo "Error: '${CONFIG}' not found" 1>&2
+	echo "Error: '${CONFIG}' not found, create manually" 1>&2
 	exit 1
 fi
 
