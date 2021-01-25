@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ksh
 
 #
 # A wrapper for doas(1)
@@ -48,5 +48,6 @@ then
 	fi
 fi
 
+# shellcheck disable=2068
 exec "$DOAS" $@
 
