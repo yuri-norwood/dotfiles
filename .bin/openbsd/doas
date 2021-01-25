@@ -1,0 +1,53 @@
+#!/bin/ksh
+
+#
+# A wrapper for doas(1)
+#
+
+set -e
+
+# Set true path of doas executable
+DOAS="/usr/bin/doas"
+
+# Set path of target config
+CONFIG="/etc/doas.conf"
+
+# Set path of source config
+SOURCE="${HOME}/.doas.conf"
+
+# Validate hardcoded executable path
+if [ ! -x "$DOAS" ]
+then
+	echo "Error: '${DOAS}' not found" 1>&2
+	exit 1
+fi
+
+if [ ! -f "$CONFIG" ]
+then
+	echo "Error: '${CONFIG}' not found, create manually" 1>&2
+	exit 1
+fi
+
+# Check that installation would work
+if [ "$("$DOAS" -C "$CONFIG" cp -f "$SOURCE" "$CONFIG")" = "deny" ]
+then
+	echo "Error: Cannot install '${SOURCE}'" 1>&2
+	exit 1
+fi
+
+# Update if target is out of date
+if [ "$SOURCE" -nt "$CONFIG" ]
+then
+	# Validate new config
+	if "$DOAS" -C "$SOURCE"
+	then
+		"$DOAS" cp -f "$SOURCE" "$CONFIG"
+	else
+		echo "Error: Config invalid"  1>&2
+		exit 1
+	fi
+fi
+
+# shellcheck disable=2068
+exec "$DOAS" $@
+
