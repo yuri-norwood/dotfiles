@@ -33,13 +33,17 @@ then
 	exit 1
 fi
 
-# Validate new config
-if "$DOAS" -C "$SOURCE"
+# Update if target is out of date
+if [ "$SOURCE" -nt "$CONFIG" ]
 then
-	"$DOAS" cp -f "$SOURCE" "$CONFIG"
-else
-	echo "Error: "  1>&2
-	exit 1
+	# Validate new config
+	if "$DOAS" -C "$SOURCE"
+	then
+		"$DOAS" cp -f "$SOURCE" "$CONFIG"
+	else
+		echo "Error: Config invalid"  1>&2
+		exit 1
+	fi
 fi
 
 exec "$DOAS" $@
