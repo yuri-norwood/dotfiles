@@ -10,8 +10,8 @@ DOAS="/usr/bin/doas"
 # Set path of target config
 CONFIG="/etc/doas.conf"
 
-# Set path os source config
-SOURCE="${HOME}/.doas.config"
+# Set path of source config
+SOURCE="${HOME}/.doas.conf"
 
 # Validate hardcoded executable path
 if [ ! -x "$DOAS" ]
