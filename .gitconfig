@@ -15,19 +15,19 @@
 	prune = true
 
 [color]
-	diff = true
-	status = true
-	branch = true
+	diff        = true
+	status      = true
+	branch      = true
 	interactive = true
-	ui = true
-	pager = true
-	branch = true
-	decorate = true
-	grep = true
-	showBranch = true
+	ui          = true
+	pager       = true
+	branch      = true
+	decorate    = true
+	grep        = true
+	showBranch  = true
 
 [diff]
-	colorMoved = zebra
+	colorMoved   = zebra
 	colorMovedWS = allow-indentation-change
 
 [alias]
@@ -35,4 +35,6 @@
 	discard = reset --hard
 	pull    = pull --recurse-submodules -j8
 	clone   = clone --recursive -j8
+	stats   = status
+	staus   = status
 
