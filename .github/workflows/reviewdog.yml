@@ -11,12 +11,22 @@ jobs:
     name: runner / shellcheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: |
+          actions/checkout@v1
+          reviewdog/action-shellcheck@v1
       - name: shellcheck .profile
-        uses: reviewdog/action-shellcheck@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           path: .
           pattern: .profile
           shellcheck_flags: -e SC1090,SC2155
+      - uses: |
+          actions/checkout@v1
+          reviewdog/action-shellcheck@v1
+      - name: shellcheck .kshrc
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          path: .
+          pattern: .kshrc
