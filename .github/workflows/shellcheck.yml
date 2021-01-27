@@ -41,6 +41,8 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .pfetchrc
+        env:
+          SHELLCHECK_OPTS: -e SC2034
       - uses: actions/checkout@v1
       - name: shellcheck .bin/openbsd/doas
         uses: ludeeus/action-shellcheck@master
