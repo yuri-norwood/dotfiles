@@ -1,4 +1,4 @@
-name: Makefile based tests
+name: makefile
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  shellcheck:
+  make_shellcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: make clean test_shellcheck
-  vimlint:
+  make_vimlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
