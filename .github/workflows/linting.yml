@@ -1,61 +1,83 @@
+# This file deines linting actions
 name: linting
 
+# Lint whenever there is a push or a pull request opened
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
+# Define a job for each linter / language
 jobs:
+  
+  # This job checks that all files match the rules in the .editorconfig
   editorconfig:
     runs-on: ubuntu-latest
     steps:
+      # Check all files against the ~/.editorconfig
       - uses: actions/checkout@v2
       - name: Check editorconfig
         uses: editorconfig-checker/action-editorconfig-checker@v1.0.0
 
+  # This job checks that the given vimscript files use best practices
   vint:
     runs-on: ubuntu-latest
     steps:
+      # Check ~/.vimrc
       - uses: actions/checkout@v1
       - name: Vint .vimrc
         uses: ludvighz/vint-action@v1
         with:
           path: .vimrc
+
+      # Check ~/.exrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
         with:
           path: .exrc
 
+  # This job checks that the given shell scripts are well written
   shellcheck:
     runs-on: ubuntu-latest
     steps:
+      # Check ~/.profile
       - uses: actions/checkout@v1
       - name: shellcheck .profile
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .profile
+
+      # Check ~/.kshrc
       - uses: actions/checkout@v1
       - name: shellcheck .kshrc
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .kshrc
+
+      # Check ~/.aliases
       - uses: actions/checkout@v1
       - name: shellcheck .aliases
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .aliases
+
+      # Check ~/.xinitrc
       - uses: actions/checkout@v1
       - name: shellcheck .xinitrc
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .xinitrc
+
+      # Check ~/.xsession
       - uses: actions/checkout@v1
       - name: shellcheck .xsession
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .xsession
+
+      # Check ~/.pfetchrc - NOTE: Ignore SC2034 as it is imported
       - uses: actions/checkout@v1
       - name: shellcheck .pfetchrc
         uses: ludeeus/action-shellcheck@master
@@ -63,6 +85,8 @@ jobs:
           additional_files: .pfetchrc
         env:
           SHELLCHECK_OPTS: -e SC2034
+
+      # Check OpenBSD specific scripts
       - uses: actions/checkout@v1
       - name: shellcheck .bin/openbsd/doas
         uses: ludeeus/action-shellcheck@master
