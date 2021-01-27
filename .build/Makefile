@@ -34,9 +34,11 @@ ${VIMLINT}: lib/vimlint
 	chmod +x $@
 
 lib/vimlint: lib/vimlparser
+	cd $@ && git submobule init
 	git submodule update --remote $@
 
 lib/vimlparser:
+	cd $@ && git submobule init
 	git submodule update --remote $@
 
 ${SHELLCHECK}: lib/shellcheck
