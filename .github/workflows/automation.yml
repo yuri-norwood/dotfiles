@@ -1,4 +1,4 @@
-name: pull_request
+name: automation
 
 on:
   pull_request:
