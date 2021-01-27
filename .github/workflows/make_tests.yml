@@ -1,4 +1,4 @@
-name: makefile
+name: make_tests
 
 on:
   push:
@@ -12,8 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: make clean test_shellcheck
+        run: make clean test_shellcheck
   make_vimlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: make clean test_vimlint
+        run: make clean test_vimlint
