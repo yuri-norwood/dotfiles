@@ -1,11 +1,11 @@
-name: pull request
+name: pull_request
 
 on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
 
 jobs:
-  pull request:
+  pull_request:
     runs-on: ubuntu-latest
     steps:
     - uses: seferov/pr-lint-action@master
