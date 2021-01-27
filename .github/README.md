@@ -1,5 +1,6 @@
 # dotfiles
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yuri-norwood/dotfiles/EditorConfig?label=EditorConfig)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3AEditorConfig)
+[![Shellcheck status](https://img.sheilds.io/github/workflow/status/yuri-norwood/dotfiles/shellcheck?label=Shellcheck)](https://github.com/yuri-norwood/dotfiles/actions?query=workflows%3A"Makefile+based+test")
+[![Editorconfig compliance](https://img.shields.io/github/workflow/status/yuri-norwood/dotfiles/EditorConfig?label=EditorConfig)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3AEditorConfig)
 [![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![GitHub repo size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
