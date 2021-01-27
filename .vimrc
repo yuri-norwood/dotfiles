@@ -5,9 +5,6 @@
 " See:     https://github/yuri-norwood/dotfiles
 "
 
-" Allow bells and whistles
-set nocompatible
-
 " Allow special characters and symbols
 set encoding=utf-8 " do this before :scriptencoding
 scriptencoding utf-8
