@@ -1,15 +1,21 @@
-name: pull_request
+# This file defines automation actions
+name: automation
 
+# Automate on all pull request events
 on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
 
+# Define a job for each automatic task
 jobs:
+
+  # This job enssures that PRs have the correct title formatting
   pull_request:
     runs-on: ubuntu-latest
     steps:
     - uses: seferov/pr-lint-action@master
       with:
+        # Check PR title against regex and close it if it fails
         title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
         title-regex-flags: 'g'
         error-message: 'Add issue number and type to your title'
