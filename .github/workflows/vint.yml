@@ -13,11 +13,9 @@ jobs:
       - name: Vint .vimrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .vimrc
-          args: --verbose --style-problem --color
+          args: --verbose --style-problem --color .vimrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .exrc
-          args: --verbose --style-problem --color
+          args: --verbose --style-problem --color .exrc
