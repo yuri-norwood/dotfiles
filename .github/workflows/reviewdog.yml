@@ -1,5 +1,11 @@
 name: reviewdog
-on: [pull_request]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   shellcheck:
     name: runner / shellcheck
