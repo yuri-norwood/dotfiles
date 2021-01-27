@@ -7,6 +7,13 @@ on:
     branches: [ main ]
 
 jobs:
+  editorconfig:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check editorconfig
+        uses: editorconfig-checker/action-editorconfig-checker@v1.0.0
+
   vint:
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +29,6 @@ jobs:
           path: .exrc
 
   shellcheck:
-    name: shellcheck
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
