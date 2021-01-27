@@ -5,7 +5,7 @@ on:
     types: ['opened', 'edited', 'reopened', 'synchronize']
 
 jobs:
-  pr-lint:
+  pull request:
     runs-on: ubuntu-latest
     steps:
     - uses: seferov/pr-lint-action@master
