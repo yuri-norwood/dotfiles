@@ -1,4 +1,4 @@
-# This file deines linting actions
+# This file defines linting actions
 name: linting
 
 # Lint whenever there is a push or a pull request opened
