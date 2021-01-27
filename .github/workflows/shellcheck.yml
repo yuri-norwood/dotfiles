@@ -40,3 +40,10 @@ jobs:
           reporter: github-pr-review
           fail_on_error: true
           pattern: .xinitrc
+      - uses: actions/checkout@v1
+      - name: shellcheck .xsession
+        uses: reviewdog/action-shellcheck@v1
+        with:
+          reporter: github-pr-review
+          fail_on_error: true
+          pattern: .xsession
