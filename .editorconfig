@@ -39,6 +39,10 @@ indent_style = space
 indent_size  = 4
 end_of_line  = crlf
 
+; Vimrc needs trailling whitespace allowed
+[.vimrc]
+trim_trailing_whitespace = false
+
 ; VS solution files
 [*.sln]
 indent_style = tab
