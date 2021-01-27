@@ -1,13 +1,14 @@
 # dotfiles
-[![vint](https://github.com/yuri-norwood/dotfiles/workflows/vint/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Avint)
-[![shellcheck](https://github.com/yuri-norwood/dotfiles/workflows/shellcheck/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Ashellcheck)
-[![editorconfig](https://github.com/yuri-norwood/dotfiles/workflows/editorconfig/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Aeditorconfig)
+[![Vint](https://github.com/yuri-norwood/dotfiles/workflows/vint/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Avint)
+[![Shellcheck](https://github.com/yuri-norwood/dotfiles/workflows/shellcheck/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Ashellcheck)
+[![Editorconfig](https://github.com/yuri-norwood/dotfiles/workflows/editorconfig/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Aeditorconfig)
 [![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![GitHub repo size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![GitHub code size](https://img.shields.io/github/languages/code-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![GitHub last commit](https://img.shields.io/github/last-commit/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![Repo Size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![Code Size](https://img.shields.io/github/languages/code-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![Commit Activity](https://img.shields.io/github/commit-activity/w/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![Last Commit](https://img.shields.io/github/last-commit/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
+[![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
 
 Configuration files and various customizations.
 
