@@ -34,9 +34,11 @@ ${VIMLINT}: lib/vimlint
 	chmod +x $@
 
 lib/vimlint: lib/vimlparser
+	cd $@ && git submodule init
 	git submodule update --remote $@
 
 lib/vimlparser:
+	cd $@ && git submodule init
 	git submodule update --remote $@
 
 ${SHELLCHECK}: lib/shellcheck
@@ -58,5 +60,5 @@ lib/shellcheck:
 		fi ; \
 	fi
 
-.PHONY: clean build test test_linters test_vimlint test_shellcheck
+.PHONY: clean build test test_linters test_vimlint test_shellcheck ${LIB}
 
