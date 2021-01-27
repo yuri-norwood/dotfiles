@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make clean test
-      run: make clean test
+      run: cd .build && make clean test
