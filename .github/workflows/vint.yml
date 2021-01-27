@@ -9,11 +9,13 @@ jobs:
   vint:
     runs-on: ubuntu-latest
     steps:
-      - uses: ludvighz/vint-action@v1
+      - uses: actions/checkout@v1
       - name: Vint .vimrc
+        uses: ludvighz/vint-action@v1
         with:
           path: .vimrc
-      - uses: ludvighz/vint-action@v1
+      - uses: actions/checkout@v1
       - name: Vint .exrc
+        uses: ludvighz/vint-action@v1
         with:
           path: .exrc
