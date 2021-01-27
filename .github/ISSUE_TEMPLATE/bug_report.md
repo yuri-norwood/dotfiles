@@ -24,10 +24,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
- - Utility: [e.g. Vim]
- - Configuration: [e.g. .vimrc]
- - OS: [e.g. OpenBSD-CURRENT]
- - Version [e.g. Vim8]
+  - Utility: [e.g. Vim]
+  - Configuration: [e.g. .vimrc]
+  - OS: [e.g. OpenBSD-CURRENT]
+  - Version [e.g. Vim8]
 
 **Additional context**
 Add any other context about the problem here.
