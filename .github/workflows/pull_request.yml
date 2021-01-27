@@ -1,0 +1,17 @@
+name: pull_request
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: seferov/pr-lint-action@master
+      with:
+        title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
+        title-regex-flags: 'g'
+        error-message: 'Add issue number and type to your title'
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-close-message: 'Closing this pull request since the title does not match %pattern% pattern. Please fix the title and re-open the pull request.'
