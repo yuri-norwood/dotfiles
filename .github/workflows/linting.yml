@@ -10,7 +10,7 @@ on:
 
 # Define a job for each linter / language
 jobs:
-  
+
   # This job checks that all files match the rules in the .editorconfig
   editorconfig:
     runs-on: ubuntu-latest
