@@ -1,4 +1,7 @@
 # dotfiles
+[![vint](https://github.com/yuri-norwood/dotfiles/workflows/vint/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Avint)
+[![shellcheck](https://github.com/yuri-norwood/dotfiles/workflows/shellcheck/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Ashellcheck)
+[![editorconfig](https://github.com/yuri-norwood/dotfiles/workflows/editorconfig/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Aeditorconfig)
 [![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![GitHub repo size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
