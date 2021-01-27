@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: seferov/pr-lint-action@master
       with:
-        title-regex: '^\[(NEW|MOD|BUG)-\d*\](\ )'
+        title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
         title-regex-flags: 'g'
         error-message: 'Add issue number and type to your title'
         github-token: ${{ secrets.GITHUB_TOKEN }}
