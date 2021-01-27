@@ -1,0 +1,19 @@
+name: vint
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  vint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ludvighz/vint-action@v1
+      - name: Vint .vimrc
+        with:
+          path: .vimrc
+      - uses: ludvighz/vint-action@v1
+      - name: Vint .exrc
+        with:
+          path: .exrc
