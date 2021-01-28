@@ -3,6 +3,7 @@ name: linting
 
 # Lint whenever there is a push or a pull request opened
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
