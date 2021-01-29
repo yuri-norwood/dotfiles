@@ -1,7 +1,6 @@
+# Resolves #
 
-## Resolves #
-
-### Changes
+## Changes
 
 1. Describe changes
 2. Note any additional information not covered in issue
