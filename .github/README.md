@@ -8,7 +8,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![Commit Activity](https://img.shields.io/github/commit-activity/w/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![Last Commit](https://img.shields.io/github/last-commit/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![Actions](https://img.shields.io/github/labels/yuri-norwood/dotfiles/actions?logo=github%20actions&logoColor=fff)](https://github.com/yuri-norwood/dotfiles/actions)
+[![Actions](https://img.shields.io/badge/-actions-2088FF?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions)
 [![Sponsors](https://img.shields.io/github/labels/yuri-norwood/dotfiles/sponsor?logo=github%20sponsors&logoColor=fff)](https://github.com/sponsors/yuri-norwood)
 [![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
 [![OpenBSD](https://img.shields.io/github/labels/yuri-norwood/dotfiles/openbsd?logo=openbsd&logoColor=000)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Aopenbsd)
