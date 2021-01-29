@@ -51,6 +51,7 @@ openbsd: # Has to do with Puffy
   ]
 
 sponsor: # GitHub sponsors
+ - ".github/FUNDING.yml"
 
 st: # http://st.suckless.org/
 
