@@ -18,10 +18,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: markdownlint-cli
+      - name: Lint README
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
-          files: .github/**.md .vim/**.md
+          files: .github/README.md
+      - uses: actions/checkout@v1
+      - name: Lint ISSUE_TEMPLATES
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .github/ISSUE_TEMPLATE/*.md
+      - uses: actions/checkout@v1
+      - name: Lint PULL_TEMPLATES
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .github/PULL_REQUEST_TEMPLATE.md
+      - uses: actions/checkout@v1
+      - name: Lint vim documentation
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .vim/pack/*/start/*.md
 
   # This job checks that all yaml files correctly shake a headless chicken
   yaml:
