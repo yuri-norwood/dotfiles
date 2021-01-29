@@ -54,9 +54,18 @@ sponsor: # GitHub sponsors
   - ".github/FUNDING.yml"
 
 st: # http://st.suckless.org/
-  - ".st/*"
+  - ".st/**"
 
 suckless: # Anything to do with a suckless.org tool
+  - add: [
+    ".dmenu/**",
+    ".dwm/**",
+    ".st/**",
+    ".surf/**",
+    ".tabbed/**",
+    "**.config.h",
+    "**.config.def.h"
+  ]
 
 surf: # http://surf.suckless.org/
 
