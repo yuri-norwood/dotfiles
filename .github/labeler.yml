@@ -1,8 +1,6 @@
 actions: # GitHub Actions
   - ".github/workflows/*.yml"
 
-bug: # Something isn't working
-
 dmenu: # http://tools.suckless.org/dmenu/
 
 documentation: # Improvements or additions to documentation
