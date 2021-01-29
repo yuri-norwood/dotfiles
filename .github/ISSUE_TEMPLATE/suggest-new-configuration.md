@@ -11,4 +11,5 @@ assignees: ''
 Describe the tool or utility that the new configuration is for. E.g. NeoVim
 
 **Files required:**
-Describe what files would need to be added and why. E.g. ~/.config/nvim/init.vim, this file is where NeoVim specific configurations are.
+Describe what files would need to be added and why. E.g. ~/.config/nvim/init.vim,
+this file is where NeoVim specific configurations are.

@@ -13,8 +13,33 @@ on:
 
 # Define a job for each linter / language
 jobs:
+  # This job checks that all readmes and other markdown files are parsable
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lint README
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .github/README.md
+      - uses: actions/checkout@v1
+      - name: Lint ISSUE_TEMPLATES
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .github/ISSUE_TEMPLATE/*.md
+      - uses: actions/checkout@v1
+      - name: Lint PULL_TEMPLATES
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .github/PULL_REQUEST_TEMPLATE.md
+      - uses: actions/checkout@v1
+      - name: Lint vim documentation
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .vim/pack/*/start/*.md
+
   # This job checks that all yaml files correctly shake a headless chicken
-  yaml_lint:
+  yaml:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -43,7 +68,7 @@ jobs:
         uses: editorconfig-checker/action-editorconfig-checker@v1.0.0
 
   # This job checks that the given vimscript files use best practices
-  vint:
+  vimscript:
     runs-on: ubuntu-latest
     steps:
       # Check ~/.vimrc
@@ -61,7 +86,7 @@ jobs:
           path: .exrc
 
   # This job checks that the given shell scripts are well written
-  shellcheck:
+  shell:
     runs-on: ubuntu-latest
     steps:
       # Check ~/.profile
