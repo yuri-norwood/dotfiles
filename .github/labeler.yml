@@ -25,6 +25,8 @@ editorconfig: # This regards the .editorconfig file or settings
 enhancement: # New feature or request
   - any: [
     "*",
+    ".config/gh/*",
+    ".github/**",
   ]
 
 github: # Actually GitHub
