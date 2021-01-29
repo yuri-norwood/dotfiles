@@ -1,0 +1,53 @@
+actions: # GitHub Actions
+
+bug: # Something isn't working
+
+dmenu: # http://tools.suckless.org/dmenu/
+
+documentation: # Improvements or additions to documentation
+
+duplicate: # This issue or pull request already exists
+
+dwm: # http://dwm.suckless.org/
+
+editorconfig: # This regards the .editorconfig file or settings
+
+enhancement: # New feature or request
+
+github: # Actually GitHub
+
+"good first issue": # Good for newcomers
+
+help wanted: # Extra attention is needed
+
+invalid: # This doesn't seem right
+
+investigation: # This needs looking into
+
+js: # This regards JavaScript
+
+"on going": # This needs some time
+
+openbsd: # Has to do with Puffy
+
+question: # Further information is requested
+
+shields.io: # Shields.io
+
+sponsor: # GitHub sponsors
+
+st: # http://st.suckless.org/
+
+suckless: # Anything to do with a suckless.org tool
+
+surf: # http://surf.suckless.org/
+
+tabbed: # http://tools.suckless.org/tabbed/
+
+test: # This needs a test case written
+
+vim: # This regard vim or vimscript
+
+"visual studio": # This affects Visual Studio (or VS-Code)
+
+wontfix: # This will not be worked on
