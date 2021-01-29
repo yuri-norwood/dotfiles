@@ -11,6 +11,13 @@ on:
 
 # Define a job for each linter / language
 jobs:
+  # This job checks that all yaml files correctly shake a headless chicken
+  yaml_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: yaml lint
+        uses: ibiqlik/action-yamllint@v3
 
   # This job checks that all files match the rules in the .editorconfig
   editorconfig:
