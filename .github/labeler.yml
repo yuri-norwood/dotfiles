@@ -57,7 +57,7 @@ st: # http://st.suckless.org/
   - ".st/**"
 
 suckless: # Anything to do with a suckless.org tool
-  - add: [
+  - any: [
     ".dmenu/**",
     ".dwm/**",
     ".st/**",
