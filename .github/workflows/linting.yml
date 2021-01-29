@@ -1,3 +1,5 @@
+---
+
 # This file defines linting actions
 name: linting
 
@@ -5,12 +7,23 @@ name: linting
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # Define a job for each linter / language
 jobs:
+  # This job checks that all yaml files correctly shake a headless chicken
+  yaml_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: yaml lint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          strict: true
+          config_file: .config/yamllint/config
+          format: parsable
 
   # This job checks that all files match the rules in the .editorconfig
   editorconfig:
