@@ -5,6 +5,9 @@ dmenu: # http://tools.suckless.org/dmenu/
   - ".dmenu/**"
 
 documentation: # Improvements or additions to documentation
+  - any: [
+    ".github/README.md"
+  ]
 
 duplicate: # This issue or pull request already exists
 
