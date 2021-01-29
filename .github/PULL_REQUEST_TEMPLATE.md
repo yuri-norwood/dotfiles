@@ -1,4 +1,4 @@
-# Resolves <ISSUE>
+# Resolves &lt;ISSUE&gt;
 
 ## Changes
 
