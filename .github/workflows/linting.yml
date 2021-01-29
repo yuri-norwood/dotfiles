@@ -13,8 +13,17 @@ on:
 
 # Define a job for each linter / language
 jobs:
+  # This job checks that all readmes and other markdown files are parsable
+  markdown:
+     runs-on: ubuntu-latest
+     steps:
+       - name: markdownlint-cli
+         uses: nosborn/github-action-markdown-cli@v1.1.1
+         with:
+          files: .
+
   # This job checks that all yaml files correctly shake a headless chicken
-  yaml_lint:
+  yaml:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
