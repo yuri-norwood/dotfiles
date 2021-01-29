@@ -50,8 +50,6 @@ openbsd: # Has to do with Puffy
     "**.ksh"
   ]
 
-shields.io: # Shields.io
-
 sponsor: # GitHub sponsors
 
 st: # http://st.suckless.org/
