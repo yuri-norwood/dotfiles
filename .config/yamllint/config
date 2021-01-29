@@ -1,0 +1,2 @@
+# This file defines configurations on how to lint yaml files
+extends: default
