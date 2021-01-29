@@ -24,6 +24,7 @@ jobs:
           strict: true
           config_file: .config/yamllint/config
           format: parsable
+          file_or_dir: .github/*.yml .github/workflows*.yml .config/*/*.yml
 
   # This job checks that all files match the rules in the .editorconfig
   editorconfig:
