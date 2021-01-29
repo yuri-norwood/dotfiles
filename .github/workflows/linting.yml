@@ -24,7 +24,14 @@ jobs:
           strict: true
           config_file: .config/yamllint/config
           format: parsable
-          file_or_dir: .github/*.yml .github/workflows*.yml .config/*/*.yml
+      - uses: actions/checkout@v1
+      - name: yaml lint config
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          strict: true
+          config_file: .config/yamllint/config
+          format: parsable
+          file_or_dir: .config/yamllint/config
 
   # This job checks that all files match the rules in the .editorconfig
   editorconfig:
