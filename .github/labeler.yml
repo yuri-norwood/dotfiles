@@ -27,6 +27,10 @@ enhancement: # New feature or request
     "*",
     ".config/gh/*",
     ".github/**",
+    ".gitattributes",
+    ".gitconfig",
+    ".gitignore",
+    ".gitmodules",
   ]
 
 github: # Actually GitHub
