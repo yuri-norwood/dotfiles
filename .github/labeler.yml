@@ -16,8 +16,6 @@ documentation: # Improvements or additions to documentation
     "**/README*"
   ]
 
-duplicate: # This issue or pull request already exists
-
 dwm: # http://dwm.suckless.org/
 
 editorconfig: # This regards the .editorconfig file or settings
