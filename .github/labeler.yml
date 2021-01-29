@@ -36,7 +36,7 @@ enhancement: # New feature or request
   ]
 
 github: # Actually GitHub
-  - ".github"
+  - ".github/**"
 
 js: # This regards JavaScript
   - "**.js"
