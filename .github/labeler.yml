@@ -39,6 +39,7 @@ github: # Actually GitHub
   - ".github"
 
 js: # This regards JavaScript
+  - "**.js"
 
 openbsd: # Has to do with Puffy
 
