@@ -38,8 +38,6 @@ enhancement: # New feature or request
 github: # Actually GitHub
   - ".github"
 
-"good first issue": # Good for newcomers
-
 help wanted: # Extra attention is needed
 
 invalid: # This doesn't seem right
