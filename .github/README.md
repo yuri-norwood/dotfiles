@@ -17,7 +17,7 @@
 
 Configuration files and various customizations.
 
-## Installation
+### Installation
 
 This repo is designed to be installed directly into a user's `$HOME` directory,
 this can be done using git:
