@@ -1,6 +1,7 @@
 # dotfiles
-[![Vint](https://github.com/yuri-norwood/dotfiles/workflows/vint/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Avint)
-[![Shellcheck](https://github.com/yuri-norwood/dotfiles/workflows/shellcheck/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Ashellcheck)
+
+[![Vim lint](https://github.com/yuri-norwood/dotfiles/workflows/vimscript/badge.svg?label=Vim%20Lint)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Avimscript)
+[![Shellcheck](https://github.com/yuri-norwood/dotfiles/workflows/shell/badge.svg?label=Shellcheck)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Ashell)
 [![Editorconfig](https://github.com/yuri-norwood/dotfiles/workflows/editorconfig/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Aeditorconfig)
 [![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 [![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
@@ -55,4 +56,3 @@ You can tell a lot about a hacker by their `.profile`, if you see something you
 like, please help yourself :)
 
 See [LICENSE](LICENSE) for terms.
-
