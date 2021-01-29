@@ -1,4 +1,5 @@
 actions: # GitHub Actions
+  - ".github/workflows/*.yml"
 
 bug: # Something isn't working
 
