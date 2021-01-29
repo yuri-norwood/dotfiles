@@ -1,10 +1,15 @@
-actions: # GitHub Actions
+---
+
+# GitHub Actions
+actions:
   - ".github/workflows/*.yml"
 
-dmenu: # http://tools.suckless.org/dmenu/
+# http://tools.suckless.org/dmenu/
+dmenu:
   - ".dmenu/**"
 
-documentation: # Improvements or additions to documentation
+# Improvements or additions to documentation
+documentation:
   - any: [
     ".github/README.md",
     ".github/LICENSE",
@@ -16,13 +21,16 @@ documentation: # Improvements or additions to documentation
     "**/README*"
   ]
 
-dwm: # http://dwm.suckless.org/
+# http://dwm.suckless.org/
+dwm:
   - ".dwm/**"
 
-editorconfig: # This regards the .editorconfig file or settings
+# This regards the .editorconfig file or settings
+editorconfig:
   - "**/.editorconfig"
 
-enhancement: # New feature or request
+# New feature or request
+enhancement:
   - any: [
     "*",
     ".config/gh/*",
@@ -35,13 +43,16 @@ enhancement: # New feature or request
     ".nuget"
   ]
 
-github: # Actually GitHub
+# Actually GitHub
+github:
   - ".github/**"
 
-js: # This regards JavaScript
+# This regards JavaScript
+js:
   - "**.js"
 
-openbsd: # Has to do with Puffy
+# Has to do with Puffy
+openbsd:
   - any: [
     "**/openbsd/**",
     ".doas.conf",
@@ -50,13 +61,16 @@ openbsd: # Has to do with Puffy
     "**.ksh"
   ]
 
-sponsor: # GitHub sponsors
+# GitHub sponsors
+sponsor:
   - ".github/FUNDING.yml"
 
-st: # http://st.suckless.org/
+# http://st.suckless.org/
+st:
   - ".st/**"
 
-suckless: # Anything to do with a suckless.org tool
+# Anything to do with a suckless.org tool
+suckless:
   - any: [
     ".dmenu/**",
     ".dwm/**",
@@ -67,16 +81,20 @@ suckless: # Anything to do with a suckless.org tool
     "**.config.def.h"
   ]
 
-surf: # http://surf.suckless.org/
+# http://surf.suckless.org/
+surf:
   - ".surf/**"
 
-tabbed: # http://tools.suckless.org/tabbed/
+# http://tools.suckless.org/tabbed/
+tabbed:
   - ".tabbed/**"
 
-test: # This needs a test case written
+# This needs a test case written
+test:
   - ".github/workflows/testing.yml"
 
-vim: # This regard vim or vimscript
+# This regard vim or vimscript
+vim:
   - any: [
     ".exrc",
     ".vimrc",
@@ -84,5 +102,6 @@ vim: # This regard vim or vimscript
     "**.vim"
   ]
 
-"visual studio": # This affects Visual Studio (or VS-Code)
+# This affects Visual Studio (or VS-Code)
+"visual studio":
   - ".vs/**"
