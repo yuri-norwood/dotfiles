@@ -36,6 +36,7 @@ enhancement: # New feature or request
   ]
 
 github: # Actually GitHub
+  - ".github"
 
 "good first issue": # Good for newcomers
 
