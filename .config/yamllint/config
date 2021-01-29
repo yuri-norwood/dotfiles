@@ -8,5 +8,5 @@ rules:
   truthy:
     check-keys: false
     allowed-values:
-      - true
-      - false
+      - "true"
+      - "false"
