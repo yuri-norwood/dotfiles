@@ -15,19 +15,21 @@ jobs:
   pull_request:
     runs-on: ubuntu-latest
     steps:
-    - uses: seferov/pr-lint-action@master
-      with:
-        # Check PR title against regex and close it if it fails
-        title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
-        title-regex-flags: 'g'
-        error-message: 'Add issue number and type to your title'
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        auto-close-message: 'Closing this pull request since the title does not match %pattern% pattern. Please fix the title and re-open the pull request.'
+      - uses: seferov/pr-lint-action@master
+        with:
+          # Check PR title against regex and close it if it fails
+          title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
+          title-regex-flags: 'g'
+          error-message: 'Add issue number and type to your title'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-close-message:
+            Closing this pull request since the title does not match %pattern% pattern.
+            Please fix the title and re-open the pull request.
 
   labeler:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@main
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        sync-labels: true
+      - uses: actions/labeler@main
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          sync-labels: true
