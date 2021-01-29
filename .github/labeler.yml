@@ -10,6 +10,8 @@ documentation: # Improvements or additions to documentation
     ".github/LICENSE",
     ".github/CODEOWNERS",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/*.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
   ]
 
 duplicate: # This issue or pull request already exists
