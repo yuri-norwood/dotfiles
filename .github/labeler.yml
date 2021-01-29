@@ -9,6 +9,7 @@ documentation: # Improvements or additions to documentation
     ".github/README.md",
     ".github/LICENSE",
     ".github/CODEOWNERS",
+    ".github/PULL_REQUEST_TEMPLATE.md",
   ]
 
 duplicate: # This issue or pull request already exists
