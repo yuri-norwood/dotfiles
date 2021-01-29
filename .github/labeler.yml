@@ -31,6 +31,8 @@ enhancement: # New feature or request
     ".gitconfig",
     ".gitignore",
     ".gitmodules",
+    ".dotnet",
+    ".nuget"
   ]
 
 github: # Actually GitHub
