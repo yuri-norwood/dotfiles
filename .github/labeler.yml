@@ -11,14 +11,12 @@ dmenu:
 # Improvements or additions to documentation
 documentation:
   - any:
-      - ".github/README.md"
-      - ".github/LICENSE"
-      - ".github/CODEOWNERS"
-      - ".github/PULL_REQUEST_TEMPLATE.md"
-      - ".github/ISSUE_TEMPLATE/*.md"
-      - ".github/ISSUE_TEMPLATE/config.yml"
-      - ".gitattributes"
-      - "**/README*"
+      - **.md
+      - .github/LICENSE
+      - .github/CODEOWNERS
+      - .github/ISSUE_TEMPLATE/config.yml
+      - .gitattributes
+      - **/README*
 
 # http://dwm.suckless.org/
 dwm:
