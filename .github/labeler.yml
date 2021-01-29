@@ -5,16 +5,15 @@ dmenu: # http://tools.suckless.org/dmenu/
   - ".dmenu/**"
 
 documentation: # Improvements or additions to documentation
-  - any: [
-    ".github/README.md",
-    ".github/LICENSE",
-    ".github/CODEOWNERS",
-    ".github/PULL_REQUEST_TEMPLATE.md",
-    ".github/ISSUE_TEMPLATE/*.md",
-    ".github/ISSUE_TEMPLATE/config.yml",
-    ".gitattributes",
-    "**/README*"
-  ]
+  - any:
+    - ".github/README.md"
+    - ".github/LICENSE"
+    - ".github/CODEOWNERS"
+    - ".github/PULL_REQUEST_TEMPLATE.md"
+    - ".github/ISSUE_TEMPLATE/*.md"
+    - ".github/ISSUE_TEMPLATE/config.yml"
+    - ".gitattributes"
+    - "**/README*"
 
 dwm: # http://dwm.suckless.org/
   - ".dwm/**"
@@ -23,17 +22,16 @@ editorconfig: # This regards the .editorconfig file or settings
   - "**/.editorconfig"
 
 enhancement: # New feature or request
-  - any: [
-    "*",
-    ".config/gh/*",
-    ".github/**",
-    ".gitattributes",
-    ".gitconfig",
-    ".gitignore",
-    ".gitmodules",
-    ".dotnet",
-    ".nuget"
-  ]
+  - any:
+    - "*"
+    - ".config/gh/*"
+    - ".github/**"
+    - ".gitattributes"
+    - ".gitconfig"
+    - ".gitignore"
+    - ".gitmodules"
+    - ".dotnet"
+    - ".nuget"
 
 github: # Actually GitHub
   - ".github/**"
@@ -42,13 +40,12 @@ js: # This regards JavaScript
   - "**.js"
 
 openbsd: # Has to do with Puffy
-  - any: [
-    "**/openbsd/**",
-    ".doas.conf",
-    ".xsetup",
-    ".kshrc",
-    "**.ksh"
-  ]
+  - any:
+    - "**/openbsd/**"
+    - ".doas.conf"
+    - ".xsetup"
+    - ".kshrc"
+    - "**.ksh"
 
 sponsor: # GitHub sponsors
   - ".github/FUNDING.yml"
@@ -58,14 +55,13 @@ st: # http://st.suckless.org/
 
 suckless: # Anything to do with a suckless.org tool
   - any: [
-    ".dmenu/**",
-    ".dwm/**",
-    ".st/**",
-    ".surf/**",
-    ".tabbed/**",
-    "**.config.h",
-    "**.config.def.h"
-  ]
+    - ".dmenu/**"
+    - ".dwm/**"
+    - ".st/**"
+    - ".surf/**"
+    - ".tabbed/**"
+    - "**.config.h"
+    - "**.config.def.h"
 
 surf: # http://surf.suckless.org/
   - ".surf/**"
@@ -77,12 +73,11 @@ test: # This needs a test case written
   - ".github/workflows/testing.yml"
 
 vim: # This regard vim or vimscript
-  - any: [
-    ".exrc",
-    ".vimrc",
-    ".vim/**",
-    "**.vim"
-  ]
+  - any:
+    - ".exrc"
+    - ".vimrc"
+    - ".vim/**"
+    - "**.vim"
 
 "visual studio": # This affects Visual Studio (or VS-Code)
   - ".vs/**"
