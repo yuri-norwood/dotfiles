@@ -77,6 +77,12 @@ test: # This needs a test case written
   - ".github/workflows/testing.yml"
 
 vim: # This regard vim or vimscript
+  - any: [
+    ".exrc",
+    ".vimrc",
+    ".vim/**",
+    "**.vim"
+  ]
 
 "visual studio": # This affects Visual Studio (or VS-Code)
 
