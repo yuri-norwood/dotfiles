@@ -17,6 +17,7 @@ documentation: # Improvements or additions to documentation
   ]
 
 dwm: # http://dwm.suckless.org/
+  - ".dwm"
 
 editorconfig: # This regards the .editorconfig file or settings
 
