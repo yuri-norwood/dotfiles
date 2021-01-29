@@ -68,6 +68,7 @@ suckless: # Anything to do with a suckless.org tool
   ]
 
 surf: # http://surf.suckless.org/
+  - ".surf/**"
 
 tabbed: # http://tools.suckless.org/tabbed/
 
