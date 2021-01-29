@@ -1,30 +1,20 @@
 ---
 
 # GitHub Actions
-actions:
-  - ".github/workflows/*.yml"
+actions: .github/workflows/*.yml
 
 # http://tools.suckless.org/dmenu/
-dmenu:
-  - ".dmenu/**"
+dmenu: .dmenu/**
 
 # Improvements or additions to documentation
 documentation:
-  - any:
-      - "**.md"
-      - ".github/LICENSE"
-      - ".github/CODEOWNERS"
-      - ".github/ISSUE_TEMPLATE/config.yml"
-      - ".gitattributes"
-      - "**/README*"
+  - any: [ "**.md", ".github/LICENSE", ".github/CODEOWNERS", ".github/ISSUE_TEMPLATE/config.yml", ".gitattributes", "**/README*" ]
 
 # http://dwm.suckless.org/
-dwm:
-  - ".dwm/**"
+dwm: .dwm/**
 
 # This regards the .editorconfig file or settings
-editorconfig:
-  - "**/.editorconfig"
+editorconfig: **/.editorconfig
 
 # New feature or request
 enhancement:
@@ -40,12 +30,10 @@ enhancement:
       - ".nuget"
 
 # Actually GitHub
-github:
-  - ".github/**"
+github: .github/**
 
 # This regards JavaScript
-js:
-  - "**.js"
+js: **.js
 
 # Has to do with Puffy
 openbsd:
@@ -61,8 +49,7 @@ sponsor:
   - ".github/FUNDING.yml"
 
 # http://st.suckless.org/
-st:
-  - ".st/**"
+st: .st/**
 
 # Anything to do with a suckless.org tool
 suckless:
@@ -76,16 +63,13 @@ suckless:
       - "**.config.def.h"
 
 # http://surf.suckless.org/
-surf:
-  - ".surf/**"
+surf: .surf/**
 
 # http://tools.suckless.org/tabbed/
-tabbed:
-  - ".tabbed/**"
+tabbed: .tabbed/**
 
 # This needs a test case written
-test:
-  - ".github/workflows/testing.yml"
+test: .github/workflows/testing.yml
 
 # This regard vim or vimscript
 vim:
@@ -96,5 +80,4 @@ vim:
       - "**.vim"
 
 # This affects Visual Studio (or VS-Code)
-"visual studio":
-  - ".vs/**"
+visual studio: .vs/**
