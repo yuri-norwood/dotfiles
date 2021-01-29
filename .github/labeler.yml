@@ -71,6 +71,7 @@ surf: # http://surf.suckless.org/
   - ".surf/**"
 
 tabbed: # http://tools.suckless.org/tabbed/
+  - ".tabbed/**"
 
 test: # This needs a test case written
 
