@@ -2,6 +2,7 @@ actions: # GitHub Actions
   - ".github/workflows/*.yml"
 
 dmenu: # http://tools.suckless.org/dmenu/
+  - ".dmenu/**"
 
 documentation: # Improvements or additions to documentation
 
