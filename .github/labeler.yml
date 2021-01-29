@@ -10,16 +10,15 @@ dmenu:
 
 # Improvements or additions to documentation
 documentation:
-  - any: [
-    ".github/README.md",
-    ".github/LICENSE",
-    ".github/CODEOWNERS",
-    ".github/PULL_REQUEST_TEMPLATE.md",
-    ".github/ISSUE_TEMPLATE/*.md",
-    ".github/ISSUE_TEMPLATE/config.yml",
-    ".gitattributes",
-    "**/README*"
-  ]
+  - any:
+      - ".github/README.md"
+      - ".github/LICENSE"
+      - ".github/CODEOWNERS"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
+      - ".github/ISSUE_TEMPLATE/*.md"
+      - ".github/ISSUE_TEMPLATE/config.yml"
+      - ".gitattributes"
+      - "**/README*"
 
 # http://dwm.suckless.org/
 dwm:
@@ -31,17 +30,16 @@ editorconfig:
 
 # New feature or request
 enhancement:
-  - any: [
-    "*",
-    ".config/gh/*",
-    ".github/**",
-    ".gitattributes",
-    ".gitconfig",
-    ".gitignore",
-    ".gitmodules",
-    ".dotnet",
-    ".nuget"
-  ]
+  - any:
+      - "*"
+      - ".config/gh/*"
+      - ".github/**"
+      - ".gitattributes"
+      - ".gitconfig"
+      - ".gitignore"
+      - ".gitmodules"
+      - ".dotnet"
+      - ".nuget"
 
 # Actually GitHub
 github:
@@ -53,13 +51,12 @@ js:
 
 # Has to do with Puffy
 openbsd:
-  - any: [
-    "**/openbsd/**",
-    ".doas.conf",
-    ".xsetup",
-    ".kshrc",
-    "**.ksh"
-  ]
+  - any:
+      - "**/openbsd/**"
+      - ".doas.conf"
+      - ".xsetup"
+      - ".kshrc"
+      - "**.ksh"
 
 # GitHub sponsors
 sponsor:
@@ -71,15 +68,14 @@ st:
 
 # Anything to do with a suckless.org tool
 suckless:
-  - any: [
-    ".dmenu/**",
-    ".dwm/**",
-    ".st/**",
-    ".surf/**",
-    ".tabbed/**",
-    "**.config.h",
-    "**.config.def.h"
-  ]
+  - any:
+      - ".dmenu/**"
+      - ".dwm/**"
+      - ".st/**"
+      - ".surf/**"
+      - ".tabbed/**"
+      - "**.config.h"
+      - "**.config.def.h"
 
 # http://surf.suckless.org/
 surf:
@@ -95,12 +91,11 @@ test:
 
 # This regard vim or vimscript
 vim:
-  - any: [
-    ".exrc",
-    ".vimrc",
-    ".vim/**",
-    "**.vim"
-  ]
+  - any:
+      - ".exrc"
+      - ".vimrc"
+      - ".vim/**"
+      - "**.vim"
 
 # This affects Visual Studio (or VS-Code)
 "visual studio":
