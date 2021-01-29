@@ -74,6 +74,7 @@ tabbed: # http://tools.suckless.org/tabbed/
   - ".tabbed/**"
 
 test: # This needs a test case written
+  - ".github/workflows/testing.yml"
 
 vim: # This regard vim or vimscript
 
