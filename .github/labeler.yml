@@ -8,18 +8,18 @@ dmenu: '.dmenu/**'
 
 # Improvements or additions to documentation
 documentation:
-  - any: [ "**.md", ".github/LICENSE", ".github/CODEOWNERS", ".github/ISSUE_TEMPLATE/config.yml", ".gitattributes", "**/README*" ]
+  - '.github/*.md'
+  - '.github/LICENSE'
+  - '.github/CODEOWNERS'
+  - '.github/ISSUE_TEMPLATE/config.yml'
+  - './.gitattributes'
+  - '.vim/pack/*/start/README.md'
 
 # http://dwm.suckless.org/
 dwm: '.dwm/**'
 
 # This regards the .editorconfig file or settings
 editorconfig: '**/.editorconfig'
-
-# New feature or request
-enhancement:
-  - any: [ '**' ]
-    all: [ '!.config/gh/*', '!.github/**', '!.gitattributes', '!.gitconfig', '!.gitignore', '!.gitmodules', '!.dotnet', '!.nuget' ]
 
 # Actually GitHub
 github: '.github/**'
@@ -29,7 +29,11 @@ js: '**.js'
 
 # Has to do with Puffy
 openbsd:
-  - any: [ '**/openbsd/**', '.doas.conf', '.xsetup', '.kshrc', '**.ksh' ]
+  - '**/openbsd/**'
+  - './.doas.conf'
+  - './.xsetup'
+  - './.kshrc'
+  - '**.ksh'
 
 # GitHub sponsors
 sponsor: '.github/FUNDING.yml'
@@ -39,7 +43,13 @@ st: '.st/**'
 
 # Anything to do with a suckless.org tool
 suckless:
-  - any: [ '.dmenu/**', '.dwm/**', '.st/**', '.surf/**', '.tabbed/**', '**.config.h', '**.config.def.h' ]
+  - '.dmenu/**'
+  - '.dwm/**'
+  - '.st/**'
+  - '.surf/**'
+  - '.tabbed/**'
+  - '**.config.h'
+  - '**.config.def.h'
 
 # http://surf.suckless.org/
 surf: '.surf/**'
@@ -52,7 +62,10 @@ test: '.github/workflows/testing.yml'
 
 # This regard vim or vimscript
 vim:
-  - any: [ '.exrc', '.vimrc', '.vim/**', '**.vim' ]
+  - './.exrc'
+  - './.vimrc'
+  - './.vim/**'
+  - './**.vim'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
