@@ -1,3 +1,16 @@
 ---
 
+# This file defines testing actions
+name: linting
 
+# Test whenever there is a push or a pull request opened
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Define a job for each linter / language
+jobs:
+  
