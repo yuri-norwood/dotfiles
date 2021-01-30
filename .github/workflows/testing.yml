@@ -13,16 +13,18 @@ on:
 
 # Define a job for each test group
 jobs:
-  # This job checks that all _ tests pass
+  # This job checks that all config tests pass
   configs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Test _
+      - name: Test Foo
+        run: echo "Testing foo..."
 
-  # This job checks that all _ tests pass
+  # This job checks that all script tests pass
   scripts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Test _
+      - name: Test Foo
+        run: echo "Testing foo..."
