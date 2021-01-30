@@ -11,6 +11,18 @@ on:
   pull_request:
     branches: [main]
 
-# Define a job for each linter / language
+# Define a job for each test group
 jobs:
-  
+  # This job checks that all _ tests pass
+  configs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Test _
+
+  # This job checks that all _ tests pass
+  scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Test _
