@@ -20,6 +20,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test Foo
         run: echo "Testing foo..."
+      - uses: actions/checkout@v1
+      - name: Test xsetup
+        run: |
+          echo "Test... that xsetroot is called..."
+          grep -E "^xsetroot" .xsetup
 
   # This job checks that all script tests pass
   scripts:
