@@ -20,6 +20,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test Foo
         run: echo "Testing foo..."
+      - uses: actions/checkout@v1
+      - name: Test .xsession
+        run: |
+          echo "Test... that the xinitrc file is included..."
+          grep -E "^\. ~/.xinitrc" .xsession
 
   # This job checks that all script tests pass
   scripts:
