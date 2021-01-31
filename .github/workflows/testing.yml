@@ -20,6 +20,15 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test Foo
         run: echo "Testing foo..."
+      - name: Test .xinitrc
+        run: |
+          echo "Test... that the profile is included..."
+      - name: Test .xinitrc
+        run: |
+          echo "Test... that dwm is exec-ed, unless dwm is not found and uname returns 'OpenBSD'..."
+      - name: Test .xinitrc
+        run: |
+          echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
 
   # This job checks that all script tests pass
   scripts:
