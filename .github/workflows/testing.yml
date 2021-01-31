@@ -13,32 +13,69 @@ on:
 
 # Define a job for each test group
 jobs:
+
   # This job checks that all config tests pass
   configs:
     runs-on: ubuntu-latest
     steps:
+
+      # Dummy test - Always fails
       - uses: actions/checkout@v1
       - name: Test Foo
-        run: echo "Testing foo..."
+        run: |
+          echo "Testing foo..."
+          false
+
+      # Test Xorg initiation includeds shell profile
+      # ---
+      # This ensures that the necessary environment
+      # variables are initialised so that the .kshrc
+      # can be accessed via ENV, PATH includes any
+      # needed scripts, etc...
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
           echo "Test... that the profile is included..."
           grep -E "^\. ~/.profile" .xinitrc
+      
+      # Test Xorg initiation starts dwm
+      # ---
+      # This ensures that the correct window manager
+      # is started after all other initiations and
+      # configurations are completed.
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
           echo "Test... that dwm is exec-ed, unless dwm is not found and uname returns 'OpenBSD'..."
           grep -E "^exec dwm"
+            
+      # Test Xorg initiation starts fvwm as a fallback
+      # ---
+      # This ensures that fvwm is correctly selected as
+      # a fallback if dwm is not available on an OpenBSD
+      # system.
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
           echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
+            
+      # Test Xorg initiation via display manager correctly
+      # ---
+      # This ensures that when Xorg is started via a
+      # graphical display manager instead of via xinit
+      # or via startx, the configs for xinit are also
+      # included to ensure consistency.
       - uses: actions/checkout@v1
       - name: Test .xsession
         run: |
           echo "Test... that the xinitrc file is included..."
           grep -E "^\. ~/.xinitrc" .xsession
+            
+      # Test Xorg initiation sets the background
+      # ---
+      # This ensures that, at minimum, the background
+      # is set to a texture pattern rather than the
+      # black default.
       - uses: actions/checkout@v1
       - name: Test xsetup
         run: |
@@ -49,6 +86,10 @@ jobs:
   scripts:
     runs-on: ubuntu-latest
     steps:
+
+      # Dummy test - Always fails
       - uses: actions/checkout@v1
       - name: Test Foo
-        run: echo "Testing foo..."
+        run: |
+          echo "Testing foo..."
+          false
