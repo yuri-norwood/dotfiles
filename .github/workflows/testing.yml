@@ -24,6 +24,7 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that the profile is included..."
+          grep -E "^\. ~/.profile" .xinitrc
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
