@@ -58,6 +58,7 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
+          false
             
       # Test Xorg initiation via display manager correctly
       # ---
