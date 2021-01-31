@@ -32,6 +32,14 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
+      - name: Test .xsession
+        run: |
+          echo "Test... that the xinitrc file is included..."
+          grep -E "^\. ~/.xinitrc" .xsession
+      - name: Test xsetup
+        run: |
+          echo "Test... that xsetroot is called..."
+          grep -E "^xsetroot" .xsetup
 
   # This job checks that all script tests pass
   scripts:
