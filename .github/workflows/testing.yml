@@ -35,9 +35,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
-          echo "Test... that the profile is included..."
+          echo "Test that the profile is included..."
           grep -q -E "^\. ~/.profile" .xinitrc
-      
+
       # Test Xorg initiation starts dwm
       # ---
       # This ensures that the correct window manager
@@ -46,9 +46,12 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
-          echo "Test... that dwm is exec-ed, unless dwm is not found and uname returns 'OpenBSD'..."
+          echo "Test that dwm is exec-ed..."
+          echo "...unless dwm is NOT found"
+          echo "AND"
+          echo "uname returns 'OpenBSD'..."
           grep -q -E "^exec dwm"
-            
+
       # Test Xorg initiation starts fvwm as a fallback
       # ---
       # This ensures that fvwm is correctly selected as
@@ -57,9 +60,12 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
-          echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
+          echo "Test that fvwm is exec-ed..."
+          echo "...if dwm is NOT installed"
+          echo "AND"
+          echo "uname returns 'OpenBSD'..."
           false
-            
+
       # Test Xorg initiation via display manager correctly
       # ---
       # This ensures that when Xorg is started via a
@@ -71,7 +77,7 @@ jobs:
         run: |
           echo "Test... that the xinitrc file is included..."
           grep -q -E "^\. ~/.xinitrc" .xsession
-            
+
       # Test Xorg initiation sets the background
       # ---
       # This ensures that, at minimum, the background
@@ -80,7 +86,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test xsetup
         run: |
-          echo "Test... that xsetroot is called..."
+          echo "Test that xsetroot is called..."
           grep -q -E "^xsetroot" .xsetup
 
       # Test shellcheck config syntax is valid
@@ -90,7 +96,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test .shellcheckrc
         run: |
-          echo "Testing that all lines match regex..."
+          echo "Test that all lines match regex..."
           grep -q -E '^disable=SC\d+$' .shellcheckrc
 
   # This job checks that all script tests pass
