@@ -32,10 +32,12 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that fvwm is exec-ed if dwm is not installed and uname returns 'OpenBSD'..."
+      - uses: actions/checkout@v1
       - name: Test .xsession
         run: |
           echo "Test... that the xinitrc file is included..."
           grep -E "^\. ~/.xinitrc" .xsession
+      - uses: actions/checkout@v1
       - name: Test xsetup
         run: |
           echo "Test... that xsetroot is called..."
