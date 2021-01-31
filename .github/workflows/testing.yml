@@ -36,7 +36,7 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that the profile is included..."
-          grep -E "^\. ~/.profile" .xinitrc
+          grep -q -E "^\. ~/.profile" .xinitrc
       
       # Test Xorg initiation starts dwm
       # ---
@@ -47,7 +47,7 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that dwm is exec-ed, unless dwm is not found and uname returns 'OpenBSD'..."
-          grep -E "^exec dwm"
+          grep -q -E "^exec dwm"
             
       # Test Xorg initiation starts fvwm as a fallback
       # ---
@@ -70,7 +70,7 @@ jobs:
       - name: Test .xsession
         run: |
           echo "Test... that the xinitrc file is included..."
-          grep -E "^\. ~/.xinitrc" .xsession
+          grep -q -E "^\. ~/.xinitrc" .xsession
             
       # Test Xorg initiation sets the background
       # ---
@@ -81,7 +81,7 @@ jobs:
       - name: Test xsetup
         run: |
           echo "Test... that xsetroot is called..."
-          grep -E "^xsetroot" .xsetup
+          grep -q -E "^xsetroot" .xsetup
 
       # Test shellcheck config syntax is valid
       # ---
@@ -91,7 +91,7 @@ jobs:
       - name: Test .shellcheckrc
         run: |
           echo "Testing that all lines match regex..."
-          grep -E '^disable=SC\d+$' .shellcheckrc
+          grep -q -E '^disable=SC\d+$' .shellcheckrc
 
   # This job checks that all script tests pass
   scripts:
