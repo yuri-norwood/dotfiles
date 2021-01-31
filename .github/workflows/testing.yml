@@ -29,6 +29,7 @@ jobs:
       - name: Test .xinitrc
         run: |
           echo "Test... that dwm is exec-ed, unless dwm is not found and uname returns 'OpenBSD'..."
+          grep -E "^exec dwm"
       - uses: actions/checkout@v1
       - name: Test .xinitrc
         run: |
