@@ -1,7 +1,7 @@
 ---
 
 # This file defines testing actions
-name: linting
+name: testing
 
 # Test whenever there is a push or a pull request opened
 on:
@@ -20,6 +20,16 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test Foo
         run: echo "Testing foo..."
+
+      # Test shellcheck config syntax is valid
+      # ---
+      # This ensures that only valid shellcheck directives
+      # are disabled via the shellcheck config file.
+      - uses: actions/checkout@v1
+      - name: Test .shellcheckrc
+        run: |
+          echo "Testing that all lines match regex..."
+          grep -E '^disable=SC\d+$' .shellcheckrc
 
   # This job checks that all script tests pass
   scripts:
