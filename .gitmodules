@@ -5,10 +5,10 @@
 	path = .vim/pack/colours/start/paper
 	url = https://github.com/NLKNguyen/papercolor-theme
 [submodule ".vim/pack/yuri/start/gitignore"]
-	path = .vim/pack/yuri/start/gitignore
+	path = .vim/pack/git/start/gitignore
 	url = https://github.com/gisphm/vim-gitignore
 [submodule ".vim/pack/yuri/start/gitgutter"]
-	path = .vim/pack/yuri/start/gitgutter
+	path = .vim/pack/git/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 [submodule ".vim/pack/yuri/start/codedark"]
 	path = .vim/pack/colours/start/codedark
