@@ -44,7 +44,7 @@
 	path = .vim/pack/colours/start/toast
 	url = https://github.com/jsit/toast.vim
 [submodule ".vim/pack/yuri/start/pgn"]
-	path = .vim/pack/yuri/start/pgn
+	path = .vim/pack/pgn/start/syntax
 	url = https://github.com/yuri-norwood/pgn-syntax-vim
 [submodule ".vim/pack/yuri/start/editorconfig"]
 	path = .vim/pack/yuri/start/editorconfig
