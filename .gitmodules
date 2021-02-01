@@ -67,3 +67,6 @@
 [submodule ".vim/pack/yuri/start/javascript"]
 	path = .vim/pack/javascript/start/syntax
 	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/pack/colours/start/solarized"]
+	path = .vim/pack/colours/start/solarized
+	url = https://github.com/altercation/vim-colors-solarized
