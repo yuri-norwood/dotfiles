@@ -47,7 +47,7 @@
 	path = .vim/pack/pgn/start/syntax
 	url = https://github.com/yuri-norwood/pgn-syntax-vim
 [submodule ".vim/pack/yuri/start/editorconfig"]
-	path = .vim/pack/yuri/start/editorconfig
+	path = .vim/pack/editorconfig/start/core
 	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule ".tools/pfetch"]
 	path = .bin/pfetch
