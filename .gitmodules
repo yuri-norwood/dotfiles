@@ -65,5 +65,5 @@
 	path = .build/lib/vimlparser
 	url = https://github.com/ynkdir/vim-vimlparser
 [submodule ".vim/pack/yuri/start/javascript"]
-	path = .vim/pack/yuri/start/javascript
+	path = .vim/pack/javascript/start/syntax
 	url = https://github.com/pangloss/vim-javascript
