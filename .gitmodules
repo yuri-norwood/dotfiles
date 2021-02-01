@@ -58,3 +58,6 @@
 [submodule ".dwm/src"]
 	path = .dwm/src
 	url = https://git.suckless.org/dwm
+[submodule ".bin/scripts"]
+	path = .bin/scripts
+	url = https://github.com/yuri-norwood/scripts
