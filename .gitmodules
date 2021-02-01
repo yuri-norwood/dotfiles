@@ -1,67 +1,58 @@
-[submodule ".vim/pack/yuri/start/syntax-extra"]
+[submodule ".vim/pack/c/start/extras"]
 	path = .vim/pack/c/start/extras
 	url = https://github.com/justinmk/vim-syntax-extra
-[submodule ".vim/pack/yuri/start/papercolor"]
+[submodule ".vim/pack/colours/start/paper"]
 	path = .vim/pack/colours/start/paper
 	url = https://github.com/NLKNguyen/papercolor-theme
-[submodule ".vim/pack/yuri/start/gitignore"]
+[submodule ".vim/pack/git/start/gitignore"]
 	path = .vim/pack/git/start/gitignore
 	url = https://github.com/gisphm/vim-gitignore
-[submodule ".vim/pack/yuri/start/gitgutter"]
+[submodule ".vim/pack/git/start/gitgutter"]
 	path = .vim/pack/git/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/pack/yuri/start/codedark"]
+[submodule ".vim/pack/colours/start/codedark"]
 	path = .vim/pack/colours/start/codedark
 	url = https://github.com/tomasiser/vim-code-dark
-[submodule ".vim/pack/yuri/start/amber"]
+[submodule ".vim/pack/colours/start/amber"]
 	path = .vim/pack/colours/start/amber
 	url = https://github.com/camgunz/amber
-[submodule ".vim/pack/yuri/start/github-colors"]
+[submodule ".vim/pack/colours/start/github"]
 	path = .vim/pack/colours/start/github
 	url = https://github.com/cormacrelf/vim-colors-github
-[submodule ".vim/pack/yuri/start/juvenile"]
+[submodule ".vim/pack/colours/start/juvenile"]
 	path = .vim/pack/colours/start/juvenile
 	url = https://sanctum.geek.nz/code/vim-juvenile.git
-[submodule ".vim/pack/yuri/start/yaml"]
+[submodule ".vim/pack/yaml/start/syntax"]
 	path = .vim/pack/yaml/start/syntax
 	url = https://github.com/stephpy/vim-yaml
-[submodule ".vim/pack/yuri/start/pgn-syntax"]
-	path = .vim/pack/yuri/start/pgn-syntax
-	url = https://github.com/yuri-norwood/pgn-syntax-vim
-[submodule ".vim/pack/yuri/start/challenger-deep"]
+[submodule ".vim/pack/colours/start/challenger"]
 	path = .vim/pack/colours/start/challenger
 	url = https://github.com/challenger-deep-theme/vim
-[submodule ".vim/pack/yuri/start/one"]
+[submodule ".vim/pack/colours/start/one"]
 	path = .vim/pack/colours/start/one
 	url = https://github.com/rakr/vim-one
-[submodule ".vim/pack/yuri/start/iceberg"]
+[submodule ".vim/pack/colours/start/iceberg"]
 	path = .vim/pack/colours/start/iceberg
 	url = https://github.com/cocopon/iceberg.vim
-[submodule ".vim/pack/yuri/start/gotham"]
+[submodule ".vim/pack/gotham/start/gotham"]
 	path = .vim/pack/colours/start/gotham
 	url = https://github.com/whatyouhide/vim-gotham
-[submodule ".vim/pack/yuri/start/toast"]
+[submodule ".vim/pack/colours/start/toast"]
 	path = .vim/pack/colours/start/toast
 	url = https://github.com/jsit/toast.vim
-[submodule ".vim/pack/yuri/start/pgn"]
+[submodule ".vim/pack/pgn/start/syntax"]
 	path = .vim/pack/pgn/start/syntax
 	url = https://github.com/yuri-norwood/pgn-syntax-vim
-[submodule ".vim/pack/yuri/start/editorconfig"]
+[submodule ".vim/pack/editorconfig/start/core"]
 	path = .vim/pack/editorconfig/start/core
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule ".tools/pfetch"]
+[submodule ".bin/pfetch"]
 	path = .bin/pfetch
 	url = https://github.com/dylanaraps/pfetch
 [submodule ".bin/scripts"]
 	path = .bin/scripts
 	url = https://github.com/yuri-norwood/scripts
-[submodule ".build/lib/vimlint"]
-	path = .build/lib/vimlint
-	url = https://github.com/syngan/vim-vimlint
-[submodule ".build/lib/vimparser"]
-	path = .build/lib/vimlparser
-	url = https://github.com/ynkdir/vim-vimlparser
-[submodule ".vim/pack/yuri/start/javascript"]
+[submodule ".vim/pack/javascript/start/syntax"]
 	path = .vim/pack/javascript/start/syntax
 	url = https://github.com/pangloss/vim-javascript
 [submodule ".vim/pack/colours/start/solarized"]
