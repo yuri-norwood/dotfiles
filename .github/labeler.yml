@@ -63,6 +63,7 @@ test: '.github/workflows/testing.yml'
 # This regards vim or vimscript
 vim:
   - '.exrc'
+  - '.vimrc'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
