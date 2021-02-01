@@ -2,11 +2,6 @@
 
 [![Linters](https://github.com/yuri-norwood/dotfiles/workflows/linting/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
 [![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
-[![Top Language](https://img.shields.io/github/languages/top/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![Repo Size](https://img.shields.io/github/repo-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![Code Size](https://img.shields.io/github/languages/code-size/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![Commit Activity](https://img.shields.io/github/commit-activity/w/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
-[![Last Commit](https://img.shields.io/github/last-commit/yuri-norwood/dotfiles)](https://github.com/yuri-norwood/dotfiles)
 [![Actions](https://img.shields.io/badge/-actions-2088ff?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions)
 [![Sponsors](https://img.shields.io/badge/-sponsor-ea4aaa?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
 [![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
