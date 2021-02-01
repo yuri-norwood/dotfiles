@@ -1,5 +1,5 @@
 [submodule ".vim/pack/yuri/start/syntax-extra"]
-	path = .vim/pack/yuri/start/syntax-extra
+	path = .vim/pack/c/start/extras
 	url = https://github.com/justinmk/vim-syntax-extra
 [submodule ".vim/pack/yuri/start/papercolor"]
 	path = .vim/pack/colours/start/paper
