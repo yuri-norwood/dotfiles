@@ -1,7 +1,9 @@
 ---
 
 # GitHub Actions
-actions: '.github/workflows/*.yml'
+actions:
+  - '.github/workflows/*.yml'
+  - '.github/labeler.yml'
 
 # http://tools.suckless.org/dmenu/
 dmenu: '.dmenu/**'
