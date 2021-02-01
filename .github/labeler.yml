@@ -66,6 +66,7 @@ vim:
   - '.vimrc'
   - '.vim/*'
   - '.vim/**/*'
+  - '**/*.vim'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
