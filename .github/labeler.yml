@@ -8,10 +8,11 @@ dmenu: '.dmenu/**'
 
 # Improvements or additions to documentation
 documentation:
+  - '.github/*.yml'
   - '.github/*.md'
   - '.github/LICENSE'
   - '.github/CODEOWNERS'
-  - '.github/ISSUE_TEMPLATE/config.yml'
+  - '.github/ISSUE_TEMPLATE/*.yml'
   - '.github/ISSUE_TEMPLATE/*.md'
   - '.gitattributes'
   - '.vim/pack/*/start/README.md'
@@ -63,8 +64,6 @@ test: '.github/workflows/testing.yml'
 
 # This regards vim or vimscript
 vim:
-  - '.exrc'
-  - '.vimrc'
   - '.vim/*'
   - '.vim/**/*'
 
