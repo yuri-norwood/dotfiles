@@ -35,12 +35,20 @@ git clone --recursive -j8 https://github.com/yuri-norwood/dotfiles.git ~/.dotfil
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
 ```
 
-To update the submodules, add the `--recurse-submodules` flag when you pull your
-repo.
+To update your local copy, just pull the repo as you would normally.
 
 ```sh
 cd "$HOME"
-git pull --recurse-submodules -j8
+git pull
+```
+
+To update the submodules, recursively update all the submodules and commit the
+update.
+
+```sh
+cd "$HOME"
+git submodule foreach --recursive git pull origin master
+git commit -am "Updated submodules"
 ```
 
 ## License
