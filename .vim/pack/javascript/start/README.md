@@ -1,1 +1,4 @@
 # Vim JavaScript Plugins
+
+* syntax
+

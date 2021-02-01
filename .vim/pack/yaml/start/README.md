@@ -1,1 +1,4 @@
 # Vim Yaml Plugins
+
+* syntax
+

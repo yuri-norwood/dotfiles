@@ -1,1 +1,4 @@
 # Vim PGN Plugins
+
+* syntax
+

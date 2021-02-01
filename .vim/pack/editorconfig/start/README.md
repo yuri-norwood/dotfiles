@@ -1,1 +1,4 @@
 # Vim EditorConfig Plugins
+
+* core
+
