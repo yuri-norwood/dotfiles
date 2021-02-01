@@ -1,4 +1,4 @@
 # Vim EditorConfig Plugins
 
-* core
+* core - The core editorconfig functionality for Vim
 

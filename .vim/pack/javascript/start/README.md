@@ -1,4 +1,4 @@
 # Vim JavaScript Plugins
 
-* syntax
+* syntax - Extended syntax highlighting and folding
 

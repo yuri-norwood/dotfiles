@@ -1,4 +1,4 @@
 # Vim C / C++ Plugins
 
-* extras
+* extras - Syntax enhancements for C, Bison, and Flex
 

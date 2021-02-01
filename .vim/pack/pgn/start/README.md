@@ -1,4 +1,4 @@
 # Vim PGN Plugins
 
-* syntax
+* syntax - Adds syntax highlighting for Chess game files
 

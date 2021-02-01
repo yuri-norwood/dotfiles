@@ -1,4 +1,4 @@
 # Vim Yaml Plugins
 
-* syntax
+* syntax - Adds highlighting for YAML files
 

@@ -1,5 +1,5 @@
 # Vim Git Plugins
 
-* gitgutter
-* gitignore
+* gitgutter - Adds diff indicators to the Vim buffer
+* gitignore - Syntax for the .gitignore files
 
