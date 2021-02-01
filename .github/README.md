@@ -1,13 +1,13 @@
 # dotfiles
 
-[![Linters](https://github.com/yuri-norwood/dotfiles/workflows/linting/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
-[![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
-[![Actions](https://img.shields.io/badge/-actions-2088ff?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions)
-[![Sponsors](https://img.shields.io/badge/-sponsor-ea4aaa?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
-[![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
+[![Vim](https://img.shields.io/github/labels/yuri-norwood/dotfiles/vim?logo=vim)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Avim)
 [![OpenBSD](https://img.shields.io/github/labels/yuri-norwood/dotfiles/openbsd?logo=openbsd&logoColor=000)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Aopenbsd)
 [![Suckless](https://img.shields.io/github/labels/yuri-norwood/dotfiles/suckless?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8IS0tIENvcHlyaWdodCAoYykgMjAxNSwgTGFzbG8gSHVuaG9sZCA8ZGV2QGZyaWduLmRlPiAtLT4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMi41IiBoZWlnaHQ9IjE1IiB2ZXJzaW9uPSIxLjEiPgo8cGF0aCBzdHlsZT0iZmlsbDojZWVlZWVlIiBkPSJtIDAsMTUgMjIuNSwwIDAsLTkuMzc1IC0xOC43NSwwIDAsLTEuODc1IDE4Ljc1LDAgMCwtMy43NSAtMjIuNSwwIDAsOS4zNzUgMTguNzUsMCAwLDEuODc1IC0xOC43NSwwIHoiIC8+Cjwvc3ZnPgo=)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Asuckless)
-[![Vim](https://img.shields.io/github/labels/yuri-norwood/dotfiles/vim?logo=vim)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Avim)
+[![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
+[![Actions](https://img.shields.io/badge/-actions-2088ff?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions)
+[![Sponsors](https://img.shields.io/badge/-sponsor-ea4aaa?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
+[![Linters](https://github.com/yuri-norwood/dotfiles/workflows/linting/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
+[![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
 
 Configuration files and various customizations.
 
