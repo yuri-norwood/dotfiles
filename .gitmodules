@@ -49,6 +49,9 @@
 [submodule ".bin/pfetch"]
 	path = .bin/pfetch
 	url = https://github.com/dylanaraps/pfetch
+[submodule ".bin/scripts"]
+	path = .bin/scripts
+	url = https://github.com/yuri-norwood/scripts
 [submodule ".vim/pack/javascript/start/syntax"]
 	path = .vim/pack/javascript/start/syntax
 	url = https://github.com/pangloss/vim-javascript
@@ -58,6 +61,3 @@
 [submodule ".dwm/src"]
 	path = .dwm/src
 	url = https://git.suckless.org/dwm
-[submodule ".bin/scripts"]
-	path = .bin/scripts
-	url = https://github.com/yuri-norwood/scripts
