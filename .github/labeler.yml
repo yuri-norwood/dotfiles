@@ -60,8 +60,9 @@ tabbed: '.tabbed/**'
 # This needs a test case written
 test: '.github/workflows/testing.yml'
 
-# This regard vim or vimscript
-vim: '**.vim**'
+# This regards vim or vimscript
+vim:
+  - '.exrc'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
