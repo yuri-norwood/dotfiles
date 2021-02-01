@@ -69,6 +69,3 @@ vim:
   - '.vim/**/*'
   - '.vim/pack/**/*'
   - '**/*.vim'
-
-# This affects Visual Studio (or VS-Code)
-visual studio: '.vs/**'
