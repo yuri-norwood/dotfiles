@@ -62,10 +62,11 @@ test: '.github/workflows/testing.yml'
 
 # This regards vim or vimscript
 vim:
-  - './.exrc'
-  - './.vimrc'
-  - './.vim/**/*'
-  - './**/*.vim'
+  - '.exrc'
+  - '.vimrc'
+  - '.vim/**/*'
+  - '.vim/pack/**/*'
+  - '**/*.vim'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
