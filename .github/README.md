@@ -6,8 +6,8 @@
 [![Visual Studio](https://img.shields.io/github/labels/yuri-norwood/dotfiles/visual%20studio?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
 [![Actions](https://img.shields.io/badge/-actions-2088ff?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions)
 [![Sponsors](https://img.shields.io/badge/-sponsor-ea4aaa?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
-[![Linters](https://github.com/yuri-norwood/dotfiles/workflows/linting/badge.svg)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
-[![License](https://img.shields.io/badge/License-Unlicense-blue)](LICENSE)
+[![Linters](https://img.shields.io/github/workflow/status/yuri-norwood/dotfiles/linting?label)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
+[![License](https://img.shields.io/badge/-Unlicense-blue)](LICENSE)
 
 Configuration files and various customizations.
 
