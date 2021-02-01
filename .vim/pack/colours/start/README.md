@@ -10,4 +10,3 @@
 * one - The One theme
 * paper - The PaperColor theme, inspired by Google's Material Design
 * toast - The Toast theme
-
