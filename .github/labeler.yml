@@ -12,7 +12,8 @@ documentation:
   - '.github/LICENSE'
   - '.github/CODEOWNERS'
   - '.github/ISSUE_TEMPLATE/config.yml'
-  - './.gitattributes'
+  - '.github/ISSUE_TEMPLATE/*.md'
+  - '.gitattributes'
   - '.vim/pack/*/start/README.md'
 
 # http://dwm.suckless.org/
@@ -30,9 +31,9 @@ js: '**.js'
 # Has to do with Puffy
 openbsd:
   - '**/openbsd/**'
-  - './.doas.conf'
-  - './.xsetup'
-  - './.kshrc'
+  - '.doas.conf'
+  - '.xsetup'
+  - '.kshrc'
   - '**.ksh'
 
 # GitHub sponsors
@@ -66,7 +67,6 @@ vim:
   - '.vimrc'
   - '.vim/*'
   - '.vim/**/*'
-  - '**/*.vim'
 
 # This affects Visual Studio (or VS-Code)
 visual studio: '.vs/**'
