@@ -38,3 +38,6 @@
 	stats   = status
 	staus   = status
 
+[submodule]
+	recurse = true
+
