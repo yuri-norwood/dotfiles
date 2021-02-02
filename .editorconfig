@@ -43,8 +43,8 @@ end_of_line  = crlf
 [.vimrc]
 trim_trailing_whitespace = false
 
-; JavaScript should be indented with spaces
-[*.js]
+; Web files should be indented with spaces
+[*.{html,htm,css,js}]
 indent_style = space
 indent_size  = 4
 
