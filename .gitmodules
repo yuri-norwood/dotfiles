@@ -64,3 +64,6 @@
 [submodule ".vim/pack/colours/start/flattened"]
 	path = .vim/pack/colours/start/flattened
 	url = https://github.com/romainl/flattened
+[submodule ".vim/pack/colours/start/typewriter"]
+	path = .vim/pack/colours/start/typewriter
+	url = https://github.com/logico/typewriter-vim

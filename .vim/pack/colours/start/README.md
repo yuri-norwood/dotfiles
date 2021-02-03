@@ -11,3 +11,4 @@
 * paper - The PaperColor theme, inspired by Google's Material Design
 * toast - The Toast theme
 * flattened - Solarized, but without the bullshit
+* typewriter - The TypeWriter theme
