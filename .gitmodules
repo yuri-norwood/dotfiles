@@ -61,3 +61,6 @@
 [submodule ".dwm/src"]
 	path = .dwm/src
 	url = https://git.suckless.org/dwm
+[submodule ".vim/pack/colours/start/flattened"]
+	path = .vim/pack/colours/start/flattened
+	url = https://github.com/romainl/flattened
