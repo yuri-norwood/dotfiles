@@ -15,11 +15,4 @@ jobs:
           head: ${{ github.ref }}
           base: main
           title: "[<TYPE>-<ISSUE>]: <TITLE>"
-          body:
-            \# Resolves \#<ISSUE>\n
-            \n
-            \## Changes\n
-            \n
-            * ...\n
-            * ...\n
-            * ...\n
+          body: "# Resolves #<ISSUE>\n\n# Changes\n\n* ...\n* ...\n* ..."
