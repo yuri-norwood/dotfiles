@@ -3,6 +3,7 @@
 * amber - Retro CRT goodness
 * challenger - Challenger Deep theme
 * codedark - The default Visual Studio theme
+* flattened - Solarized, without the bullshit
 * github - The GitHub code editor theme
 * gotham - Code never sleeps in Gotham City
 * iceberg - The IceBerg theme
