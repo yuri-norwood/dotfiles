@@ -16,10 +16,10 @@ jobs:
           base: main
           title: "[<TYPE>-<ISSUE>]: <TITLE>"
           body:
-            \# Resolves \#<ISSUE>
+            \# Resolves \#<ISSUE>\n
             \n
-            \## Changes
+            \## Changes\n
             \n
-            * ...
-            * ...
-            * ...
+            * ...\n
+            * ...\n
+            * ...\n
