@@ -1,3 +1,5 @@
+---
+
 name: "Create PR"
 on: push
 
@@ -11,5 +13,5 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         head: ${{ github.ref }}
-        base: master
+        base: main
         title: "[<TYPE>-<ISSUE>]: <TITLE>"
