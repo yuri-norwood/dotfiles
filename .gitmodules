@@ -70,3 +70,9 @@
 [submodule ".vim/pack/colours/start/typewriter"]
 	path = .vim/pack/colours/start/typewriter
 	url = https://github.com/logico/typewriter-vim
+[submodule ".vim/pack/html/start/syntax"]
+	path = .vim/pack/html/start/syntax
+	url = https://github.com/sheerun/html5.vim
+[submodule ".vim/pack/css/start/colourpreview"]
+	path = .vim/pack/css/start/colourpreview
+	url = https://github.com/ap/vim-css-color
