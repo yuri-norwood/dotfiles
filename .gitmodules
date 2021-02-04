@@ -79,3 +79,6 @@
 [submodule ".vim/pack/comments/start/manager"]
 	path = .vim/pack/comments/start/manager
 	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/pack/git/start/fugitive"]
+	path = .vim/pack/git/start/fugitive
+	url = https://github.com/tpope/vim-fugitive
