@@ -69,20 +69,20 @@ path_add "${DOTNET_TOOLS}"
 export PF_SOURCE="${HOME}/.pfetchrc"
 
 # Add pfetch to PATH
-path_add "${HOME}/.bin/pfetch"
+path_add "${HOME}/.local/bin/pfetch"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
-export GOPATH="${HOME}/.bin/go"
+export GOPATH="${HOME}/.local/bin/go"
 
 # Add go lang tools to PATH
 path_add "${GOPATH}/bin" "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
-path_add "${HOME}/.bin/$(uname | tr '[:upper:]' '[:lower:]')"
+path_add "${HOME}/.local/bin/$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Add general / universal scripts to PATH
-path_add "${HOME}/.bin/scripts"
+path_add "${HOME}/.local/bin/scripts"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
