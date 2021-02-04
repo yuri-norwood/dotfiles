@@ -26,6 +26,7 @@ jobs:
             Closing this pull request since the title does not match %pattern%
             pattern. Please fix the title and re-open the pull request.
 
+  # This job labels the PR based on the files modified
   labeler:
     runs-on: ubuntu-latest
     steps:
