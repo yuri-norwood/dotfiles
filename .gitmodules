@@ -76,3 +76,6 @@
 [submodule ".vim/pack/css/start/colourpreview"]
 	path = .vim/pack/css/start/colourpreview
 	url = https://github.com/ap/vim-css-color
+[submodule ".vim/pack/comments/start/manager"]
+	path = .vim/pack/comments/start/manager
+	url = https://github.com/tpope/vim-commentary
