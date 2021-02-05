@@ -52,6 +52,11 @@ export PAGER=less
 # Set ENV to provide shell specific settings
 export ENV="${HOME}/.kshrc"
 
+# Set XDG standard directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
 
