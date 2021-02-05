@@ -24,7 +24,7 @@ dwm: '.local/share/suckless/dwm/**'
 editorconfig: '**/.editorconfig'
 
 # Actually GitHub
-github: '.github/**'
+github: '.github/**/*'
 
 # This regards JavaScript
 js: '**.js'
