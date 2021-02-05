@@ -23,8 +23,8 @@ jobs:
           error-message: 'Add issue number and type to your title'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-close-message:
-            Closing this pull request since the title does not match %pattern%
-            pattern. Please fix the title and re-open the pull request.
+            Closing this pull request since the title does not match
+            `%pattern%`. Please fix the title and re-open the PR.
 
   # This job labels the PR based on the files modified
   labeler:
