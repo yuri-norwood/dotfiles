@@ -32,6 +32,9 @@ path_add() {
 		if [ -d "${MODULE}" ]
 		then
 			export PATH="${MODULE}:${PATH}"
+		elif [ -n "${XDG_BIN_HOME}" ]
+		then
+			path_add "${XDG_BIN_HOME}/${MODULE}"
 		fi
 	done
 }
@@ -77,7 +80,7 @@ path_add "${DOTNET_TOOLS}"
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
 # Add pfetch to PATH
-path_add "${XDG_BIN_HOME}/pfetch"
+path_add "pfetch"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
@@ -87,10 +90,10 @@ export GOPATH="${XDG_BIN_HOME}/go"
 path_add "${GOPATH}/bin" "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
-path_add "${XDG_BIN_HOME}/$(uname | tr '[:upper:]' '[:lower:]')"
+path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Add general / universal scripts to PATH
-path_add "${XDG_BIN_HOME}/scripts"
+path_add "scripts"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
