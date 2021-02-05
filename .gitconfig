@@ -8,6 +8,9 @@
 [pull]
 	rebase = true
 
+[push]
+	default = current
+
 [fetch]
 	prune = true
 
