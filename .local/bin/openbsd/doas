@@ -13,7 +13,7 @@ DOAS="/usr/bin/doas"
 CONFIG="/etc/doas.conf"
 
 # Set path of source config
-SOURCE="${HOME}/.doas.conf"
+SOURCE="${XDG_CONFIG_HOME}/doas/config"
 
 # Validate hardcoded executable path
 if [ ! -x "$DOAS" ]

@@ -6,7 +6,7 @@ actions:
   - '.github/labeler.yml'
 
 # http://tools.suckless.org/dmenu/
-dmenu: '.dmenu/**'
+dmenu: '.local/share/suckless/dmenu/**'
 
 # Improvements or additions to documentation
 documentation:
@@ -18,13 +18,13 @@ documentation:
   - '.vim/pack/*/start/README.md'
 
 # http://dwm.suckless.org/
-dwm: '.dwm/**'
+dwm: '.local/share/suckless/dwm/**'
 
 # This regards the .editorconfig file or settings
 editorconfig: '**/.editorconfig'
 
 # Actually GitHub
-github: '.github/**'
+github: '.github/**/*'
 
 # This regards JavaScript
 js: '**.js'
@@ -32,8 +32,8 @@ js: '**.js'
 # Has to do with Puffy
 openbsd:
   - '**/openbsd/**'
-  - './.doas.conf'
-  - './.xsetup'
+  - '.config/doas/**'
+  - '.config/xenodm/**'
   - './.kshrc'
   - '**.ksh'
 
@@ -41,23 +41,24 @@ openbsd:
 sponsor: '.github/FUNDING.yml'
 
 # http://st.suckless.org/
-st: '.st/**'
+st: '.local/share/suckless/st/**'
 
 # Anything to do with a suckless.org tool
 suckless:
-  - '.dmenu/**'
-  - '.dwm/**'
-  - '.st/**'
-  - '.surf/**'
-  - '.tabbed/**'
+  - '.local/share/suckless/dmenu/**'
+  - '.local/share/suckless/dwm/**'
+  - '.local/share/suckless/st/**'
+  - '.local/share/suckless/surf/**'
+  - '.local/share/suckless/tabbed/**'
+  - '.local/share/suckless/**'
   - '**.config.h'
   - '**.config.def.h'
 
 # http://surf.suckless.org/
-surf: '.surf/**'
+surf: '.local/share/suckless/surf/**'
 
 # http://tools.suckless.org/tabbed/
-tabbed: '.tabbed/**'
+tabbed: '.local/share/suckless/tabbed/**'
 
 # This needs a test case written
 test: '.github/workflows/testing.yml'

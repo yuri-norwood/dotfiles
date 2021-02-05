@@ -58,8 +58,8 @@
 [submodule ".vim/pack/colours/start/solarized"]
 	path = .vim/pack/colours/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".dwm/src"]
-	path = .dwm/src
+[submodule ".local/share/suckless/dwm/src"]
+	path = .local/share/suckless/dwm/src
 	url = https://git.suckless.org/dwm
 [submodule ".vim/pack/colours/start/flattened"]
 	path = .vim/pack/colours/start/flattened
