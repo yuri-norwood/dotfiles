@@ -52,10 +52,13 @@ export PAGER=less
 # Set ENV to provide shell specific settings
 export ENV="${HOME}/.kshrc"
 
-# Set XDG standard directories
+# Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
+
+# Set nonstandard and pseudo XDG directories
+export XDG_BIN_HOME="${HOME}/.local/bin"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -71,23 +74,23 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 path_add "${DOTNET_TOOLS}"
 
 # Set pfetch startup script
-export PF_SOURCE="${HOME}/.pfetchrc"
+export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
 # Add pfetch to PATH
-path_add "${HOME}/.local/bin/pfetch"
+path_add "${XDG_BIN_HOME}/pfetch"
 
 # Set Golang environment
 export GOROOT="/usr/local/go"
-export GOPATH="${HOME}/.local/bin/go"
+export GOPATH="${XDG_BIN_HOME}/go"
 
 # Add go lang tools to PATH
 path_add "${GOPATH}/bin" "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
-path_add "${HOME}/.local/bin/$(uname | tr '[:upper:]' '[:lower:]')"
+path_add "${XDG_BIN_HOME}/$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Add general / universal scripts to PATH
-path_add "${HOME}/.local/bin/scripts"
+path_add "${XDG_BIN_HOME}/scripts"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
