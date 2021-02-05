@@ -61,9 +61,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Set dotnet directories and privacy settings
-export DOTNET_ROOT="${HOME}/.dotnet"
-export DOTNET_TOOLS="${DOTNET}/tools"
-export NUGET_PACKAGES="${HOME}/.nuget/packages"
+export DOTNET_ROOT="${XDG_DATA_HOME}/dotnet"
+export DOTNET_TOOLS="${DOTNET_ROOT}/tools"
+export NUGET_PACKAGES="${DOTNET_ROOT}/nuget/packages"
 export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
