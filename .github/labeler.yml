@@ -32,8 +32,8 @@ js: '**.js'
 # Has to do with Puffy
 openbsd:
   - '**/openbsd/**'
-  - '.config/doas/config'
-  - './.xsetup'
+  - '.config/doas/**'
+  - '.config/xenodm/**'
   - './.kshrc'
   - '**.ksh'
 
