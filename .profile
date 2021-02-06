@@ -13,6 +13,14 @@ try() {
 	fi
 }
 
+# Helper to safely include external scripts
+include() {
+	if [ -f "$1" ]
+	then
+		. ~/.aliases
+	fi
+}
+
 # Helper to calculate PS1
 _PS1_DIR() {
 	case "$PWD" in
@@ -41,7 +49,7 @@ path_add() {
 }
 
 # Include alias definitions
-. ~/.aliases
+include ~/.config/aliases/main
 
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
