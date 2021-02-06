@@ -24,32 +24,39 @@ include() {
 # Helper to calculate PS1
 _PS1_DIR() {
 	case "$PWD" in
-		"$HOME")
-			echo "~" ;;
-		"/")
-			echo "/" ;;
-		*)
-			echo "${PWD##*/}" ;;
+		"$HOME") echo "~"          ;;
+		"/")     echo "/"          ;;
+		*)       echo "${PWD##*/}" ;;
 	esac
 }
 
 # Helper to add executables to $PATH
 path_add() {
-	# shellcheck disable=SC2068
-	for MODULE in $@
-	do
-		if [ -d "${MODULE}" ]
-		then
-			export PATH="${MODULE}:${PATH}"
-		elif [ -n "${XDG_BIN_HOME}" ]
-		then
-			path_add "${XDG_BIN_HOME}/${MODULE}"
-		fi
-	done
+	# If the directory exists, add it to PATH
+	if [ -d "$1" ]
+	then
+		export PATH="$1:${PATH}"
+
+	# Otherwise try as a subdir of XDG_BIN_HOME
+	elif [ -d "${XDG_BIN_HOME}" ]
+	then
+		path_add "${XDG_BIN_HOME}/$1"
+
+	# Lastly try as a subdir of .local/bin
+	elif [ -d ".local/bin" ]
+	then
+		path_add ".local/bin/$1"
+	fi
 }
 
 # Include alias definitions
 include ~/.config/aliases/main
+
+# Add scripts to PATH
+path_add "scripts"
+
+# Add pfetch to PATH
+path_add "pfetch"
 
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
@@ -88,21 +95,16 @@ path_add "${DOTNET_TOOLS}"
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
-# Add pfetch to PATH
-path_add "pfetch"
-
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOPATH="${XDG_BIN_HOME}/go"
 
 # Add go lang tools to PATH
-path_add "${GOPATH}/bin" "${GOROOT}/bin"
+path_add "${GOPATH}/bin"
+path_add "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
-
-# Add general / universal scripts to PATH
-path_add "scripts"
 
 # Integrate settings
 try xrdb -merge "${HOME}/.Xresources"
