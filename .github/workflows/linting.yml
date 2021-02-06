@@ -18,21 +18,29 @@ jobs:
   markdown:
     runs-on: ubuntu-latest
     steps:
+
+      # Lint the README
       - uses: actions/checkout@v1
       - name: Lint README
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/README.md
+
+      # Lint issue templates
       - uses: actions/checkout@v1
       - name: Lint ISSUE_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/ISSUE_TEMPLATE/*.md
+
+      # Lint pull request templates
       - uses: actions/checkout@v1
       - name: Lint PULL_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/PULL_REQUEST_TEMPLATE.md
+
+      # Lint vim plugin documentation
       - uses: actions/checkout@v1
       - name: Lint vim documentation
         uses: nosborn/github-action-markdown-cli@v1.1.1
@@ -43,6 +51,8 @@ jobs:
   yaml:
     runs-on: ubuntu-latest
     steps:
+
+      # Lint all .yml files
       - uses: actions/checkout@v1
       - name: yaml lint
         uses: ibiqlik/action-yamllint@v3
@@ -50,6 +60,8 @@ jobs:
           strict: true
           config_file: .config/yamllint/config
           format: parsable
+
+      # Lint yamllint config
       - uses: actions/checkout@v1
       - name: yaml lint config
         uses: ibiqlik/action-yamllint@v3
@@ -63,6 +75,7 @@ jobs:
   editorconfig:
     runs-on: ubuntu-latest
     steps:
+
       # Check all files against the ~/.editorconfig
       - uses: actions/checkout@v2
       - name: Check editorconfig
@@ -72,14 +85,15 @@ jobs:
   vimscript:
     runs-on: ubuntu-latest
     steps:
-      # Check ~/.vimrc
+
+      # Lint vimrc
       - uses: actions/checkout@v1
       - name: Vint .vimrc
         uses: ludvighz/vint-action@v1
         with:
           path: .vimrc
 
-      # Check ~/.exrc
+      # Lint exrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
@@ -90,53 +104,54 @@ jobs:
   shell:
     runs-on: ubuntu-latest
     steps:
-      # Check ~/.profile
+
+      # Lint user profile
       - uses: actions/checkout@v1
-      - name: shellcheck .profile
+      - name: shellcheck profile
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .profile
 
-      # Check ~/.kshrc
+      # Lint kshrc
       - uses: actions/checkout@v1
-      - name: shellcheck .kshrc
+      - name: shellcheck kshrc
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .kshrc
 
-      # Check ~/.aliases
+      # Lint user aliases
       - uses: actions/checkout@v1
-      - name: shellcheck .aliases
+      - name: shellcheck aliases
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .aliases
 
-      # Check ~/.xinitrc
+      # Lint xinitrc
       - uses: actions/checkout@v1
-      - name: shellcheck .xinitrc
+      - name: shellcheck xinitrc
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .xinitrc
 
-      # Check ~/.xsession
+      # Lint xsession
       - uses: actions/checkout@v1
-      - name: shellcheck .xsession
+      - name: shellcheck xsession
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .xsession
 
-      # Check ~/.pfetchrc - NOTE: Ignore SC2034 as it is imported
+      # Lint pfetch config - NOTE: Ignore SC2034 as it is imported
       - uses: actions/checkout@v1
-      - name: shellcheck .pfetchrc
+      - name: shellcheck pfetch config
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .pfetchrc
+          additional_files: .config/pfetch/config
         env:
           SHELLCHECK_OPTS: -e SC2034
 
-      # Check OpenBSD specific scripts
+      # Lint OpenBSD specific scripts
       - uses: actions/checkout@v1
-      - name: shellcheck .bin/openbsd/doas
+      - name: shellcheck doas
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .bin/openbsd/doas
+          additional_files: .local/bin/openbsd/doas
