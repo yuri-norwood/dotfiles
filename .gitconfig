@@ -36,8 +36,6 @@
 [alias]
 	unstage = reset HEAD --
 	discard = reset --hard
-	pull    = pull --recurse-submodules -j8
-	clone   = clone --recursive -j8
 	stats   = status
 	staus   = status
 
