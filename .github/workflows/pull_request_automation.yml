@@ -1,7 +1,7 @@
 ---
 
 # This file defines automation actions
-name: automation
+name: pull request automation
 
 # Automate on all pull request events
 on:
