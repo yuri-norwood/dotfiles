@@ -17,7 +17,7 @@ try() {
 include() {
 	if [ -f "$1" ]
 	then
-		. ~/.aliases
+		. "$1"
 	fi
 }
 
