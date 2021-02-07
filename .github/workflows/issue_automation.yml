@@ -23,11 +23,10 @@ jobs:
           echo "GITHUB_REPO_URL=https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git" >> $GITHUB_ENV
 
       # Create new branch and push to remote
+      - uses: actions/checkout@v2
+        with:
+          ref: main
       - name: Auto branch
         run: |
-          git init
-          git remote add origin https://github.com/yuri-norwood/dotfiles.git
-          git fetch
-          git checkout origin/main -ft
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
-          git push --set-upstream origin "${{ env.GITHUB_NEW_BRANCH }}" "${{ env.GITHUB_REPO_URL }}"
+          git push -f -u origin "${{ env.GITHUB_NEW_BRANCH }}" "${{ env.GITHUB_REPO_URL }}"
