@@ -20,12 +20,12 @@ jobs:
       - uses: actions/checkout@master
       - name: Set env
         run: |
-          echo "GITHUB_NEW_BRANCH=$(echo ${{ github.event.issue.number }}-${{ github.event.issue.title }} | tr '[:space:]' '_')" >> $GITHUB_ENV
-          echo "GITHUB_REPO_URL=https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git" >> $GITHUB_ENV
+          echo "GITHUB_NEW_BRANCH=$(echo ${{ github.event.issue.number }}-${{ github.event.issue.title }} | tr '[:space:]' '_')" >> $GITHUB_ENV # yamllint disable-line
+          echo "GITHUB_REPO_URL=https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git" >> $GITHUB_ENV # yamllint disable-line
 
       # Create new branch and push to remote
       - uses: actions/checkout@v1
       - name: Auto branch
         run: |
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
-          git push --set-upstream "${{ env.GITHUB_NEW_BRANCH }}" ${{ env.GITHUB_REPO_URL }}"
+          git push --set-upstream "${{ env.GITHUB_NEW_BRANCH }}" "${{ env.GITHUB_REPO_URL }}" # yamllint disable-line
