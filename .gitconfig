@@ -12,7 +12,8 @@
 	default = current
 
 [fetch]
-	prune = true
+	prune    = true
+	parallel = 8
 
 [remote.origin]
 	prune = true
@@ -40,5 +41,5 @@
 	staus   = status
 
 [submodule]
-	recurse = true
-
+	recurse   = true
+	fetchJobs = 8
