@@ -28,4 +28,4 @@ jobs:
       - name: Auto branch
         run: |
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
-          git push --set-upstream "${{ env.GITHUB_NEW_BRANCH }}" "${{ env.GITHUB_REPO_URL }}"
+          git push --set-upstream origin "${{ env.GITHUB_NEW_BRANCH }}" "${{ env.GITHUB_REPO_URL }}"
