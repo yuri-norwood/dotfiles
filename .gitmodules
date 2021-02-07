@@ -82,3 +82,6 @@
 [submodule ".vim/pack/git/start/fugitive"]
 	path = .vim/pack/git/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/go/start/syntax"]
+	path = .vim/pack/go/start/syntax
+	url = https://github.com/fatih/vim-go
