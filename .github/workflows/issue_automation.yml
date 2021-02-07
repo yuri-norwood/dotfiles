@@ -12,7 +12,7 @@ on:
 jobs:
 
   # This job creates new branches for new issues
-  labeler:
+  auto_branch:
     runs-on: ubuntu-latest
     steps:
 
