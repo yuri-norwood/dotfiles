@@ -19,8 +19,7 @@ jobs:
       # Set environment vairables to allow configuration
       - name: Set env
         run: |
-          echo "GITHUB_NEW_BRANCH=$(echo ${{ github.event.issue.number }} ${{ github.event.issue.title }} | tr -Cs '[:alnum:]' '-')" >> $GITHUB_ENV
-          echo "GITHUB_REPO_URL=https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git" >> $GITHUB_ENV
+          echo "GITHUB_NEW_BRANCH=$(echo ${{ github.event.issue.number }} ${{ github.event.issue.title }} | awk '{$1=$1};1' | tr -Cs '[:alnum:]' '-')" >> $GITHUB_ENV
 
       # Create new branch and push to remote
       - uses: actions/checkout@v2
@@ -28,6 +27,6 @@ jobs:
           ref: main
       - name: Auto branch
         run: |
-          git push "${{ env.GITHUB_REPO_URL }}"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
