@@ -107,5 +107,5 @@ path_add "${GOROOT}/bin"
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Integrate settings
-try xrdb -merge "${HOME}/.Xresources"
+try xrdb -merge "${XDG_CONFIG_HOME}/X11/Xresources"
 
