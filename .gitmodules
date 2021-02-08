@@ -88,3 +88,6 @@
 [submodule ".vim/pack/git/start/syntax"]
 	path = .vim/pack/git/start/syntax
 	url = https://github.com/tpope/vim-git
+[submodule ".local/share/suckless/surf/src"]
+	path = .local/share/suckless/surf/src
+	url = https://git.suckless.org/surf
