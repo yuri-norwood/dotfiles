@@ -8,6 +8,12 @@
 # Source Profile
 . ~/.profile
 
+# Set session settings
+USERXSESSION="${XDG_CONFIG_HOME}/x11/xsession"
+USERXSESSIONRC="${XDG_CONFIG_HOME}/x11/xsessionrc"
+ALTUSERXSESSION="${XDG_CONFIG_HOME}/x11/Xsession"
+ERRFILE="${XDG_CONFIG_HOME}/x11/xsession-errors"
+
 # Integrate settings
 xrdb -merge "${XDG_CONFIG_HOME}/X11/Xresources"
 
