@@ -7,7 +7,7 @@ static char *certdir        = "~/.local/share/suckless/surf/certificates/";
 static char *cachedir       = "~/.local/share/suckless/surf/cache/";
 static char *cookiefile     = "~/.local/share/suckless/surf/cookies.txt";
 static char **plugindirs    = (char*[]){
-	"~/.surf/plugins/",
+	"~/.local/share/suckless/surf/plugins/",
 	LIBPREFIX "/mozilla/plugins/",
 	NULL
 };
