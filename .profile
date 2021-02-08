@@ -5,14 +5,6 @@
 # ~/.profile
 #
 
-# Helper to prevent errors on missing tools
-try() {
-	if command -v "$1" >/dev/null 2>&1
-	then
-		"$@"
-	fi
-}
-
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
@@ -105,7 +97,4 @@ path_add "${GOROOT}/bin"
 
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
-
-# Integrate settings
-try xrdb -merge "${HOME}/.Xresources"
 

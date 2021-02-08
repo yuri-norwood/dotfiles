@@ -6,7 +6,8 @@ actions:
   - '.github/labeler.yml'
 
 # http://tools.suckless.org/dmenu/
-dmenu: '.local/share/suckless/dmenu/**'
+dmenu:
+  - '.local/share/suckless/dmenu/**'
 
 # Improvements or additions to documentation
 documentation:
@@ -14,20 +15,31 @@ documentation:
   - '.github/LICENSE'
   - '.github/CODEOWNERS'
   - '.github/ISSUE_TEMPLATE/config.yml'
-  - './.gitattributes'
+  - '.gitattributes'
   - '.vim/pack/*/start/README.md'
 
 # http://dwm.suckless.org/
-dwm: '.local/share/suckless/dwm/**'
+dwm:
+  - '.local/share/suckless/dwm/**'
 
 # This regards the .editorconfig file or settings
-editorconfig: '**/.editorconfig'
+editorconfig:
+  - '**/.editorconfig'
+
+# This regards git
+git:
+  - '.config/git/**/*'
+  - '.gitmodules'
+  - '**/.gitattributes'
+  - '**/.gitignore'
 
 # Actually GitHub
-github: '.github/**/*'
+github:
+  - '.github/**/*'
 
 # This regards JavaScript
-js: '**.js'
+js:
+  - '**.js'
 
 # Has to do with Puffy
 openbsd:
@@ -38,10 +50,12 @@ openbsd:
   - '**.ksh'
 
 # GitHub sponsors
-sponsor: '.github/FUNDING.yml'
+sponsor:
+  - '.github/FUNDING.yml'
 
 # http://st.suckless.org/
-st: '.local/share/suckless/st/**'
+st:
+  - '.local/share/suckless/st/**'
 
 # Anything to do with a suckless.org tool
 suckless:
@@ -55,13 +69,16 @@ suckless:
   - '**.config.def.h'
 
 # http://surf.suckless.org/
-surf: '.local/share/suckless/surf/**'
+surf:
+  - '.local/share/suckless/surf/**'
 
 # http://tools.suckless.org/tabbed/
-tabbed: '.local/share/suckless/tabbed/**'
+tabbed:
+  - '.local/share/suckless/tabbed/**'
 
 # This needs a test case written
-test: '.github/workflows/testing.yml'
+test:
+  - '.github/workflows/testing.yml'
 
 # This regards vim or vimscript
 vim:
@@ -70,3 +87,9 @@ vim:
   - '.vim/**/*'
   - '.vim/pack/**/*'
   - '**/*.vim'
+
+# This regards Xorg or X11
+x11:
+  - '.config/X11/**/*'
+  - '.xinitrc'
+  - '.xsession'
