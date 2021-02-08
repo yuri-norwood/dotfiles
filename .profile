@@ -5,14 +5,6 @@
 # ~/.profile
 #
 
-# Helper to prevent errors on missing tools
-try() {
-	if command -v "$1" >/dev/null 2>&1
-	then
-		"$@"
-	fi
-}
-
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
