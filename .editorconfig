@@ -69,6 +69,9 @@ indent_style = space
 indent_size  = 4
 end_of_line  = unset
 
+; File heading
+file_header_template = {fileName}\nLicensed under CC0
+
 ; Dotnet style conventions
 dotnet_analyzer_diagnostic.severity = suggestion
 
