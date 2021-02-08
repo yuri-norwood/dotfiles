@@ -105,19 +105,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Lint user profile
+      # Lint shell scripts
       - uses: actions/checkout@v1
       - name: shellcheck profile
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .profile
-
-      # Lint kshrc
-      - uses: actions/checkout@v1
-      - name: shellcheck kshrc
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .kshrc
+          additional_files: .profile .kshrc
 
       # Lint user aliases
       - uses: actions/checkout@v1
@@ -125,20 +118,6 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .config/aliases/*
-
-      # Lint xinitrc
-      - uses: actions/checkout@v1
-      - name: shellcheck xinitrc
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .config/X11/xinitrc
-
-      # Lint xsession
-      - uses: actions/checkout@v1
-      - name: shellcheck xsession
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .config/X11/xsession
 
       # Lint pfetch config - NOTE: Ignore SC2034 as it is imported
       - uses: actions/checkout@v1
@@ -148,10 +127,3 @@ jobs:
           additional_files: .config/pfetch/config
         env:
           SHELLCHECK_OPTS: -e SC2034
-
-      # Lint OpenBSD specific scripts
-      - uses: actions/checkout@v1
-      - name: shellcheck doas
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .local/bin/openbsd/doas
