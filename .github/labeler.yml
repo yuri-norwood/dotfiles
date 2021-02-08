@@ -70,3 +70,8 @@ vim:
   - '.vim/**/*'
   - '.vim/pack/**/*'
   - '**/*.vim'
+
+x11:
+  - .config/X11/**/*
+  - .xinitrc
+  - .xsession
