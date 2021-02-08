@@ -98,3 +98,6 @@ path_add "${GOROOT}/bin"
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
+# Set X11 init script
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
