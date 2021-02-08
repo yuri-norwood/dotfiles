@@ -106,6 +106,3 @@ path_add "${GOROOT}/bin"
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
-# Integrate settings
-try xrdb -merge "${XDG_CONFIG_HOME}/X11/Xresources"
-
