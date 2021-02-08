@@ -72,6 +72,6 @@ vim:
   - '**/*.vim'
 
 x11:
- - .config/X11/**/*
- - .xinitrc
- - .xsession
+  - .config/X11/**/*
+  - .xinitrc
+  - .xsession
