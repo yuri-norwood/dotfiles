@@ -7,7 +7,7 @@ static char *certdir        = "~/.local/share/suckless/surf/certificates/";
 static char *cachedir       = "~/.local/share/suckless/surf/cache/";
 static char *cookiefile     = "~/.local/share/suckless/surf/cookies.txt";
 static char **plugindirs    = (char*[]){
-	"~/.surf/plugins/",
+	"~/.local/share/suckless/surf/plugins/",
 	LIBPREFIX "/mozilla/plugins/",
 	NULL
 };
@@ -19,76 +19,77 @@ static char **plugindirs    = (char*[]){
  * Command parameters are priority 2
  */
 static Parameter defconfig[ParameterLast] = {
-	/* parameter                    Arg value       priority */
-	[AcceleratedCanvas]   =       { { .i = 1 },     },
-	[AccessMicrophone]    =       { { .i = 0 },     },
-	[AccessWebcam]        =       { { .i = 0 },     },
-	[Certificate]         =       { { .i = 0 },     },
-	[CaretBrowsing]       =       { { .i = 0 },     },
-	[CookiePolicies]      =       { { .v = "@Aa" }, },
-	[DefaultCharset]      =       { { .v = "UTF-8" }, },
-	[DiskCache]           =       { { .i = 1 },     },
-	[DNSPrefetch]         =       { { .i = 0 },     },
-	[Ephemeral]           =       { { .i = 0 },     },
-	[FileURLsCrossAccess] =       { { .i = 0 },     },
-	[FontSize]            =       { { .i = 12 },    },
-	[FrameFlattening]     =       { { .i = 0 },     },
-	[Geolocation]         =       { { .i = 0 },     },
-	[HideBackground]      =       { { .i = 0 },     },
-	[Inspector]           =       { { .i = 0 },     },
-	[Java]                =       { { .i = 1 },     },
-	[JavaScript]          =       { { .i = 1 },     },
-	[KioskMode]           =       { { .i = 0 },     },
-	[LoadImages]          =       { { .i = 1 },     },
-	[MediaManualPlay]     =       { { .i = 1 },     },
-	[Plugins]             =       { { .i = 1 },     },
-	[PreferredLanguages]  =       { { .v = (char *[]){ NULL } }, },
-	[RunInFullscreen]     =       { { .i = 0 },     },
-	[ScrollBars]          =       { { .i = 1 },     },
-	[ShowIndicators]      =       { { .i = 1 },     },
-	[SiteQuirks]          =       { { .i = 1 },     },
-	[SmoothScrolling]     =       { { .i = 0 },     },
-	[SpellChecking]       =       { { .i = 0 },     },
+	/* parameter                    Arg value                               priority */
+	[AcceleratedCanvas]   =       { { .i = 1                             }, },
+	[AccessMicrophone]    =       { { .i = 0                             }, },
+	[AccessWebcam]        =       { { .i = 0                             }, },
+	[Certificate]         =       { { .i = 0                             }, },
+	[CaretBrowsing]       =       { { .i = 0                             }, },
+	[CookiePolicies]      =       { { .v = "@Aa"                         }, },
+	[DefaultCharset]      =       { { .v = "UTF-8"                       }, },
+	[DiskCache]           =       { { .i = 1                             }, },
+	[DNSPrefetch]         =       { { .i = 0                             }, },
+	[Ephemeral]           =       { { .i = 0                             }, },
+	[FileURLsCrossAccess] =       { { .i = 0                             }, },
+	[FontSize]            =       { { .i = 12                            }, },
+	[FrameFlattening]     =       { { .i = 0                             }, },
+	[Geolocation]         =       { { .i = 0                             }, },
+	[HideBackground]      =       { { .i = 0                             }, },
+	[Inspector]           =       { { .i = 0                             }, },
+	[Java]                =       { { .i = 1                             }, },
+	[JavaScript]          =       { { .i = 1                             }, },
+	[KioskMode]           =       { { .i = 0                             }, },
+	[LoadImages]          =       { { .i = 1                             }, },
+	[MediaManualPlay]     =       { { .i = 1                             }, },
+	[Plugins]             =       { { .i = 1                             }, },
+	[PreferredLanguages]  =       { { .v = (char *[]){ NULL }            }, },
+	[RunInFullscreen]     =       { { .i = 0                             }, },
+	[ScrollBars]          =       { { .i = 1                             }, },
+	[ShowIndicators]      =       { { .i = 1                             }, },
+	[SiteQuirks]          =       { { .i = 1                             }, },
+	[SmoothScrolling]     =       { { .i = 0                             }, },
+	[SpellChecking]       =       { { .i = 0                             }, },
 	[SpellLanguages]      =       { { .v = ((char *[]){ "en_US", NULL }) }, },
-	[StrictTLS]           =       { { .i = 1 },     },
-	[Style]               =       { { .i = 1 },     },
-	[WebGL]               =       { { .i = 0 },     },
-	[ZoomLevel]           =       { { .f = 1.0 },   },
+	[StrictTLS]           =       { { .i = 1                             }, },
+	[Style]               =       { { .i = 1                             }, },
+	[WebGL]               =       { { .i = 0                             }, },
+	[ZoomLevel]           =       { { .f = 1.0                           }, },
 };
 
 static UriParameters uriparams[] = {
 	{ "(://|\\.)suckless\\.org(/|$)", {
-	  [JavaScript] = { { .i = 0 }, 1 },
-	  [Plugins]    = { { .i = 0 }, 1 },
+		[JavaScript] = { { .i = 0 }, 1 },
+		[Plugins]    = { { .i = 0 }, 1 },
 	}, },
 };
 
 /* default window size: width, height */
 static int winsize[] = { 800, 600 };
 
-static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
-                                    WEBKIT_FIND_OPTIONS_WRAP_AROUND;
+static WebKitFindOptions findopts = 0 |
+	WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
+	WEBKIT_FIND_OPTIONS_WRAP_AROUND;
 
 #define PROMPT_GO   "Go:"
 #define PROMPT_FIND "Find:"
 
 /* SETPROP(readprop, setprop, prompt)*/
 #define SETPROP(r, s, p) { \
-        .v = (const char *[]){ "/bin/sh", "-c", \
-             "prop=\"$(printf '%b' \"$(xprop -id $1 $2 " \
-             "| sed \"s/^$2(STRING) = //;s/^\\\"\\(.*\\)\\\"$/\\1/\")\" " \
-             "| dmenu -p \"$4\" -w $1)\" && xprop -id $1 -f $3 8s -set $3 \"$prop\"", \
-             "surf-setprop", winid, r, s, p, NULL \
-        } \
+	.v = (const char *[]){ "/bin/sh", "-c", \
+		"prop=\"$(printf '%b' \"$(xprop -id $1 $2 " \
+		"| sed \"s/^$2(STRING) = //;s/^\\\"\\(.*\\)\\\"$/\\1/\")\" " \
+		"| dmenu -p \"$4\" -w $1)\" && xprop -id $1 -f $3 8s -set $3 \"$prop\"", \
+		"surf-setprop", winid, r, s, p, NULL \
+	} \
 }
 
 /* DOWNLOAD(URI, referer) */
 #define DOWNLOAD(u, r) { \
-        .v = (const char *[]){ "st", "-e", "/bin/sh", "-c",\
-             "curl -g -L -J -O -A \"$1\" -b \"$2\" -c \"$2\"" \
-             " -e \"$3\" \"$4\"; read", \
-             "surf-download", useragent, cookiefile, r, u, NULL \
-        } \
+	.v = (const char *[]){ "st", "-e", "/bin/sh", "-c",\
+		"curl -g -L -J -O -A \"$1\" -b \"$2\" -c \"$2\"" \
+		" -e \"$3\" \"$4\"; read", \
+		"surf-download", useragent, cookiefile, r, u, NULL \
+	} \
 }
 
 /* PLUMB(URI) */
@@ -96,16 +97,16 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
  * "http://" or "https://" should be opened.
  */
 #define PLUMB(u) {\
-        .v = (const char *[]){ "/bin/sh", "-c", \
-             "xdg-open \"$0\"", u, NULL \
-        } \
+	.v = (const char *[]){ "/bin/sh", "-c", \
+		"xdg-open \"$0\"", u, NULL \
+	} \
 }
 
 /* VIDEOPLAY(URI) */
 #define VIDEOPLAY(u) {\
-        .v = (const char *[]){ "/bin/sh", "-c", \
-             "mpv --really-quiet \"$0\"", u, NULL \
-        } \
+	.v = (const char *[]){ "/bin/sh", "-c", \
+		"mpv --really-quiet \"$0\"", u, NULL \
+	} \
 }
 
 /* styles */
