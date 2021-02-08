@@ -91,3 +91,6 @@
 [submodule ".local/share/suckless/surf/src"]
 	path = .local/share/suckless/surf/src
 	url = https://git.suckless.org/surf
+[submodule ".local/share/suckless/st/src"]
+	path = .local/share/suckless/st/src
+	url = https://git.suckless.org/st
