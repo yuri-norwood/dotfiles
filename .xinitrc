@@ -9,7 +9,7 @@
 . ~/.profile
 
 # Integrate settings
-try xrdb -merge "${XDG_CONFIG_HOME}/X11/Xresources"
+xrdb -merge "${XDG_CONFIG_HOME}/X11/Xresources"
 
 # Select Graphical Environment
 if [ ! -x "$(command -v dwm)" ] && [ "$(uname)" = "OpenBSD" ]
