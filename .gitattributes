@@ -1,6 +1,8 @@
 # Overload all C files and headers
-.local/share/suckless/**/*.c linguist-language=C
-.local/share/suckless/**/*.h linguist-language=C
+.local/share/suckless/*/*.c linguist-language=C
+.local/share/suckless/*/*.h linguist-language=C
+.local/share/suckless/*/*/*.c linguist-language=C
+.local/share/suckless/*/*/*.h linguist-language=C
 
 # Correct yaml lint file type (missing extension by design)
 .config/yamllint/config lingust-language=YAML
