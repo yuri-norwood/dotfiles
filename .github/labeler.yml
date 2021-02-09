@@ -43,7 +43,7 @@ js:
 
 # This regards the Korn Shell
 ksh:
-  - './.kshrc'
+  - '.kshrc'
   - '**/*.ksh'
 
 # This regards the labeler automation
@@ -55,7 +55,7 @@ openbsd:
   - '**/openbsd/**/*'
   - '.config/doas/**/*'
   - '.config/xenodm/**/*'
-  - './.kshrc'
+  - '.kshrc'
   - '**/*.ksh'
 
 # This regards the UNIX shell environment
