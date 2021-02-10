@@ -94,3 +94,6 @@
 [submodule ".local/share/suckless/st/src"]
 	path = .local/share/suckless/st/src
 	url = https://git.suckless.org/st
+[submodule ".local/share/suckless/dmenu/src"]
+	path = .local/share/suckless/dmenu/src
+	url = https://git.suckless.org/dmenu
