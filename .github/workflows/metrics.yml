@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           config_timezone: Pacific/Auckland
-          filename: .github/dotfiles-metrics.svg
+          filename: .github/metrics.svg
           base: header
           query: '{"repo":"dotfiles"}'
 
