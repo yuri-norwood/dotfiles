@@ -13,10 +13,6 @@
 
 Configuration files and various customizations.
 
-## Stats
-
-[![Dotfiles](https://github-readme-stats.vercel.app/api/pin/?username=yuri-norwood&repo=dotfiles&theme=dark)](https://github.com/yuri-norwood/dotfiles)
-
 ## Installation
 
 This repo is designed to be installed directly into a user's `$HOME` directory,
