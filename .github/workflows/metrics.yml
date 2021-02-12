@@ -1,4 +1,4 @@
-name: Metrics
+name: metrics
   
 on:
   schedule: [{cron: "0 * * * *"}]
