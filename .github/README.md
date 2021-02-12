@@ -15,7 +15,7 @@ Configuration files and various customizations.
 
 ## Stats
 
-[![Metrics](https://raw.githubusercontent.com/yuri-norwood/yuri-norwood/main/.github/dotfiles-metrics.svg)](https://github.com/yuri-norwood/dotfiles)
+[![Dotfiles](https://github-readme-stats.vercel.app/api/pin/?username=yuri-norwood&repo=dotfiles&theme=dark)](https://github.com/yuri-norwood/dotfiles)
 
 ## Installation
 
