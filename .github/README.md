@@ -15,7 +15,7 @@ Configuration files and various customizations.
 
 ## Stats
 
-[![Metrics](metrics.svg)](https://github.com/yuri-norwood/dotfiles)
+[![Metrics](https://raw.githubusercontent.com/yuri-norwood/yuri-norwood/main/.github/dotfiles-metrics.svg)](https://github.com/yuri-norwood/dotfiles)
 
 ## Installation
 
