@@ -23,9 +23,9 @@ jobs:
           query: '{"repo":"dotfiles"}'
 
           # Show followup to issues and pulls
-          plugin_followup: yes
+          plugin_followup: true
 
           # Show license details
-          plugin_licenses: yes
-          plugin_licenses_ratio: yes
-          plugin_licenses_legal: yes
+          plugin_licenses: true
+          plugin_licenses_ratio: true
+          plugin_licenses_legal: true
