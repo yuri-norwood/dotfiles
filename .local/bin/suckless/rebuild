@@ -4,3 +4,66 @@
 # rebuild - manage rebuilding suckless tools
 #
 
+err() { # Error message helper {{{
+	echo "$*" 1>&2
+} # }}}
+
+die() { # Fatal error message helper {{{
+	err "Fatal: $*"
+	exit 1
+} # }}}
+
+usage() { # Usage message helper {{{
+	# Allow error message preamble
+	while [ "$#" -gt 0 ]
+	do
+		err "$1"
+		shift
+	done
+
+	# Show help message
+	err "usage:"
+	err "        rebuild [-p <patch>[,<patch> ...]] <tool>"
+	err ""
+	err "options:"
+	err "        -p, --patch <patch>[,<patch> ...]"
+	err "                Define patches to apply during the rebuild. May"
+	err "                be given multiple times, or multiple patches may"
+	err "                be passed as a comma separated list of patches."
+	err "                Patches must be given by name, matching the name"
+	err "                of a .diff or .patch file in the /patches subdir"
+	err "                of the \$XDG_DATA_HOME/suckless/<tool> namespace"
+	err "                directory."
+
+	# Exit non-error
+	exit 0
+} # }}}
+
+# Verify arguments {{{
+if [ "#$" -eq 0 ]
+then
+	usage "At least one argument <tool> must be given"
+else
+	while [ "#$" -gt 0 ]
+	do
+		case "$1" in
+			-p|--patch)
+				if [ "$#" -gt 1 ]
+				then
+					shift
+
+					PATCHES="${PATCHES},$1"
+				else
+					usage "'$1' argument requires <patch>"
+				fi
+				;;
+			*)
+				usage "Unrecognised argument '$1'"
+				;;
+		esac
+
+		shift
+	done
+fi
+# }}}
+
