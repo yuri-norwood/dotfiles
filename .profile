@@ -53,9 +53,6 @@ path_add "scripts"
 # Add pfetch to PATH
 path_add "pfetch"
 
-# Add suckless tools to PATH
-path_add "suckless"
-
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
