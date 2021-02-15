@@ -2,8 +2,7 @@
 
 # GitHub Actions
 actions:
-  - '.github/workflows/*.yml'
-  - '.github/labeler.yml'
+  - '.github/**/*.yml'
 
 # http://tools.suckless.org/dmenu/
 dmenu:
@@ -11,6 +10,7 @@ dmenu:
 
 # Improvements or additions to documentation
 documentation:
+  - '**/*.md'
   - '.github/*.md'
   - '.github/LICENSE'
   - '.github/CODEOWNERS'
@@ -20,7 +20,7 @@ documentation:
 
 # http://dwm.suckless.org/
 dwm:
-  - '.local/share/suckless/dwm/**'
+  - '.local/share/suckless/dwm/**/*'
 
 # This regards the .editorconfig file or settings
 editorconfig:
@@ -39,15 +39,31 @@ github:
 
 # This regards JavaScript
 js:
-  - '**.js'
+  - '**/*.js'
+
+# This regards the Korn Shell
+ksh:
+  - '.kshrc'
+  - '**/*.ksh'
+
+# This regards the labeler automation
+labeler:
+  - '.github/labeler.yml'
 
 # Has to do with Puffy
 openbsd:
-  - '**/openbsd/**'
-  - '.config/doas/**'
-  - '.config/xenodm/**'
-  - './.kshrc'
-  - '**.ksh'
+  - '**/openbsd/**/*'
+  - '.config/doas/**/*'
+  - '.config/xenodm/**/*'
+  - '.kshrc'
+  - '**/*.ksh'
+
+# This regards the UNIX shell environment
+shell:
+  - '**/*.sh'
+  - '**/*.ksh'
+  - '.profile'
+  - '.kshrc'
 
 # GitHub sponsors
 sponsor:
@@ -55,26 +71,26 @@ sponsor:
 
 # http://st.suckless.org/
 st:
-  - '.local/share/suckless/st/**'
+  - '.local/share/suckless/st/**/*'
 
 # Anything to do with a suckless.org tool
 suckless:
-  - '.local/share/suckless/dmenu/**'
-  - '.local/share/suckless/dwm/**'
-  - '.local/share/suckless/st/**'
-  - '.local/share/suckless/surf/**'
-  - '.local/share/suckless/tabbed/**'
-  - '.local/share/suckless/**'
-  - '**.config.h'
-  - '**.config.def.h'
+  - '.local/share/suckless/dmenu/**/*'
+  - '.local/share/suckless/dwm/**/*'
+  - '.local/share/suckless/st/**/*'
+  - '.local/share/suckless/surf/**/*'
+  - '.local/share/suckless/tabbed/**/*'
+  - '.local/share/suckless/**/*'
+  - '**/*.config.h'
+  - '**/*.config.def.h'
 
 # http://surf.suckless.org/
 surf:
-  - '.local/share/suckless/surf/**'
+  - '.local/share/suckless/surf/**/*'
 
 # http://tools.suckless.org/tabbed/
 tabbed:
-  - '.local/share/suckless/tabbed/**'
+  - '.local/share/suckless/tabbed/**/*'
 
 # This needs a test case written
 test:
@@ -91,5 +107,6 @@ vim:
 # This regards Xorg or X11
 x11:
   - '.config/X11/**/*'
+  - '.config/xenodm/**/*'
   - '.xinitrc'
   - '.xsession'
