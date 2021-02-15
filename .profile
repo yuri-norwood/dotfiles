@@ -47,9 +47,6 @@ include ~/.config/aliases/main
 # Add scripts to PATH
 path_add "scripts"
 
-# Add pfetch to PATH
-path_add "pfetch"
-
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
@@ -87,13 +84,17 @@ path_add "${DOTNET_TOOLS}"
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
+# Add pfetch to PATH
+path_add "pfetch"
+
 # Set Golang environment
 export GOROOT="/usr/local/go"
+export GOBIN="${XDG_BIN_HOME}/go/bin"
 export GOPATH="${XDG_BIN_HOME}/go"
 
 # Add go lang tools to PATH
-path_add "${GOPATH}/bin"
 path_add "${GOROOT}/bin"
+path_add "${GOBIN}"
 
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
