@@ -53,6 +53,14 @@ git submodule foreach --recursive git pull origin master
 git commit -am "Updated submodules"
 ```
 
+## Contributing
+
+Usually, dotfiles are very personal and specific to the author, however, I
+try to keep my dotfiles as a general framework that can be used for anyone's
+configuration. If you have a question or suggestion, feel free to open a PR.
+
+[Just don't be a dick.](CODE_OF_CONDUCT.md)
+
 ## License
 
 You can tell a lot about a hacker by their `.profile`, if you see something you
