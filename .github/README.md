@@ -7,6 +7,7 @@
 [![git](https://img.shields.io/badge/--F05032?logo=git&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Agit)
 [![x11](https://img.shields.io/badge/--F28834?logo=x.org&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Ax11)
 [![Visual Studio](https://img.shields.io/badge/--6C33AF?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
+[![Go](https://img.shields.io/badge/--00ADD8?logo=go&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Ago)
 [![Sponsors](https://img.shields.io/badge/--EA4AAA?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
 [![Build](https://img.shields.io/badge/--success?logo=github-actions&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/actions?query=workflow%3Alinting)
 [![License](https://img.shields.io/badge/--blue?logo=creative-commons&logoColor=ffffff)](LICENSE)
