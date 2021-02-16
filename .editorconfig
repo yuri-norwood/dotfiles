@@ -289,7 +289,7 @@ dotnet_naming_rule.public_members_pascal.style    = pascal
 dotnet_naming_rule.public_members_pascal.severity = warning
 
 ; Define `private` symbols
-dotnet_naming_symbols.private.applicable_kinds           = class, struct, interface, enum, property, method, field, event, delegate
+dotnet_naming_symbols.private.applicable_kinds           = property, method, field, event, delegate
 dotnet_naming_symbols.private.applicable_accessibilities = private, private_protected
 
 ; Define `camel` style
