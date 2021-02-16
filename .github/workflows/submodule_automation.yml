@@ -27,6 +27,6 @@ jobs:
           git config --global user.email "76186754+yuri-norwood@users.noreply.github.com"
           git config --global user.name "Yuri Norwood"
           git checkout -b "meta-update-submodules"
-          git submodule foreach --recursive git pull origin master
-          git commit -am "Updated submodules" &&
-          git push -u origin "meta-update-submodules"
+          git submodule foreach --recursive git pull origin master  || true
+          git commit -am "Updated submodules" || true
+          git push -u origin "meta-update-submodules" || true
