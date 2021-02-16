@@ -6,14 +6,14 @@ name: submodule automation
 # This 
 on:
   schedule:
-    - '0 0 * * *'  # every day at midnight
+    - cron: '0 0 * * *'  # every day at midnight
 
 # Define a job for each automatic task
 jobs:
 
   # This job 
   update_modules:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
 
       # Create new branch and push to remote
