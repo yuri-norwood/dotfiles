@@ -1,0 +1,29 @@
+---
+
+# This file defines submodule automation actions
+name: submodule automation
+
+# This action runs every day at midnight
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+# Define a job for each automatic task
+jobs:
+
+  # This job updates all the submodules in a new branch
+  update_modules:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Create new branch and push to remote
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Auto branch
+        run: |
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/yuri-norwood/dotfiles.git
+          git checkout -b "meta-update-submodules"
+          git submodule foreach --recursive git pull origin master
+          git commit -am "Updated submodules"
+          git push -u origin "meta-update-submodules"
