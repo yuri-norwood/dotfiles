@@ -1,11 +1,11 @@
 # dotfiles
 
-[![Vim](https://img.shields.io/badge/--019733?logo=vim)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Avim)
+[![Vim](https://img.shields.io/badge/--019733?logo=vim)](../.vimrc)
 [![OpenBSD](https://img.shields.io/badge/--F2CA30?logo=openbsd&logoColor=000000)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Aopenbsd)
-[![Suckless](https://img.shields.io/badge/--1177AA?logo=suckless)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Asuckless)
-[![dwm](https://img.shields.io/badge/--1177AA?logo=dwm)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Adwm)
-[![git](https://img.shields.io/badge/--F05032?logo=git&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Agit)
-[![x11](https://img.shields.io/badge/--F28834?logo=x.org&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Ax11)
+[![Suckless](https://img.shields.io/badge/--1177AA?logo=suckless)](../.local/share/suckless)
+[![dwm](https://img.shields.io/badge/--1177AA?logo=dwm)](../.local/share/suckless/dwm)
+[![git](https://img.shields.io/badge/--F05032?logo=git&logoColor=ffffff)](../.config/git)
+[![x11](https://img.shields.io/badge/--F28834?logo=x.org&logoColor=ffffff)](../.config/X11)
 [![Visual Studio](https://img.shields.io/badge/--6C33AF?logo=visual%20studio)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3A%22visual+studio%22)
 [![Go](https://img.shields.io/badge/--00ADD8?logo=go&logoColor=ffffff)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Ago)
 [![Sponsors](https://img.shields.io/badge/--EA4AAA?logo=github-sponsors&logoColor=ffffff)](https://github.com/sponsors/yuri-norwood)
