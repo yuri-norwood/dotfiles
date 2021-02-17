@@ -1,6 +1,6 @@
 # dotfiles
 
-[![Vim](https://img.shields.io/badge/--019733?logo=vim)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Avim)
+[![Vim](https://img.shields.io/badge/--019733?logo=vim)](../.vimrc)
 [![OpenBSD](https://img.shields.io/badge/--F2CA30?logo=openbsd&logoColor=000000)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Aopenbsd)
 [![Suckless](https://img.shields.io/badge/--1177AA?logo=suckless)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Asuckless)
 [![dwm](https://img.shields.io/badge/--1177AA?logo=dwm)](https://github.com/yuri-norwood/dotfiles/issues?q=label%3Adwm)
