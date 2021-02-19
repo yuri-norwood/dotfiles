@@ -91,14 +91,14 @@ jobs:
       - name: Vint vimrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .config/vimrc
+          path: .config/vim/vimrc
 
       # Lint exrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .exrc
+          path: .config/vim/exrc
 
   # This job checks that the given shell scripts are well written
   shell:
