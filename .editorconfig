@@ -39,10 +39,6 @@ indent_style = space
 indent_size  = 4
 end_of_line  = crlf
 
-; Vimrc needs trailling whitespace allowed
-[.vimrc]
-trim_trailing_whitespace = false
-
 ; Web files should be indented with spaces
 [*.{html,htm,css,js}]
 indent_style = space

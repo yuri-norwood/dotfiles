@@ -1,0 +1,7 @@
+; This is the vim editorconfig
+root = false
+
+; Vimrc needs trailling whitespace allowed
+[vimrc]
+trim_trailing_whitespace = false
+
