@@ -22,7 +22,7 @@ set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 
 " Allow spellfiles to respect XDG directories
-call mkdir($XDG_DATA_HOME."/vim/spell/", 'p', 0700)
+call mkdir($XDG_DATA_HOME.'/vim/spell/', 'p', 0700)
 
 " Prevent annoying flashes and beeps
 set belloff=all
