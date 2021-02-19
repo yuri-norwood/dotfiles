@@ -9,6 +9,21 @@
 set encoding=utf-8 " do this before :scriptencoding
 scriptencoding utf-8
 
+" Allow XDG directories to be searched for runtime files
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+
+" Allow XDG directories to be searched for packages
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+
+" Allow viminfo files to respect XDG directories
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+
+" Allow spellfiles to respect XDG directories
+call mkdir($XDG_DATA_HOME."/vim/spell/", 'p', 0700)
+
 " Prevent annoying flashes and beeps
 set belloff=all
 
