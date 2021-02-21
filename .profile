@@ -47,6 +47,14 @@ include ~/.config/aliases/main
 # Add scripts to PATH
 path_add "scripts"
 
+# Set standard XDG directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
+# Set nonstandard and pseudo XDG directories
+export XDG_BIN_HOME="${HOME}/.local/bin"
+
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
@@ -59,14 +67,6 @@ export PAGER=less
 
 # Set ENV to provide shell specific settings
 export ENV="${HOME}/.kshrc"
-
-# Set standard XDG directories
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CACHE_HOME="${HOME}/.cache"
-
-# Set nonstandard and pseudo XDG directories
-export XDG_BIN_HOME="${HOME}/.local/bin"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
