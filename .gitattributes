@@ -4,5 +4,9 @@
 .local/share/suckless/*/colours/*.c linguist-language=C
 .local/share/suckless/*/colours/*.h linguist-language=C
 
+# Satisfy st(1) colourschemes explicitly
+.local/share/suckless/st/colours/*.c linguist-language=C
+.local/share/suckless/st/colours/*.h linguist-language=C
+
 # Correct yaml lint file type (missing extension by design)
 .config/yamllint/config lingust-language=YAML
