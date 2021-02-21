@@ -55,7 +55,7 @@ openbsd:
   - '**/openbsd/**/*'
   - '.config/doas/**/*'
   - '.config/xenodm/**/*'
-  - '.kshrc'
+  - '.config/ksh/kshrc'
   - '**/*.ksh'
 
 # This regards the UNIX shell environment
@@ -63,7 +63,7 @@ shell:
   - '**/*.sh'
   - '**/*.ksh'
   - '.profile'
-  - '.kshrc'
+  - '.config/ksh/kshrc'
 
 # GitHub sponsors
 sponsor:
