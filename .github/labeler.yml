@@ -98,10 +98,10 @@ test:
 
 # This regards vim or vimscript
 vim:
-  - '.exrc'
-  - '.vimrc'
-  - '.vim/**/*'
-  - '.vim/pack/**/*'
+  - '.config/vim/exrc'
+  - '.config/vim/vimrc'
+  - '.config/vim/**/*'
+  - '.config/vim/pack/**/*'
   - '**/*.vim'
 
 # This regards Xorg or X11
