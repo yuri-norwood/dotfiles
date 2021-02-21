@@ -44,7 +44,7 @@ path_add() {
 # Include alias definitions
 include ~/.config/aliases/main
 
-# Add scripts to PATH
+# Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
 # Set standard XDG directories
