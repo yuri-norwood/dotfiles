@@ -85,7 +85,7 @@ path_add "pfetch"
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
-export GOPATH="${XDG_BIN_HOME}/go"
+export GOPATH="${HOME}/go:${XDG_BIN_HOME}/go"
 
 # Add go lang tools to PATH
 path_add "${GOROOT}/bin"
