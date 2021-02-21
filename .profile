@@ -66,7 +66,7 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 export PAGER=less
 
 # Set ENV to provide shell specific settings
-export ENV="${HOME}/.kshrc"
+export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
