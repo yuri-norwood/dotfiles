@@ -30,19 +30,11 @@ path_add() {
 		export PATH="$1:${PATH}"
 
 	# Otherwise try as a subdir of XDG_BIN_HOME
-	elif [ -d "${XDG_BIN_HOME}/$1" ]
+	elif [ -d "${XDG_BIN_HOME:-.local/bin}/$1" ]
 	then
-		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
-
-	# Lastly try as a subdir of .local/bin
-	elif [ -d ".local/bin/$1" ]
-	then
-		export PATH=".local/bin/$1:${PATH}"
+		export PATH="${XDG_BIN_HOME:-.local/bin}/$1:${PATH}"
 	fi
 }
-
-# Include alias definitions
-include ~/.config/aliases/main
 
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
@@ -51,6 +43,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 # Set nonstandard and pseudo XDG directories
 export XDG_BIN_HOME="${HOME}/.local/bin"
+
+# Include alias definitions
+include "${XDG_CONFIG_HOME}/aliases/main"
 
 # Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
