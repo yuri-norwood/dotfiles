@@ -44,9 +44,6 @@ path_add() {
 # Include alias definitions
 include ~/.config/aliases/main
 
-# Add scripts to PATH, its tools may be accessed after this
-path_add "scripts"
-
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -54,6 +51,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 # Set nonstandard and pseudo XDG directories
 export XDG_BIN_HOME="${HOME}/.local/bin"
+
+# Add scripts to PATH, its tools may be accessed after this
+path_add "scripts"
 
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
