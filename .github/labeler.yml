@@ -107,6 +107,4 @@ vim:
 # This regards Xorg or X11
 x11:
   - '.config/X11/**/*'
-  - '.config/xenodm/**/*'
-  - '.xinitrc'
-  - '.xsession'
+  - '.config/X11/xdm/**/*'
