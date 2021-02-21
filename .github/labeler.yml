@@ -43,7 +43,7 @@ js:
 
 # This regards the Korn Shell
 ksh:
-  - '.kshrc'
+  - '.config/ksh/kshrc'
   - '**/*.ksh'
 
 # This regards the labeler automation
