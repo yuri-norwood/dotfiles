@@ -30,21 +30,24 @@ path_add() {
 		export PATH="$1:${PATH}"
 
 	# Otherwise try as a subdir of XDG_BIN_HOME
-	elif [ -d "${XDG_BIN_HOME}/$1" ]
+	elif [ -d "${XDG_BIN_HOME:-.local/bin}/$1" ]
 	then
-		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
-
-	# Lastly try as a subdir of .local/bin
-	elif [ -d ".local/bin/$1" ]
-	then
-		export PATH=".local/bin/$1:${PATH}"
+		export PATH="${XDG_BIN_HOME:-.local/bin}/$1:${PATH}"
 	fi
 }
 
-# Include alias definitions
-include ~/.config/aliases/main
+# Set standard XDG directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
 
-# Add scripts to PATH
+# Set nonstandard and pseudo XDG directories
+export XDG_BIN_HOME="${HOME}/.local/bin"
+
+# Include alias definitions
+include "${XDG_CONFIG_HOME}/aliases/main"
+
+# Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
 # Set the prompt to the current directory and a dollar sign
@@ -58,15 +61,7 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 export PAGER=less
 
 # Set ENV to provide shell specific settings
-export ENV="${HOME}/.kshrc"
-
-# Set standard XDG directories
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CACHE_HOME="${HOME}/.cache"
-
-# Set nonstandard and pseudo XDG directories
-export XDG_BIN_HOME="${HOME}/.local/bin"
+export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
