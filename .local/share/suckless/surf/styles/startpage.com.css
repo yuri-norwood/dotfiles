@@ -6,3 +6,10 @@
 #bottom-result-container #sponsored_csa2 {
     display: none !important;
 }
+
+/**
+ * Based on later versions of startpage
+ */
+#gcsa-top {
+    display: none;
+}

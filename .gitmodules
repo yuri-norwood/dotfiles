@@ -1,96 +1,99 @@
-[submodule ".vim/pack/c/start/extras"]
-	path = .vim/pack/c/start/extras
+[submodule ".config/vim/pack/c/start/extras"]
+	path = .config/vim/pack/c/start/extras
 	url = https://github.com/justinmk/vim-syntax-extra
-[submodule ".vim/pack/colours/start/paper"]
-	path = .vim/pack/colours/start/paper
+[submodule ".config/vim/pack/colours/start/paper"]
+	path = .config/vim/pack/colours/start/paper
 	url = https://github.com/NLKNguyen/papercolor-theme
-[submodule ".vim/pack/git/start/gitignore"]
-	path = .vim/pack/git/start/gitignore
+[submodule ".config/vim/pack/git/start/gitignore"]
+	path = .config/vim/pack/git/start/gitignore
 	url = https://github.com/gisphm/vim-gitignore
-[submodule ".vim/pack/git/start/gitgutter"]
-	path = .vim/pack/git/start/gitgutter
+[submodule ".config/vim/pack/git/start/gitgutter"]
+	path = .config/vim/pack/git/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/pack/colours/start/codedark"]
-	path = .vim/pack/colours/start/codedark
+[submodule ".config/vim/pack/colours/start/codedark"]
+	path = .config/vim/pack/colours/start/codedark
 	url = https://github.com/tomasiser/vim-code-dark
-[submodule ".vim/pack/colours/start/amber"]
-	path = .vim/pack/colours/start/amber
+[submodule ".config/vim/pack/colours/start/amber"]
+	path = .config/vim/pack/colours/start/amber
 	url = https://github.com/camgunz/amber
-[submodule ".vim/pack/colours/start/github"]
-	path = .vim/pack/colours/start/github
+[submodule ".config/vim/pack/colours/start/github"]
+	path = .config/vim/pack/colours/start/github
 	url = https://github.com/cormacrelf/vim-colors-github
-[submodule ".vim/pack/colours/start/juvenile"]
-	path = .vim/pack/colours/start/juvenile
+[submodule ".config/vim/pack/colours/start/juvenile"]
+	path = .config/vim/pack/colours/start/juvenile
 	url = https://sanctum.geek.nz/code/vim-juvenile.git
-[submodule ".vim/pack/yaml/start/syntax"]
-	path = .vim/pack/yaml/start/syntax
+[submodule ".config/vim/pack/yaml/start/syntax"]
+	path = .config/vim/pack/yaml/start/syntax
 	url = https://github.com/stephpy/vim-yaml
-[submodule ".vim/pack/colours/start/challenger"]
-	path = .vim/pack/colours/start/challenger
+[submodule ".config/vim/pack/colours/start/challenger"]
+	path = .config/vim/pack/colours/start/challenger
 	url = https://github.com/challenger-deep-theme/vim
-[submodule ".vim/pack/colours/start/one"]
-	path = .vim/pack/colours/start/one
+[submodule ".config/vim/pack/colours/start/one"]
+	path = .config/vim/pack/colours/start/one
 	url = https://github.com/rakr/vim-one
-[submodule ".vim/pack/colours/start/iceberg"]
-	path = .vim/pack/colours/start/iceberg
+[submodule ".config/vim/pack/colours/start/iceberg"]
+	path = .config/vim/pack/colours/start/iceberg
 	url = https://github.com/cocopon/iceberg.vim
-[submodule ".vim/pack/gotham/start/gotham"]
-	path = .vim/pack/colours/start/gotham
+[submodule ".config/vim/pack/gotham/start/gotham"]
+	path = .config/vim/pack/colours/start/gotham
 	url = https://github.com/whatyouhide/vim-gotham
-[submodule ".vim/pack/colours/start/toast"]
-	path = .vim/pack/colours/start/toast
+[submodule ".config/vim/pack/colours/start/toast"]
+	path = .config/vim/pack/colours/start/toast
 	url = https://github.com/jsit/toast.vim
-[submodule ".vim/pack/pgn/start/syntax"]
-	path = .vim/pack/pgn/start/syntax
+[submodule ".config/vim/pack/pgn/start/syntax"]
+	path = .config/vim/pack/pgn/start/syntax
 	url = https://github.com/yuri-norwood/pgn-syntax-vim
-[submodule ".vim/pack/editorconfig/start/core"]
-	path = .vim/pack/editorconfig/start/core
+[submodule ".config/vim/pack/editorconfig/start/core"]
+	path = .config/vim/pack/editorconfig/start/core
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule ".local/bin/pfetch"]
+[submodule ".config/local/bin/pfetch"]
 	path = .local/bin/pfetch
 	url = https://github.com/dylanaraps/pfetch
-[submodule ".local/bin/scripts"]
+[submodule ".config/local/bin/scripts"]
 	path = .local/bin/scripts
 	url = https://github.com/yuri-norwood/scripts
-[submodule ".vim/pack/javascript/start/syntax"]
-	path = .vim/pack/javascript/start/syntax
+[submodule ".config/vim/pack/javascript/start/syntax"]
+	path = .config/vim/pack/javascript/start/syntax
 	url = https://github.com/pangloss/vim-javascript
-[submodule ".vim/pack/colours/start/solarized"]
-	path = .vim/pack/colours/start/solarized
+[submodule ".config/vim/pack/colours/start/solarized"]
+	path = .config/vim/pack/colours/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".local/share/suckless/dwm/src"]
+[submodule ".config/local/share/suckless/dwm/src"]
 	path = .local/share/suckless/dwm/src
 	url = https://git.suckless.org/dwm
-[submodule ".vim/pack/colours/start/flattened"]
-	path = .vim/pack/colours/start/flattened
+[submodule ".config/vim/pack/colours/start/flattened"]
+	path = .config/vim/pack/colours/start/flattened
 	url = https://github.com/romainl/flattened
-[submodule ".vim/pack/markdown/start/syntax"]
-	path = .vim/pack/markdown/start/syntax
+[submodule ".config/vim/pack/markdown/start/syntax"]
+	path = .config/vim/pack/markdown/start/syntax
 	url = https://github.com/tpope/vim-markdown
-[submodule ".vim/pack/colours/start/typewriter"]
-	path = .vim/pack/colours/start/typewriter
+[submodule ".config/vim/pack/colours/start/typewriter"]
+	path = .config/vim/pack/colours/start/typewriter
 	url = https://github.com/logico/typewriter-vim
-[submodule ".vim/pack/html/start/syntax"]
-	path = .vim/pack/html/start/syntax
+[submodule ".config/vim/pack/html/start/syntax"]
+	path = .config/vim/pack/html/start/syntax
 	url = https://github.com/sheerun/html5.vim
-[submodule ".vim/pack/css/start/colourpreview"]
-	path = .vim/pack/css/start/colourpreview
+[submodule ".config/vim/pack/css/start/colourpreview"]
+	path = .config/vim/pack/css/start/colourpreview
 	url = https://github.com/ap/vim-css-color
-[submodule ".vim/pack/comments/start/manager"]
-	path = .vim/pack/comments/start/manager
+[submodule ".config/vim/pack/comments/start/manager"]
+	path = .config/vim/pack/comments/start/manager
 	url = https://github.com/tpope/vim-commentary
-[submodule ".vim/pack/git/start/fugitive"]
-	path = .vim/pack/git/start/fugitive
+[submodule ".config/vim/pack/git/start/fugitive"]
+	path = .config/vim/pack/git/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/pack/go/start/syntax"]
-	path = .vim/pack/go/start/syntax
+[submodule ".config/vim/pack/go/start/syntax"]
+	path = .config/vim/pack/go/start/syntax
 	url = https://github.com/fatih/vim-go
-[submodule ".vim/pack/git/start/syntax"]
-	path = .vim/pack/git/start/syntax
+[submodule ".config/vim/pack/git/start/syntax"]
+	path = .config/vim/pack/git/start/syntax
 	url = https://github.com/tpope/vim-git
-[submodule ".local/share/suckless/surf/src"]
+[submodule ".config/local/share/suckless/surf/src"]
 	path = .local/share/suckless/surf/src
 	url = https://git.suckless.org/surf
-[submodule ".local/share/suckless/st/src"]
+[submodule ".config/local/share/suckless/st/src"]
 	path = .local/share/suckless/st/src
 	url = https://git.suckless.org/st
+[submodule ".config/local/share/suckless/dmenu/src"]
+	path = .local/share/suckless/dmenu/src
+	url = https://git.suckless.org/dmenu
