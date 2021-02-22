@@ -29,7 +29,7 @@ If applicable, add screenshots to help explain your problem.
 - Utility: [e.g. Vim]
 - Configuration: [e.g. .vimrc]
 - OS: [e.g. OpenBSD-CURRENT]
-- Version [e.g. Vim8]
+- Version: [e.g. Vim8]
 
 **Additional context**
 Add any other context about the problem here.
