@@ -35,7 +35,7 @@ symlink the desired files:
 ```sh
 cd "$HOME"
 git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
-ln -sf ~/.dotfiles/.vimrc ~/.vimrc
+ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 ```
 
 To update your local copy, just pull the repo as you would normally.
