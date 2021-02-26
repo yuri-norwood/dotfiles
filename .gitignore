@@ -26,7 +26,6 @@
 **.*auth*
 
 # other
-**.viminfo
 **.Xdefaults
 **.cshrc
 **.cvsrc

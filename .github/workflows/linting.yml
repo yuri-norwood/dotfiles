@@ -45,7 +45,7 @@ jobs:
       - name: Lint vim documentation
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
-          files: .vim/pack/*/start/*.md
+          files: .config/vim/pack/*/start/*.md
 
   # This job checks that all yaml files correctly shake a headless chicken
   yaml:
@@ -88,17 +88,17 @@ jobs:
 
       # Lint vimrc
       - uses: actions/checkout@v1
-      - name: Vint .vimrc
+      - name: Vint vimrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .vimrc
+          path: .config/vim/vimrc
 
       # Lint exrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .exrc
+          path: .config/vim/exrc
 
   # This job checks that the given shell scripts are well written
   shell:

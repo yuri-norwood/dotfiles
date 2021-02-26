@@ -39,12 +39,8 @@ indent_style = space
 indent_size  = 4
 end_of_line  = crlf
 
-; Vimrc needs trailling whitespace allowed
-[.vimrc]
-trim_trailing_whitespace = false
-
 ; Web files should be indented with spaces
-[*.{html,htm,css,js}]
+[*.{html,htm,css,js,cshtml}]
 indent_style = space
 indent_size  = 4
 
@@ -275,52 +271,3 @@ csharp_space_between_square_brackets                                     = false
 ; Wrapping preferences
 csharp_preserve_single_line_blocks     = true
 csharp_preserve_single_line_statements = true
-
-; Define `public` symbols
-dotnet_naming_symbols.public.applicable_kinds           = class, struct, interface, enum, property, method, field, event, delegate
-dotnet_naming_symbols.public.applicable_accessibilities = public, internal, protected, protected_internal
-
-; Define `pascal` style
-dotnet_naming_style.pascal.capitalization = pascal_case
-
-; Define `public_members_pascal` rule
-dotnet_naming_rule.public_members_pascal.symbols  = public
-dotnet_naming_rule.public_members_pascal.style    = pascal
-dotnet_naming_rule.public_members_pascal.severity = warning
-
-; Define `private` symbols
-dotnet_naming_symbols.private.applicable_kinds           = class, struct, interface, enum, property, method, field, event, delegate
-dotnet_naming_symbols.private.applicable_accessibilities = private, private_protected
-
-; Define `camel` style
-dotnet_naming_style.camel.capitalization = camel_case
-
-; Define `private_members_camel` rule
-dotnet_naming_rule.private_members_camel.symbols  = private
-dotnet_naming_rule.private_members_camel.style    = camel
-dotnet_naming_rule.private_members_camel.severity = warning
-
-; Define `type` symbol
-dotnet_naming_symbols.type.applicable_kinds           = type_parameter
-dotnet_naming_symbols.type.applicable_accessibilities = *
-
-; Define `t_name` style
-dotnet_naming_style.t_name.capitalization  = pascal_case
-dotnet_naming_style.t_name.required_prefix = T
-
-; Define `type_t_prefix` rule
-dotnet_naming_rule.type_t_prefix.symbols  = type
-dotnet_naming_rule.type_t_prefix.style    = t_name
-dotnet_naming_rule.type_t_prefix.severity = warning
-
-; Define `locals` symbols
-dotnet_naming_symbols.locals.applicable_kinds           = parameter, local, local_function
-dotnet_naming_symbols.locals.applicable_accessibilities = local
-
-; Define `lower` style
-dotnet_naming_style.lower.capitalization = camel_case
-
-; Define `locals_lower_camel` rule
-dotnet_naming_style.locals_lower_camel.symbols  = locals
-dotnet_naming_style.locals_lower_camel.style    = lower
-dotnet_naming_style.locals_lower_camel.severity = warning

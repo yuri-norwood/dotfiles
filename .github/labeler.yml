@@ -43,7 +43,7 @@ js:
 
 # This regards the Korn Shell
 ksh:
-  - '.kshrc'
+  - '.config/ksh/kshrc'
   - '**/*.ksh'
 
 # This regards the labeler automation
@@ -55,7 +55,7 @@ openbsd:
   - '**/openbsd/**/*'
   - '.config/doas/**/*'
   - '.config/xenodm/**/*'
-  - '.kshrc'
+  - '.config/ksh/kshrc'
   - '**/*.ksh'
 
 # This regards the UNIX shell environment
@@ -63,7 +63,7 @@ shell:
   - '**/*.sh'
   - '**/*.ksh'
   - '.profile'
-  - '.kshrc'
+  - '.config/ksh/kshrc'
 
 # GitHub sponsors
 sponsor:
@@ -98,15 +98,13 @@ test:
 
 # This regards vim or vimscript
 vim:
-  - '.exrc'
-  - '.vimrc'
-  - '.vim/**/*'
-  - '.vim/pack/**/*'
+  - '.config/vim/exrc'
+  - '.config/vim/vimrc'
+  - '.config/vim/**/*'
+  - '.config/vim/pack/**/*'
   - '**/*.vim'
 
 # This regards Xorg or X11
 x11:
   - '.config/X11/**/*'
-  - '.config/xenodm/**/*'
-  - '.xinitrc'
-  - '.xsession'
+  - '.config/X11/xdm/**/*'

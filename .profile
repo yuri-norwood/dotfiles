@@ -30,21 +30,24 @@ path_add() {
 		export PATH="$1:${PATH}"
 
 	# Otherwise try as a subdir of XDG_BIN_HOME
-	elif [ -d "${XDG_BIN_HOME}/$1" ]
+	elif [ -d "${XDG_BIN_HOME:-.local/bin}/$1" ]
 	then
-		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
-
-	# Lastly try as a subdir of .local/bin
-	elif [ -d ".local/bin/$1" ]
-	then
-		export PATH=".local/bin/$1:${PATH}"
+		export PATH="${XDG_BIN_HOME:-.local/bin}/$1:${PATH}"
 	fi
 }
 
-# Include alias definitions
-include ~/.config/aliases/main
+# Set standard XDG directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
 
-# Add scripts to PATH
+# Set nonstandard and pseudo XDG directories
+export XDG_BIN_HOME="${HOME}/.local/bin"
+
+# Include alias definitions
+include "${XDG_CONFIG_HOME}/aliases/main"
+
+# Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
 # Add pfetch to PATH
@@ -64,15 +67,7 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 export PAGER=less
 
 # Set ENV to provide shell specific settings
-export ENV="${HOME}/.kshrc"
-
-# Set standard XDG directories
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CACHE_HOME="${HOME}/.cache"
-
-# Set nonstandard and pseudo XDG directories
-export XDG_BIN_HOME="${HOME}/.local/bin"
+export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -90,17 +85,24 @@ path_add "${DOTNET_TOOLS}"
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
+# Add pfetch to PATH
+path_add "pfetch"
+
 # Set Golang environment
 export GOROOT="/usr/local/go"
-export GOPATH="${XDG_BIN_HOME}/go"
+export GOBIN="${XDG_BIN_HOME}/go/bin"
+export GOPATH="${HOME}/go:${XDG_BIN_HOME}/go"
 
 # Add go lang tools to PATH
-path_add "${GOPATH}/bin"
 path_add "${GOROOT}/bin"
+path_add "${GOBIN}"
 
 # Add OS specific scripts to PATH
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Set X11 init script
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
+# Make vim respect XDG_CONFIG_DIR
+export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"
 
