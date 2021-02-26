@@ -16,7 +16,7 @@ documentation:
   - '.github/CODEOWNERS'
   - '.github/ISSUE_TEMPLATE/config.yml'
   - '.gitattributes'
-  - '.vim/pack/*/start/README.md'
+  - '.config/vim/pack/**/README.md'
 
 # http://dwm.suckless.org/
 dwm:
