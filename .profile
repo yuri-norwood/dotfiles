@@ -82,9 +82,6 @@ path_add "${DOTNET_TOOLS}"
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
-# Add pfetch to PATH
-path_add "pfetch"
-
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
