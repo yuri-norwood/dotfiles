@@ -60,7 +60,7 @@ Usually, dotfiles are very personal and specific to the author, however, I
 try to keep my dotfiles as a general framework that can be used for anyone's
 configuration. If you have a question or suggestion, feel free to open a PR.
 
-[Just don't be a dick.](CODE_OF_CONDUCT.md)
+[Just don't be a dick.](CODE_OF_CONDUCT)
 
 ## License
 
