@@ -104,7 +104,7 @@ set spellcapcheck=""
 
 " Setup colourscheme
 syntax on
-colorscheme github
+colorscheme toast
 
 " Allow colours to work correctly, regardless of terminal
 set t_Co=256
