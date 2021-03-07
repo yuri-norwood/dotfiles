@@ -248,6 +248,18 @@ dotnet_diagnostic.CA2234.severity = warning
 dotnet_diagnostic.CA2218.severity = warning
 dotnet_diagnostic.CA2224.severity = warning
 
+; Manage specific CA code quality settings
+dotnet_code_quality.CA2241.severity = warning ; Provide correct arguments to formatting methods
+dotnet_code_quality.CA1021.severity = warning ; Avoid out parameters
+dotnet_code_quality.CA1008.severity = warning ; Enums should have zero value
+dotnet_code_quality.CA1069.severity = warning ; Enums should not have duplicate values
+dotnet_code_quality.CA2237.severity = warning ; Mark ISerializable types with SerializableAttribute
+dotnet_code_quality.CA2229.severity = warning ; Implement serialization constructors
+dotnet_code_quality.CA2235.severity = warning ; Mark all non-serializable fields
+
+; Attempt to autmoatically detect formating methods
+dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
+
 ; New line preferences
 csharp_new_line_before_catch                          = true
 csharp_new_line_before_else                           = true
