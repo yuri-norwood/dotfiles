@@ -14,7 +14,7 @@ case "$0" in
 esac
 
 # Configure history
-HISTFILE="${XDG_CACHE_HOME}/history.ksh"
+HISTFILE="${XDG_CACHE_HOME}/history.${0##*/}"
 HISTSIZE=2048
 
 # Use Emacs line editing for arrow and home / end keys to work

@@ -22,7 +22,7 @@ this can be done using git:
 ```sh
 cd "$HOME"
 git init
-git remote add origin https://github.com/yuri-norwood/dotfiles.git
+git remote add origin git@github.com:yuri-norwood/dotfiles.git
 git fetch
 git checkout origin/main -ft
 git submodule update --init --recursive
@@ -34,7 +34,7 @@ symlink the desired files:
 
 ```sh
 cd "$HOME"
-git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
+git clone git@github.com:yuri-norwood/dotfiles.git ~/.dotfiles
 ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 ```
 
@@ -60,7 +60,7 @@ Usually, dotfiles are very personal and specific to the author, however, I
 try to keep my dotfiles as a general framework that can be used for anyone's
 configuration. If you have a question or suggestion, feel free to open a PR.
 
-[Just don't be a dick.](CODE_OF_CONDUCT.md)
+[Just don't be a dick.](CODE_OF_CONDUCT)
 
 ## License
 

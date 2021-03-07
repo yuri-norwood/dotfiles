@@ -50,6 +50,9 @@ include "${XDG_CONFIG_HOME}/aliases/main"
 # Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
+# Add pfetch to PATH
+path_add "pfetch"
+
 # Set the prompt to the current directory and a dollar sign
 export PS1='$(_PS1_DIR) $ '
 
@@ -79,9 +82,6 @@ path_add "${DOTNET_TOOLS}"
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
-# Add pfetch to PATH
-path_add "pfetch"
-
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
@@ -99,4 +99,17 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
 # Make vim respect XDG_CONFIG_DIR
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"
+
+# Hide .lesshist in XDG_CACHE_HOME
+export LESSKEY="${XDG_CONFIG_HOME}/less.key"
+export LESSHISTFILE="${XDG_CACHE_HOME}/less.history"
+
+# Move wgetrc to XDG_CONFIG
+export WGETRC="$XDG_CONFIG_HOME/wget/config"
+
+# Startup ssh-agent(1)
+if [ -z "$SSH_AUTH_SOCK" ]
+then
+	eval "$(ssh-agent -s)" >/dev/null 2>&1
+fi
 

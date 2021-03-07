@@ -46,10 +46,10 @@
 [submodule ".config/vim/pack/editorconfig/start/core"]
 	path = .config/vim/pack/editorconfig/start/core
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule ".config/local/bin/pfetch"]
+[submodule ".local/bin/pfetch"]
 	path = .local/bin/pfetch
 	url = https://github.com/dylanaraps/pfetch
-[submodule ".config/local/bin/scripts"]
+[submodule ".local/bin/scripts"]
 	path = .local/bin/scripts
 	url = https://github.com/yuri-norwood/scripts
 [submodule ".config/vim/pack/javascript/start/syntax"]
@@ -58,15 +58,12 @@
 [submodule ".config/vim/pack/colours/start/solarized"]
 	path = .config/vim/pack/colours/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".config/local/share/suckless/dwm/src"]
+[submodule ".local/share/suckless/dwm/src"]
 	path = .local/share/suckless/dwm/src
 	url = https://git.suckless.org/dwm
 [submodule ".config/vim/pack/colours/start/flattened"]
 	path = .config/vim/pack/colours/start/flattened
 	url = https://github.com/romainl/flattened
-[submodule ".config/vim/pack/markdown/start/syntax"]
-	path = .config/vim/pack/markdown/start/syntax
-	url = https://github.com/tpope/vim-markdown
 [submodule ".config/vim/pack/colours/start/typewriter"]
 	path = .config/vim/pack/colours/start/typewriter
 	url = https://github.com/logico/typewriter-vim
@@ -88,12 +85,15 @@
 [submodule ".config/vim/pack/git/start/syntax"]
 	path = .config/vim/pack/git/start/syntax
 	url = https://github.com/tpope/vim-git
-[submodule ".config/local/share/suckless/surf/src"]
+[submodule ".local/share/suckless/surf/src"]
 	path = .local/share/suckless/surf/src
 	url = https://git.suckless.org/surf
-[submodule ".config/local/share/suckless/st/src"]
+[submodule ".local/share/suckless/st/src"]
 	path = .local/share/suckless/st/src
 	url = https://git.suckless.org/st
-[submodule ".config/local/share/suckless/dmenu/src"]
+[submodule ".local/share/suckless/dmenu/src"]
 	path = .local/share/suckless/dmenu/src
 	url = https://git.suckless.org/dmenu
+[submodule ".config/vim/pack/markdown/start/syntax"]
+	path = .config/vim/pack/markdown/start/syntax
+	url = https://github.com/plasticboy/vim-markdown
