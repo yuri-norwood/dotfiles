@@ -100,3 +100,6 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 # Make vim respect XDG_CONFIG_DIR
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"
 
+# Hide .lesshist in XDG_CACHE_HOME
+export LESSKEY="${XDG_CONFIG_HOME}/less.key"
+export LESSHISTFILE="${XDG_CACHE_HOME}/less.history"
