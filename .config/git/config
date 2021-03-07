@@ -44,5 +44,3 @@
 	recurse   = true
 	fetchJobs = 8
 
-[url "ssh:github.com/"]
-	insteadOf = https://github.com/
