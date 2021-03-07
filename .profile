@@ -106,3 +106,7 @@ export LESSHISTFILE="${XDG_CACHE_HOME}/less.history"
 
 # Move wgetrc to XDG_CONFIG
 export WGETRC="$XDG_CONFIG_HOME/wget/config"
+
+# Startup ssh-agent(1)
+eval "$(ssh-agent -s)" 2>&1 >/dev/null
+
