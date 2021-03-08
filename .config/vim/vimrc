@@ -115,7 +115,7 @@ set background=dark
 " Disable parenthesis matching highlight, as it is is extremely annoying
 let g:loaded_matchparen = 1
 
-" Show tabs as special character, NOTE: listchars has a trailing space
+" Show tabs as special character
 set list
 set listchars=tab:\|\ ,trail:.
 match Comment /\t/
