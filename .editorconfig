@@ -164,7 +164,6 @@ dotnet_diagnostic.IDE0050.severity = suggestion ; Always convert anonymous type 
 dotnet_diagnostic.IDE0051.severity = warning    ; Remove unused private member.
 dotnet_diagnostic.IDE0052.severity = warning    ; Remove unread private member
 dotnet_diagnostic.IDE0054.severity = warning    ; Always use compound assignment
-dotnet_diagnostic.IDE0055.severity = warning    ; Always warn on all formatting options have rule ID IDE0055.
 dotnet_diagnostic.IDE0058.severity = none       ; Remove unnecessary expression value (allow silent discard).
 dotnet_diagnostic.IDE0071.severity = warning    ; Always simplify interpolation.
 dotnet_diagnostic.IDE0074.severity = warning    ; Always use coalesce compound assignment
