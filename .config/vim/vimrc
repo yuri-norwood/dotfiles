@@ -117,7 +117,7 @@ let g:loaded_matchparen = 1
 
 " Show tabs as special character, NOTE: listchars has a trailing space
 set list
-set listchars=tab:\|\ 
+set listchars=tab:\|\ ,trail:.
 match Comment /\t/
 
 " Allow special sequences to be collapsed inline
