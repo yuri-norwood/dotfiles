@@ -95,7 +95,7 @@ path_add "${GOBIN}"
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Set X11 init script
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XINITRC="${XDG_CONFIG_HOME}/X11/xinitrc"
 
 # Make vim respect XDG_CONFIG_DIR
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"
