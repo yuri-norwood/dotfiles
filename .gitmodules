@@ -74,7 +74,7 @@
 	path = .config/vim/pack/css/start/colourpreview
 	url = https://github.com/ap/vim-css-color
 [submodule ".config/vim/pack/comments/start/manager"]
-	path = .config/vim/pack/comments/start/manager
+	path = .config/vim/pack/misc/start/commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule ".config/vim/pack/git/start/fugitive"]
 	path = .config/vim/pack/git/start/fugitive
