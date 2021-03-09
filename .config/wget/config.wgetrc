@@ -1,0 +1,5 @@
+# Move ~/.wget-hsts to ~/.cache/ to remove cluter
+hsts-file = ~/.cache/wget-hsts
+
+# Ignore robots.txt files, allows access to picky sites
+robots = off
