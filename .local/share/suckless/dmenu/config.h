@@ -1,3 +1,5 @@
+/* vim: set ft=c: */
+
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -25,4 +27,3 @@ static const char *colors[SchemeLast][2] = {
  * for example: " /?\"&[]"
  */
 static const char worddelimiters[] = " ";
-
