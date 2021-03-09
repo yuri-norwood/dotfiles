@@ -11,7 +11,7 @@ on:
 # Define a job for each automatic task
 jobs:
 
-  # This job enssures that PRs have the correct title formatting
+  # This job ensures that PRs have the correct title formatting
   pull_request:
     runs-on: ubuntu-latest
     steps:
@@ -34,3 +34,11 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           sync-labels: false
+
+  # This job assigns each PR to it's author
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: samspills/assign-pr-to-author@v1.0
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
