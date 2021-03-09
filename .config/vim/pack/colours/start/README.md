@@ -13,3 +13,4 @@
 * solarized - The famous solarized theme
 * toast - The Toast theme
 * typewriter - The TypeWriter theme
+* firewatch - Two tone simple theme.
