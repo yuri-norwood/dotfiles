@@ -31,10 +31,11 @@ jobs:
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
-      - name: Add issue comment
+      # Add checkout comment to issue
       - uses: KeisukeYamashita/create-comment@v1
         with:
           comment: |
             ```sh
             git fetch && git checkout "${{ env.GITHUB_NEW_BRANCH }}"
             ```
+      - name: Add issue comment
