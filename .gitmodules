@@ -100,3 +100,6 @@
 [submodule ".config/vim/pack/misc/start/vim-illuminate"]
 	path = .config/vim/pack/misc/start/illuminate
 	url = https://github.com/RRethy/vim-illuminate.git
+[submodule "/home/yuri/.config/vim/pack/colours/start/firewatch"]
+	path = /home/yuri/.config/vim/pack/colours/start/firewatch
+	url = https://github.com/rakr/vim-two-firewatch
