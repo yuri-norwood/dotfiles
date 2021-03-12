@@ -318,7 +318,6 @@ dotnet_diagnostic.RCS1194.severity  = warning ; Implement exception constructors
 dotnet_diagnostic.RCS1195.severity  = warning ; Use ^ operator
 dotnet_diagnostic.RCS1196.severity  = warning ; Call extension method as instance method
 dotnet_diagnostic.RCS1197.severity  = warning ; Optimize StringBuilder.Append/AppendLine call
-dotnet_diagnostic.RCS1198.severity  = warning ; Avoid unnecessary boxing of value type
 dotnet_diagnostic.RCS1199.severity  = warning ; Unncessary null check
 dotnet_diagnostic.RCS1200.severity  = warning ; Call 'Enumerable.ThenBy' instead of 'Enumerable.OrderBy'
 dotnet_diagnostic.RCS1201.severity  = warning ; Use method chaining
