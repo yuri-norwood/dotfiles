@@ -27,7 +27,7 @@ jobs:
           ref: main
       - name: Auto branch
         run: |
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ GITHUB_REPOSITORY }}.git
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
