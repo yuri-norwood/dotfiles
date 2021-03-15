@@ -23,6 +23,7 @@ this can be done using git:
 <summary>
 Clone with SSH
 </summary>
+
 ```sh
 cd "$HOME"
 git init
@@ -37,6 +38,7 @@ git submodule update --init --recursive
 <summary>
 Clone with HTTPS
 </summary>
+
 ```sh
 cd "$HOME"
 git init
@@ -55,6 +57,7 @@ symlink the desired files:
 <summary>
 Clone with SSH
 </summary>
+
 ```sh
 cd "$HOME"
 git clone git@github.com:yuri-norwood/dotfiles.git ~/.dotfiles
@@ -66,6 +69,7 @@ ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 <summary>
 Clone with HTTPS
 </summary>
+
 ```sh
 cd "$HOME"
 git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
@@ -77,6 +81,7 @@ ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 <summary>
 To update your local copy, just pull the repo as you would normally.
 </summary>
+
 ```sh
 cd "$HOME"
 git pull
@@ -88,6 +93,7 @@ git pull
 To update the submodules, recursively update all the submodules and commit the
 update.
 </summary>
+
 ```sh
 cd "$HOME"
 git submodule foreach --recursive git pull origin master
