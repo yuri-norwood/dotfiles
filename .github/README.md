@@ -32,6 +32,7 @@ git fetch
 git checkout origin/main -ft
 git submodule update --init --recursive
 ```
+
 </details>
 
 <details>
@@ -47,6 +48,7 @@ git fetch
 git checkout origin/main -ft
 git submodule update --init --recursive
 ```
+
 </details>
 
 Alternatively, if you don't want to overwrite any existing files, or just want
@@ -63,6 +65,7 @@ cd "$HOME"
 git clone git@github.com:yuri-norwood/dotfiles.git ~/.dotfiles
 ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 ```
+
 </details>
 
 <details>
@@ -75,6 +78,7 @@ cd "$HOME"
 git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
 ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 ```
+
 </details>
 
 <details>
@@ -86,6 +90,7 @@ To update your local copy, just pull the repo as you would normally.
 cd "$HOME"
 git pull
 ```
+
 </details>
 
 <details>
@@ -99,6 +104,7 @@ cd "$HOME"
 git submodule foreach --recursive git pull origin master
 git commit -am "Updated submodules"
 ```
+
 </details>
 
 ## Contributing
