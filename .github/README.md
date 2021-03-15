@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD001 MD005 -->
+
 # dotfiles
 
 [![Vim](https://img.shields.io/badge/--019733?logo=vim)](../.config/vim)
