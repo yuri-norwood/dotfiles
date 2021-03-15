@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD001 MD005 -->
+<!-- markdownlint-disable MD001 MD032 -->
 
 # dotfiles
 
