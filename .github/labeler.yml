@@ -37,6 +37,10 @@ git:
 github:
   - '.github/**/*'
 
+# https://golang.org/
+go:
+  - '.local/bin/go/**/*'
+
 # This regards JavaScript
 js:
   - '**/*.js'
