@@ -30,9 +30,9 @@ path_add() {
 		export PATH="$1:${PATH}"
 
 	# Otherwise try as a subdir of XDG_BIN_HOME
-	elif [ -d "${XDG_BIN_HOME:-.local/bin}/$1" ]
+	elif [ -d "${XDG_BIN_HOME}" ] && [ -d "${XDG_BIN_HOME}/$1" ]
 	then
-		export PATH="${XDG_BIN_HOME:-.local/bin}/$1:${PATH}"
+		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
 	fi
 }
 
