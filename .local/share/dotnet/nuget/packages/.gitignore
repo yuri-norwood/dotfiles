@@ -1,0 +1,5 @@
+# Ignore nuget packages by default:
+*
+
+# But track these:
+!.gitignore
