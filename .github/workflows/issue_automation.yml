@@ -36,7 +36,7 @@ jobs:
         uses: KeisukeYamashita/create-comment@v1
         with:
           comment: |
-            [Checkout](https://github.com/${GITHUB_REPOSITORY}/tree/${{ env.GITHUB_NEW_BRANCH }}):
+            https://github.com/${GITHUB_REPOSITORY}/tree/${{ env.GITHUB_NEW_BRANCH }}
             ```sh
             git fetch && git checkout "${{ env.GITHUB_NEW_BRANCH }}"
             ```
