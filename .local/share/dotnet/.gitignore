@@ -3,5 +3,3 @@
 
 # But track the git ignore and git keep files
 !.gitignore
-!.gitkeep
-
