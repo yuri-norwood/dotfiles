@@ -4,7 +4,7 @@ about: Describes issues that relate primarily to simple aesthetic changes, such 
   changing the colourscheme for vim / nvim.
 title: "[COL]: "
 labels: ''
-assignees: ''
+assignees: yuri-norwood
 
 ---
 
