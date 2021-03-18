@@ -1,6 +1,0 @@
-# Overload all C files and headers
-.st/*.c linguist-language=C
-.st/*.h linguist-language=C
-
-# Correct yaml lint file type (missing extension by design)
-.config/yamllint/config lingust-language=YAML

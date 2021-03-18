@@ -13,35 +13,46 @@ on:
 
 # Define a job for each linter / language
 jobs:
+
   # This job checks that all readmes and other markdown files are parsable
   markdown:
     runs-on: ubuntu-latest
     steps:
+
+      # Lint the README
       - uses: actions/checkout@v1
       - name: Lint README
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/README.md
+
+      # Lint issue templates
       - uses: actions/checkout@v1
       - name: Lint ISSUE_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/ISSUE_TEMPLATE/*.md
+
+      # Lint pull request templates
       - uses: actions/checkout@v1
       - name: Lint PULL_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/PULL_REQUEST_TEMPLATE.md
+
+      # Lint vim plugin documentation
       - uses: actions/checkout@v1
       - name: Lint vim documentation
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
-          files: .vim/pack/*/start/*.md
+          files: .config/vim/pack/*/start/*.md
 
   # This job checks that all yaml files correctly shake a headless chicken
   yaml:
     runs-on: ubuntu-latest
     steps:
+
+      # Lint all .yml files
       - uses: actions/checkout@v1
       - name: yaml lint
         uses: ibiqlik/action-yamllint@v3
@@ -49,6 +60,8 @@ jobs:
           strict: true
           config_file: .config/yamllint/config
           format: parsable
+
+      # Lint yamllint config
       - uses: actions/checkout@v1
       - name: yaml lint config
         uses: ibiqlik/action-yamllint@v3
@@ -62,6 +75,7 @@ jobs:
   editorconfig:
     runs-on: ubuntu-latest
     steps:
+
       # Check all files against the ~/.editorconfig
       - uses: actions/checkout@v2
       - name: Check editorconfig
@@ -71,71 +85,45 @@ jobs:
   vimscript:
     runs-on: ubuntu-latest
     steps:
-      # Check ~/.vimrc
+
+      # Lint vimrc
       - uses: actions/checkout@v1
-      - name: Vint .vimrc
+      - name: Vint vimrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .vimrc
+          path: .config/vim/vimrc
 
-      # Check ~/.exrc
+      # Lint exrc
       - uses: actions/checkout@v1
       - name: Vint .exrc
         uses: ludvighz/vint-action@v1
         with:
-          path: .exrc
+          path: .config/vim/exrc
 
   # This job checks that the given shell scripts are well written
   shell:
     runs-on: ubuntu-latest
     steps:
-      # Check ~/.profile
-      - uses: actions/checkout@v1
-      - name: shellcheck .profile
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .profile
 
-      # Check ~/.kshrc
+      # Lint shell scripts
       - uses: actions/checkout@v1
-      - name: shellcheck .kshrc
+      - name: shellcheck profile
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .kshrc
+          additional_files: .profile .kshrc
 
-      # Check ~/.aliases
+      # Lint user aliases
       - uses: actions/checkout@v1
-      - name: shellcheck .aliases
+      - name: shellcheck aliases
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .aliases
+          additional_files: .config/aliases/*
 
-      # Check ~/.xinitrc
+      # Lint pfetch config - NOTE: Ignore SC2034 as it is imported
       - uses: actions/checkout@v1
-      - name: shellcheck .xinitrc
+      - name: shellcheck pfetch config
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .xinitrc
-
-      # Check ~/.xsession
-      - uses: actions/checkout@v1
-      - name: shellcheck .xsession
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .xsession
-
-      # Check ~/.pfetchrc - NOTE: Ignore SC2034 as it is imported
-      - uses: actions/checkout@v1
-      - name: shellcheck .pfetchrc
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .pfetchrc
+          additional_files: .config/pfetch/config
         env:
           SHELLCHECK_OPTS: -e SC2034
-
-      # Check OpenBSD specific scripts
-      - uses: actions/checkout@v1
-      - name: shellcheck .bin/openbsd/doas
-        uses: ludeeus/action-shellcheck@master
-        with:
-          additional_files: .bin/openbsd/doas

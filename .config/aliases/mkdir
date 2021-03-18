@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#
+# Alias definitions
+#
+
+# Simplify directory creation
+alias mkdir="mkdir -p"
+

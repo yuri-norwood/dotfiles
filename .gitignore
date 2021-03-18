@@ -12,27 +12,9 @@
 **.bak
 **cache**
 
-# history files
-**hst
-**hsts
-**hist**
-**HIST**
-
-# logs
-**.log
-
-# sensitive information
-**.*credentials?
-**.*auth*
-
 # other
-**.viminfo
-**.Xdefaults
 **.cshrc
 **.cvsrc
 **.login
 **.mailrc
-**.ssh
-**.xsession-errors
-**.templateengine
 

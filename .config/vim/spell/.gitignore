@@ -1,0 +1,5 @@
+# Ignore spell files as they may contain sensitive information
+*
+
+# Track this gitignore
+!.gitignore

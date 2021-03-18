@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#
+# Alias definitions
+#
+
+# Simplify directory listing
+alias ls="ls -F"
+alias la="ls -A"
+alias ll="ls -l"
+

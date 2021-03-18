@@ -1,4 +1,0 @@
-#!/bin/sh
-
-xsetroot -fg \#6f6f6f -bg \#bfbfbf -bitmap /usr/X11R6/include/X11/bitmaps/root_weave
-
