@@ -113,6 +113,6 @@ x11:
   - '.config/X11/**/*'
   - '.config/X11/xdm/**/*'
 
-# This regards the labeler automation
+# This regards the yamllint automation
 yamllint:
   - '.github/yamllint.yml'
