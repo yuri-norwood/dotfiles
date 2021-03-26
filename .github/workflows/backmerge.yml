@@ -1,0 +1,39 @@
+---
+
+name: Backmerge
+
+on: 
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
+
+jobs:
+
+  main_onto_feature_branches:
+
+    if: github.event.pull_request.merged == true
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+
+    steps:
+      # Create new branch and push to remote
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+
+      # Set environment variables to allow configuration
+      - name: Set env
+        run: |
+          echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY}" >> $GITHUB_ENV
+          git config --local user.email "76186754+yuri-norwood@users.noreply.github.com"
+          git config --local user.name  "Yuri Norwood"
+
+      # Loop over all branches and backmerge
+      - name: Backmerge All
+        run: |
+          for branch in $(git branch -r | sed 's/^\s*origin\///g')
+          do
+            echo "Backmerging ${BRANCH}"
+          done
