@@ -10,6 +10,9 @@ include() {
 	if [ -f "$1" ]
 	then
 		. "$1"
+	elif [ -f "${XDG_CONFIG_HOME}/$1" ]
+	then
+		. "${XDG_CONFIG_HOME}/$1"
 	fi
 }
 
@@ -45,9 +48,9 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_BIN_HOME="${HOME}/.local/bin"
 
 # Include alias definitions
-include "${XDG_CONFIG_HOME}/aliases/ls"
-include "${XDG_CONFIG_HOME}/aliases/mkdir"
-include "${XDG_CONFIG_HOME}/aliases/cd"
+include "aliases/ls"
+include "aliases/mkdir"
+include "aliases/cd"
 
 # Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
