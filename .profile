@@ -56,7 +56,7 @@ path_add "scripts"
 path_add "pfetch"
 
 # Set the prompt to the current directory and a dollar sign
-export PS1='$(_PS1_DIR) $ '
+export PS1="$(_PS1_DIR) $ "
 
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
