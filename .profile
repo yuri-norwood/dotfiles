@@ -10,6 +10,8 @@ include() {
 	if [ -f "$1" ]
 	then
 		. "$1"
+	elif [ -d "${XDG_CONFIG_HOME}" ] && [ -f "${XDG_CONFIG_HOME}/$1" ]
+		. "${XDG_CONFIG_HOME}/$1"
 	fi
 }
 
