@@ -11,6 +11,7 @@ include() {
 	then
 		. "$1"
 	elif [ -f "${XDG_CONFIG_HOME}/$1" ]
+	then
 		. "${XDG_CONFIG_HOME}/$1"
 	fi
 }
