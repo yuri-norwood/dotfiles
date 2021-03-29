@@ -75,7 +75,10 @@ export PAGER=less
 # Set KSHRC to provide ksh/mksh specific settings
 export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
 
-# Set ENV to provide shell specific settings
+# Set SHRC to provide POSIX generic shell settings
+export SHRC="${XDG_CONFIG_HOME}/sh/shrc"
+
+# Set ENV to provide session specific settings
 export ENV="${KSHRC}"
 
 # Fixing misbehaving Java applications
