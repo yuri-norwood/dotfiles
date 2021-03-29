@@ -79,7 +79,7 @@ export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
 export SHRC="${XDG_CONFIG_HOME}/sh/shrc"
 
 # Set ENV to provide session specific settings
-export ENV="${KSHRC}"
+export ENV="${SHRC}"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
