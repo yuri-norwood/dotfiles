@@ -5,6 +5,8 @@
 # ~/.profile
 #
 
+# Helper functions {{{
+
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
@@ -14,15 +16,6 @@ include() {
 	then
 		. "${XDG_CONFIG_HOME}/$1"
 	fi
-}
-
-# Helper to calculate PS1
-_PS1_DIR() {
-	case "$PWD" in
-		"$HOME") echo "~"          ;;
-		"/")     echo "/"          ;;
-		*)       echo "${PWD##*/}" ;;
-	esac
 }
 
 # Helper to add executables to $PATH
@@ -38,6 +31,8 @@ path_add() {
 		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
 	fi
 }
+
+# Helper functions }}}
 
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
@@ -58,9 +53,6 @@ path_add "scripts"
 # Add pfetch to PATH
 path_add "pfetch"
 
-# Set the prompt to the current directory and a dollar sign
-export PS1="$(_PS1_DIR) $ "
-
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
 export EDITOR="$(command -v vi  2>/dev/null)"
@@ -68,8 +60,14 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 # Set PAGER to prevent use of more(1)
 export PAGER=less
 
-# Set ENV to provide shell specific settings
-export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
+# Set KSHRC to provide ksh/mksh specific settings
+export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
+
+# Set SHRC to provide POSIX generic shell settings
+export SHRC="${XDG_CONFIG_HOME}/sh/shrc"
+
+# Set ENV to provide session specific settings
+export ENV="${SHRC}"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
