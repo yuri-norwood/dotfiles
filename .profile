@@ -5,6 +5,8 @@
 # ~/.profile
 #
 
+# Helper functions {{{
+
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
@@ -39,6 +41,8 @@ path_add() {
 	fi
 }
 
+# Helper functions }}}
+
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -68,8 +72,11 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 # Set PAGER to prevent use of more(1)
 export PAGER=less
 
+# Set KSHRC to provide ksh/mksh specific settings
+export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
+
 # Set ENV to provide shell specific settings
-export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
+export ENV="${KSHRC}"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
