@@ -20,7 +20,12 @@ export PS1='$(_PS1_DIR) $ '
 case "$0" in
 	# Include kshrc in interactive ksh sessions, within
 	# the confines of this case we can assume ksh syntax.
-	# shellcheck disable=SC2039
-	*ksh*) [[ $- = *i* ]] && . "${KSHRC}" ;;
+	*ksh*)
+		# shellcheck disable=SC2039
+		if [[ $- = *i* ]] && [ "${KSHRC}" ]
+		then
+			. "${KSHRC}"
+		fi
+	;;
 esac
 
