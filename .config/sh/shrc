@@ -4,6 +4,18 @@
 # Session shell configuration
 #
 
+# Helper to calculate PS1
+_PS1_DIR() {
+	case "$PWD" in
+		"$HOME") echo "~"          ;;
+		"/")     echo "/"          ;;
+		*)       echo "${PWD##*/}" ;;
+	esac
+}
+
+# Set the prompt to the current directory and a dollar sign
+export PS1='$(_PS1_DIR) $ '
+
 # Catch session shell
 case "$0" in
 	# Include kshrc in interactive ksh sessions

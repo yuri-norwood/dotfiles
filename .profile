@@ -18,15 +18,6 @@ include() {
 	fi
 }
 
-# Helper to calculate PS1
-_PS1_DIR() {
-	case "$PWD" in
-		"$HOME") echo "~"          ;;
-		"/")     echo "/"          ;;
-		*)       echo "${PWD##*/}" ;;
-	esac
-}
-
 # Helper to add executables to $PATH
 path_add() {
 	# If the directory exists, add it to PATH
@@ -61,9 +52,6 @@ path_add "scripts"
 
 # Add pfetch to PATH
 path_add "pfetch"
-
-# Set the prompt to the current directory and a dollar sign
-export PS1='$(_PS1_DIR) $ '
 
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
