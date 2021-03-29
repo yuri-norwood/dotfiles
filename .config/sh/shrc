@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#
+# Session shell configuration
+#
+
+# Catch session shell
+case "$0" in
+	# Include kshrc in interactive ksh sessions
+	*ksh*) [[ $- = *i* ]] && . "${KSHRC}" ;;
+esac
+
