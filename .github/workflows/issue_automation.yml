@@ -6,10 +6,21 @@ name: issue automation
 # Automate on issue create events
 on:
   issues:
-    types: [opened]
+    types:
+      - opened
 
 # Define a job for each automatic task
 jobs:
+
+  # This job assigns the issue
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: estrada9166/issue-assigner@v1
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          WITH_COMMENTS: false
 
   # This job creates new branches for new issues
   auto_branch:
