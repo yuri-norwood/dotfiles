@@ -1,18 +1,22 @@
 ---
 
 # This file defines automation actions
-name: pull request automation
+name: Auto
 
 # Automate on all pull request events
 on:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
 
 # Define a job for each automatic task
 jobs:
 
   # This job ensures that PRs have the correct title formatting
-  pull_request:
+  title:
     runs-on: ubuntu-latest
     steps:
       - uses: seferov/pr-lint-action@master
