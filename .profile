@@ -88,7 +88,7 @@ export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
-export GOPATH="${HOME}/go:${XDG_BIN_HOME}/go"
+export GOPATH="${XDG_BIN_HOME}/go:${HOME}/going-gophers:${HOME}/bfk"
 
 # Add go lang tools to PATH
 path_add "${GOROOT}/bin"
