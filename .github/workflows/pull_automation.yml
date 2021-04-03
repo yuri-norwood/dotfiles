@@ -31,7 +31,7 @@ jobs:
             `%pattern%`. Please fix the title and re-open the PR.
 
   # This job labels the PR based on the files modified
-  labeler:
+  label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@main
