@@ -17,8 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       # Lint the README
       - name: Lint README
@@ -48,8 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       # Lint all .yml files
       - name: yaml lint
@@ -73,8 +69,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       # Check all files against the .editorconfig
       - name: Check editorconfig
@@ -84,8 +78,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       # Lint shell scripts
       - name: shellcheck profile
@@ -111,8 +103,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       # Lint vimrc
       - name: Vint vimrc
