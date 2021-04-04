@@ -112,7 +112,3 @@ vim:
 x11:
   - '.config/X11/**/*'
   - '.config/X11/xdm/**/*'
-
-# This regards the yamllint automation
-yamllint:
-  - '.github/yamllint.yml'
