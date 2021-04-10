@@ -1,17 +1,16 @@
 ---
 
 # This file defines automation actions
-name: pull request automation
+name: Auto
 
 # Automate on all pull request events
 on:
   pull_request:
     types:
-      - 'opened'
-      - 'edited'
-      - 'reopened'
-      - 'synchronize'
-      - 'ready_for_review'
+      - edited
+      - reopened
+      - synchronize
+      - ready_for_review
 
 # Define a job for each automatic task
 jobs:
@@ -32,7 +31,7 @@ jobs:
             `%pattern%`. Please fix the title and re-open the PR.
 
   # This job labels the PR based on the files modified
-  labeler:
+  label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@main
