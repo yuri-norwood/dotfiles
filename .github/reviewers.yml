@@ -22,16 +22,14 @@ reviewers:
   # Reviewers per author.
   # Keys are reviewees, each of which has an array of reviewers.
   per_author:
-    engineers:
-      - engineers # group
-    lead_designer:
-      - js-lovers # group
-      - desinger_a # username
-    designer_a:
-      - lead_designer # username
-    designer_b:
-      - lead_desinger # username
-      - desinger_a # username
+
+    # Core contributors need reviews from repo owners.
+    core-contributors:
+      - repository-owners
+
+    # Repository owners need internal reviews.
+    repository-owners:
+      - repository-owners
 
 files:
   # Keys are glob expressions.
