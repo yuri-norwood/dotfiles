@@ -3,19 +3,15 @@
 reviewers:
   # The default reviewers
   defaults:
-    - yuri-norwood
+    - repository-owners
+    - core-contributors
 
   # Reviewer groups each of which has a list of GitHub usernames
   groups:
     repository-owners:
-      - me # username
-      - you # username
+      - yuri-norwood
     core-contributors:
-      - good-boy # username
-      - good-girl # username
-    js-lovers:
-      - js-man # username
-      - js-woman # username
+      - yuri-norwood
 
   # Reviewers per author.
   # Keys are reviewees, each of which has an array of reviewers.
