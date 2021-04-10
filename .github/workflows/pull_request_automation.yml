@@ -6,7 +6,11 @@ name: pull request automation
 # Automate on all pull request events
 on:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+    types:
+      - 'opened'
+      - 'edited'
+      - 'reopened'
+      - 'synchronize'
 
 # Define a job for each automatic task
 jobs:
