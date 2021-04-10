@@ -1,6 +1,8 @@
 ---
 
+# Defines who can be requested to make a review
 reviewers:
+
   # The default reviewers
   defaults:
     - repository-owners
@@ -8,8 +10,12 @@ reviewers:
 
   # Reviewer groups each of which has a list of GitHub usernames
   groups:
+
+    # Users responsible for repo
     repository-owners:
       - yuri-norwood
+
+    # Users with major contributions
     core-contributors:
       - yuri-norwood
 
