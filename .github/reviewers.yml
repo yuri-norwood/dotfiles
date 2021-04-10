@@ -31,27 +31,18 @@ reviewers:
     repository-owners:
       - repository-owners
 
+# Keys are glob expressions.
+# You can assign groups defined above as well as GitHub usernames.
 files:
-  # Keys are glob expressions.
-  # You can assign groups defined above as well as GitHub usernames.
+
+  # All files require owner review.
   '**':
     - repository-owners # group
-  '**/*.js':
-    - core-contributors # group
-    - js-lovers # group
-  '**/*.yml':
-    - core-contributors # group
-    - yamler # username
-  '.github/**':
-    - octopus # username
-    - cat # username
 
 options:
+
+  # Don't add reviewers until the PR is ready.
   ignore_draft: true
   ignored_keywords:
     - DO NOT REVIEW
-  enable_group_assignment: false
-
-  # Randomly pick reviewers up to this number.
-  # Do not set this option if you'd like to assign all matching reviewers.
-  number_of_reviewers: 3
+    - WIP
