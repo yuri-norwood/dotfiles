@@ -47,3 +47,12 @@ jobs:
       - uses: samspills/assign-pr-to-author@v1.0
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
+
+  # This job requests reviews based on files changes and/or the author
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: necojackarc/auto-request-review@v0.5.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config: .github/reviewers.yml
