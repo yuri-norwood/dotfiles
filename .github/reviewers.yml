@@ -1,4 +1,4 @@
----
+#---
 
 # Defines who can be requested to make a review
 reviewers:
@@ -36,8 +36,12 @@ reviewers:
 files:
 
   # All files require owner review.
-  './**':
-    - repository-owners # group
+  '**':
+    - repository-owners
+    - core-contributors
+
+  '.github/**':
+    - repository-owners
 
 options:
 
