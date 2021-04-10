@@ -41,6 +41,9 @@ files:
 
 options:
 
+  # Enable assignment by group
+  enable_group_assignment: true
+
   # Don't add reviewers until the PR is ready.
   ignore_draft: true
   ignored_keywords:
