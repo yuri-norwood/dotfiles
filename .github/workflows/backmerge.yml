@@ -33,7 +33,7 @@ jobs:
       # Loop over all branches and backmerge
       - name: Backmerge All
         run: |
-          for branch in $(git branch -r | sed 's/^\s*origin\///g')
+          for BRANCH in $(git branch -r | sed 's/^\s*origin\///g')
           do
             echo "Backmerging ${BRANCH}"
             git fetch --unshallow
