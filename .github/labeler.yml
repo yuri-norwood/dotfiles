@@ -67,6 +67,7 @@ shell:
   - '**/*.sh'
   - '**/*.ksh'
   - '.profile'
+  - '.config/sh/shrc'
   - '.config/ksh/kshrc'
 
 # GitHub sponsors

@@ -9,9 +9,3 @@ alias ls="ls -F"
 alias la="ls -A"
 alias ll="ls -l"
 
-# Simplify directory creation
-alias mkdir="mkdir -p"
-
-# Simplify directory navigation
-alias ..="cd .."
-
