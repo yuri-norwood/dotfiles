@@ -5,21 +5,17 @@
 # ~/.profile
 #
 
+# Helper functions {{{
+
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
 	then
 		. "$1"
+	elif [ -f "${XDG_CONFIG_HOME}/$1" ]
+	then
+		. "${XDG_CONFIG_HOME}/$1"
 	fi
-}
-
-# Helper to calculate PS1
-_PS1_DIR() {
-	case "$PWD" in
-		"$HOME") echo "~"          ;;
-		"/")     echo "/"          ;;
-		*)       echo "${PWD##*/}" ;;
-	esac
 }
 
 # Helper to add executables to $PATH
@@ -36,6 +32,8 @@ path_add() {
 	fi
 }
 
+# Helper functions }}}
+
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -45,18 +43,15 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_BIN_HOME="${HOME}/.local/bin"
 
 # Include alias definitions
-include "${XDG_CONFIG_HOME}/aliases/ls"
-include "${XDG_CONFIG_HOME}/aliases/mkdir"
-include "${XDG_CONFIG_HOME}/aliases/cd"
+include "aliases/ls"
+include "aliases/mkdir"
+include "aliases/cd"
 
 # Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
 # Add pfetch to PATH
 path_add "pfetch"
-
-# Set the prompt to the current directory and a dollar sign
-export PS1='$(_PS1_DIR) $ '
 
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
@@ -65,8 +60,14 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 # Set PAGER to prevent use of more(1)
 export PAGER=less
 
-# Set ENV to provide shell specific settings
-export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
+# Set KSHRC to provide ksh/mksh specific settings
+export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
+
+# Set SHRC to provide POSIX generic shell settings
+export SHRC="${XDG_CONFIG_HOME}/sh/shrc"
+
+# Set ENV to provide session specific settings
+export ENV="${SHRC}"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -87,7 +88,7 @@ export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
-export GOPATH="${HOME}/go:${XDG_BIN_HOME}/go"
+export GOPATH="${XDG_BIN_HOME}/go:${HOME}/going-gophers:${HOME}/bfk"
 
 # Add go lang tools to PATH
 path_add "${GOROOT}/bin"
