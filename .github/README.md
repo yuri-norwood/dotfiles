@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # dotfiles
 
 [![Vim](https://img.shields.io/badge/--019733?logo=vim)](../.config/vim)
@@ -19,6 +21,11 @@ Configuration files and various customizations.
 This repo is designed to be installed directly into a user's `$HOME` directory,
 this can be done using git:
 
+<details>
+<summary>
+Clone with SSH
+</summary>
+
 ```sh
 cd "$HOME"
 git init
@@ -28,9 +35,32 @@ git checkout origin/main -ft
 git submodule update --init --recursive
 ```
 
+</details>
+
+<details>
+<summary>
+Clone with HTTPS
+</summary>
+
+```sh
+cd "$HOME"
+git init
+git remote add origin https://github.com/yuri-norwood/dotfiles.git
+git fetch
+git checkout origin/main -ft
+git submodule update --init --recursive
+```
+
+</details>
+
 Alternatively, if you don't want to overwrite any existing files, or just want
 to use a specific subset, you may clone into another directory and copy or
 symlink the desired files:
+
+<details>
+<summary>
+Clone with SSH
+</summary>
 
 ```sh
 cd "$HOME"
@@ -38,21 +68,46 @@ git clone git@github.com:yuri-norwood/dotfiles.git ~/.dotfiles
 ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
 ```
 
+</details>
+
+<details>
+<summary>
+Clone with HTTPS
+</summary>
+
+```sh
+cd "$HOME"
+git clone https://github.com/yuri-norwood/dotfiles.git ~/.dotfiles
+ln -sf ~/.dotfiles/.config/vim/vimrc ~/.vimrc
+```
+
+</details>
+
+<details>
+<summary>
 To update your local copy, just pull the repo as you would normally.
+</summary>
 
 ```sh
 cd "$HOME"
 git pull
 ```
 
+</details>
+
+<details>
+<summary>
 To update the submodules, recursively update all the submodules and commit the
 update.
+</summary>
 
 ```sh
 cd "$HOME"
 git submodule foreach --recursive git pull origin master
 git commit -am "Updated submodules"
 ```
+
+</details>
 
 ## Contributing
 

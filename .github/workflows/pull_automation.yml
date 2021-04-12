@@ -1,24 +1,28 @@
 ---
 
 # This file defines automation actions
-name: pull request automation
+name: Auto
 
 # Automate on all pull request events
 on:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
 
 # Define a job for each automatic task
 jobs:
 
-  # This job enssures that PRs have the correct title formatting
-  pull_request:
+  # This job ensures that PRs have the correct title formatting
+  title:
     runs-on: ubuntu-latest
     steps:
       - uses: seferov/pr-lint-action@master
         with:
           # Check PR title against regex and close it if it fails
-          title-regex: '^\[(NEW|MOD|BUG)-\d*\]:(\ )'
+          title-regex: '^\[(VIM|XGD|GIT|HUB|ENV|COL|EDT|IDE)-\d*\]:(\ )'
           title-regex-flags: 'g'
           error-message: 'Add issue number and type to your title'
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,10 +31,18 @@ jobs:
             `%pattern%`. Please fix the title and re-open the PR.
 
   # This job labels the PR based on the files modified
-  labeler:
+  label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@main
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           sync-labels: false
+
+  # This job assigns each PR to it's author
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: samspills/assign-pr-to-author@v1.0
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'

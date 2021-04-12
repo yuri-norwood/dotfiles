@@ -73,8 +73,8 @@
 [submodule ".config/vim/pack/css/start/colourpreview"]
 	path = .config/vim/pack/css/start/colourpreview
 	url = https://github.com/ap/vim-css-color
-[submodule ".config/vim/pack/comments/start/manager"]
-	path = .config/vim/pack/comments/start/manager
+[submodule ".config/vim/pack/misc/start/commentary"]
+	path = .config/vim/pack/misc/start/commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule ".config/vim/pack/git/start/fugitive"]
 	path = .config/vim/pack/git/start/fugitive
@@ -97,3 +97,9 @@
 [submodule ".config/vim/pack/markdown/start/syntax"]
 	path = .config/vim/pack/markdown/start/syntax
 	url = https://github.com/plasticboy/vim-markdown
+[submodule ".config/vim/pack/misc/start/vim-illuminate"]
+	path = .config/vim/pack/misc/start/illuminate
+	url = https://github.com/RRethy/vim-illuminate.git
+[submodule ".config/vim/pack/colours/start/firewatch"]
+	path = .config/vim/pack/colours/start/firewatch
+	url = https://github.com/rakr/vim-two-firewatch

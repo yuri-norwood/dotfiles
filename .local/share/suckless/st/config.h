@@ -1,3 +1,5 @@
+/* vim: set ft=c: */
+
 /* See LICENSE file for copyright and license details. */
 
 /*

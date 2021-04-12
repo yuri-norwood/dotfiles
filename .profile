@@ -5,21 +5,17 @@
 # ~/.profile
 #
 
+# Helper functions {{{
+
 # Helper to safely include external scripts
 include() {
 	if [ -f "$1" ]
 	then
 		. "$1"
+	elif [ -f "${XDG_CONFIG_HOME}/$1" ]
+	then
+		. "${XDG_CONFIG_HOME}/$1"
 	fi
-}
-
-# Helper to calculate PS1
-_PS1_DIR() {
-	case "$PWD" in
-		"$HOME") echo "~"          ;;
-		"/")     echo "/"          ;;
-		*)       echo "${PWD##*/}" ;;
-	esac
 }
 
 # Helper to add executables to $PATH
@@ -30,11 +26,13 @@ path_add() {
 		export PATH="$1:${PATH}"
 
 	# Otherwise try as a subdir of XDG_BIN_HOME
-	elif [ -d "${XDG_BIN_HOME:-.local/bin}/$1" ]
+	elif [ -d "${XDG_BIN_HOME}" ] && [ -d "${XDG_BIN_HOME}/$1" ]
 	then
-		export PATH="${XDG_BIN_HOME:-.local/bin}/$1:${PATH}"
+		export PATH="${XDG_BIN_HOME}/$1:${PATH}"
 	fi
 }
+
+# Helper functions }}}
 
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
@@ -45,16 +43,15 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_BIN_HOME="${HOME}/.local/bin"
 
 # Include alias definitions
-include "${XDG_CONFIG_HOME}/aliases/main"
+include "aliases/ls"
+include "aliases/mkdir"
+include "aliases/cd"
 
 # Add scripts to PATH, its tools may be accessed after this
 path_add "scripts"
 
 # Add pfetch to PATH
 path_add "pfetch"
-
-# Set the prompt to the current directory and a dollar sign
-export PS1='$(_PS1_DIR) $ '
 
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
@@ -63,8 +60,14 @@ export EDITOR="$(command -v vi  2>/dev/null)"
 # Set PAGER to prevent use of more(1)
 export PAGER=less
 
-# Set ENV to provide shell specific settings
-export ENV="${XDG_CONFIG_HOME}/ksh/kshrc"
+# Set KSHRC to provide ksh/mksh specific settings
+export KSHRC="${XDG_CONFIG_HOME}/ksh/kshrc"
+
+# Set SHRC to provide POSIX generic shell settings
+export SHRC="${XDG_CONFIG_HOME}/sh/shrc"
+
+# Set ENV to provide session specific settings
+export ENV="${SHRC}"
 
 # Fixing misbehaving Java applications
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -85,7 +88,7 @@ export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 # Set Golang environment
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
-export GOPATH="${HOME}/go:${XDG_BIN_HOME}/go"
+export GOPATH="${XDG_BIN_HOME}/go:${HOME}/going-gophers:${HOME}/bfk"
 
 # Add go lang tools to PATH
 path_add "${GOROOT}/bin"
@@ -95,7 +98,7 @@ path_add "${GOBIN}"
 path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Set X11 init script
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XINITRC="${XDG_CONFIG_HOME}/X11/xinitrc"
 
 # Make vim respect XDG_CONFIG_DIR
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc"

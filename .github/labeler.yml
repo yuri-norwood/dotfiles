@@ -37,6 +37,10 @@ git:
 github:
   - '.github/**/*'
 
+# https://golang.org/
+go:
+  - '.local/bin/go/**/*'
+
 # This regards JavaScript
 js:
   - '**/*.js'
@@ -63,6 +67,7 @@ shell:
   - '**/*.sh'
   - '**/*.ksh'
   - '.profile'
+  - '.config/sh/shrc'
   - '.config/ksh/kshrc'
 
 # GitHub sponsors
