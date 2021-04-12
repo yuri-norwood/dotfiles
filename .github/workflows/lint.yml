@@ -1,129 +1,117 @@
 ---
 
-# This file defines linting actions
-name: linting
+name: Lint
 
-# Lint whenever there is a push or a pull request opened
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
-# Define a job for each linter / language
 jobs:
 
-  # This job checks that all readmes and other markdown files are parsable
   markdown:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
 
       # Lint the README
-      - uses: actions/checkout@v1
       - name: Lint README
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/README.md
 
       # Lint issue templates
-      - uses: actions/checkout@v1
       - name: Lint ISSUE_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/ISSUE_TEMPLATE/*.md
 
       # Lint pull request templates
-      - uses: actions/checkout@v1
       - name: Lint PULL_TEMPLATES
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .github/PULL_REQUEST_TEMPLATE.md
 
       # Lint vim plugin documentation
-      - uses: actions/checkout@v1
       - name: Lint vim documentation
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: .config/vim/pack/*/start/*.md
 
-  # This job checks that all yaml files correctly shake a headless chicken
   yaml:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
 
       # Lint all .yml files
-      - uses: actions/checkout@v1
       - name: yaml lint
         uses: ibiqlik/action-yamllint@v3
         with:
           strict: true
-          config_file: .config/yamllint/config
           format: parsable
+          config_data: |
+            extends: default
+            ignore:
+              test/**/*.yml
+            rules:
+              line-length: disable
+              truthy:
+                check-keys: false
+                allowed-values:
+                  - "true"
+                  - "false"
 
-      # Lint yamllint config
-      - uses: actions/checkout@v1
-      - name: yaml lint config
-        uses: ibiqlik/action-yamllint@v3
-        with:
-          strict: true
-          config_file: .config/yamllint/config
-          format: parsable
-          file_or_dir: .config/yamllint/config
-
-  # This job checks that all files match the rules in the .editorconfig
   editorconfig:
     runs-on: ubuntu-latest
     steps:
-
-      # Check all files against the ~/.editorconfig
       - uses: actions/checkout@v2
+
+      # Check all files against the .editorconfig
       - name: Check editorconfig
         uses: editorconfig-checker/action-editorconfig-checker@v1.0.0
 
-  # This job checks that the given vimscript files use best practices
-  vimscript:
-    runs-on: ubuntu-latest
-    steps:
-
-      # Lint vimrc
-      - uses: actions/checkout@v1
-      - name: Vint vimrc
-        uses: ludvighz/vint-action@v1
-        with:
-          path: .config/vim/vimrc
-
-      # Lint exrc
-      - uses: actions/checkout@v1
-      - name: Vint .exrc
-        uses: ludvighz/vint-action@v1
-        with:
-          path: .config/vim/exrc
-
-  # This job checks that the given shell scripts are well written
   shell:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
 
       # Lint shell scripts
-      - uses: actions/checkout@v1
       - name: shellcheck profile
         uses: ludeeus/action-shellcheck@master
         with:
-          additional_files: .profile .kshrc
+          additional_files: .profile
 
       # Lint user aliases
-      - uses: actions/checkout@v1
       - name: shellcheck aliases
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .config/aliases/*
 
       # Lint pfetch config - NOTE: Ignore SC2034 as it is imported
-      - uses: actions/checkout@v1
       - name: shellcheck pfetch config
         uses: ludeeus/action-shellcheck@master
         with:
           additional_files: .config/pfetch/config
         env:
           SHELLCHECK_OPTS: -e SC2034
+
+  vimscript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Lint vimrc
+      - name: Vint vimrc
+        uses: ludvighz/vint-action@v1
+        with:
+          path: .config/vim/vimrc
+
+      # Lint exrc
+      - name: Vint .exrc
+        uses: ludvighz/vint-action@v1
+        with:
+          path: .config/vim/exrc

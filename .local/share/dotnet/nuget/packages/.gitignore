@@ -3,6 +3,3 @@
 
 # But track these:
 !.gitignore
-!packages/
-!packages/.gitkeep
-

@@ -34,6 +34,11 @@ indent_style = tab
 indent_size  = 8
 end_of_line  = lf
 
+; Docker files
+[{D,d}ockerfile]
+indent_style = space
+indent_size = 4
+
 ; Batch files
 [*.{cmd,bat}]
 indent_style = space
@@ -207,7 +212,7 @@ dotnet_diagnostic.RCS1003.severity  = warning ; Add braces to if-else (when expr
 dotnet_diagnostic.RCS1005.severity  = warning ; Simplify nested using statement
 dotnet_diagnostic.RCS1006.severity  = warning ; Merge 'else' with nested 'if'
 dotnet_diagnostic.RCS1007.severity  = warning ; Add braces
-dotnet_diagnostic.RCS1010.severity  = error   ; Use 'var' instead of explicit type (when the type is obvious)
+dotnet_diagnostic.RCS1010.severity  = warning ; Use 'var' instead of explicit type (when the type is obvious)
 dotnet_diagnostic.RCS1013.severity  = warning ; Use predefined type
 dotnet_diagnostic.RCS1014.severity  = warning ; Use explicitly typed array (or vice versa)
 dotnet_diagnostic.RCS1014a.severity = warning ; Use implicitly typed array (when type is obvious)
