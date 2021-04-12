@@ -1,18 +1,30 @@
 ---
 
-# This file defines issue automation actions
-name: issue automation
+# This file defines automation actions
+name: Auto
 
-# Automate on issue create events
+# Automate on all issue events
 on:
   issues:
-    types: [opened]
+    types:
+      - opened
 
 # Define a job for each automatic task
 jobs:
 
-  # This job creates new branches for new issues
-  auto_branch:
+  # This job assigns the issue
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Assigns DEFAULT_ISSUE_ASSIGNEE
+      - uses: pozil/auto-assign-issue@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ secrets.DEFAULT_ISSUE_ASSIGNEE }}
+
+  # This job creates a branch for each issue and comments checkout command
+  branch:
     runs-on: ubuntu-latest
     steps:
 
@@ -20,7 +32,6 @@ jobs:
       - name: Set env
         run: |
           echo "GITHUB_NEW_BRANCH=$(echo '${{ github.event.issue.number }} ${{ github.event.issue.title }}' | tr -Cs '[:alnum:]\n' '-' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-          echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY}" >> $GITHUB_ENV
 
       # Create new branch and push to remote
       - uses: actions/checkout@v2
@@ -28,7 +39,7 @@ jobs:
           ref: main
       - name: Auto branch
         run: |
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
@@ -40,4 +51,4 @@ jobs:
             ```sh
             git fetch && git checkout "${{ env.GITHUB_NEW_BRANCH }}"
             ```
-            ([Go to branch](https://github.com/${{ env.GITHUB_REPOSITORY }}/tree/${{ env.GITHUB_NEW_BRANCH }}))
+            ([Go to branch](https://github.com/${{ github.repository }}/tree/${{ env.GITHUB_NEW_BRANCH }}))

@@ -4,15 +4,6 @@
 # Korn shell configuration
 #
 
-# Catch non-ksh sessions
-case "$0" in
-	# Early return if the ksh(1) instance isn't interactive
-	*ksh*) [[ $- = *i* ]] || return ;;
-
-	# Early return if not run by ksh(1)
-	*) return ;;
-esac
-
 # Configure history
 HISTFILE="${XDG_CACHE_HOME}/history.${0##*/}"
 HISTSIZE=2048

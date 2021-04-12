@@ -1,7 +1,0 @@
-; Inherit global rules
-root = false
-
-; Apply YMAL rules to the config files (missing extension)
-[config]
-indent_style = space
-indent_size  = 2
