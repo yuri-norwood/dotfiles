@@ -36,4 +36,9 @@ jobs:
           for branch in $(git branch -r | sed 's/^\s*origin\///g')
           do
             echo "Backmerging ${BRANCH}"
+            git fetch --unshallow
+            git checkout "${BRANCH}"
+            git pull
+            git merge --no-ff main -m "Backmerge"
+            git push
           done
