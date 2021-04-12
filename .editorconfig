@@ -35,7 +35,7 @@ indent_size  = 8
 end_of_line  = lf
 
 ; Docker files
-[Dockerfile]
+[{D,d}ockerfile]
 indent_style = space
 indent_size = 4
 
