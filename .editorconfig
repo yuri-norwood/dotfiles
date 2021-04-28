@@ -290,6 +290,7 @@ dotnet_diagnostic.RCS1146.severity  = warning ; Use conditional access
 dotnet_diagnostic.RCS1151.severity  = warning ; Remove redundant cast
 dotnet_diagnostic.RCS1154.severity  = warning ; Sort enum members
 dotnet_diagnostic.RCS1155.severity  = warning ; Use StringComparison when comparing strings
+dotnet_diagnostic.RCS1156.severity  = none    ; (Don't) use string.Length instead of comparison with empty string
 dotnet_diagnostic.RCS1157.severity  = warning ; Composite enum value contains undefined flag
 dotnet_diagnostic.RCS1158.severity  = warning ; Static member in generic type should use a type parameter
 dotnet_diagnostic.RCS1160.severity  = warning ; Abstract type should not have public constructors
