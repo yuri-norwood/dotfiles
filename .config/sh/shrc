@@ -21,7 +21,7 @@ case "$0" in
 	# Include kshrc in interactive ksh sessions, within
 	# the confines of this case we can assume ksh syntax.
 	*ksh*)
-		# shellcheck disable=SC2039 source=/dev/null
+		# shellcheck disable=SC2039,SC3010 source=/dev/null
 		if [[ $- = *i* ]] && [ "${KSHRC}" ]
 		then
 			. "${KSHRC}"
