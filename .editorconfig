@@ -93,14 +93,14 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:warning
 csharp_style_prefer_switch_expression                 = true:suggestion
 
 ; Try to use arrow function syntax
-csharp_style_expression_bodied_accessors       = true:suggestion
-csharp_style_expression_bodied_constructors    = when_on_single_line:suggestion
-csharp_style_expression_bodied_indexers        = true:suggestion
-csharp_style_expression_bodied_lambdas         = true:suggestion
-csharp_style_expression_bodied_local_functions = true:suggestion
-csharp_style_expression_bodied_methods         = when_on_single_line:suggestion
-csharp_style_expression_bodied_operators       = when_on_single_line:suggestion
-csharp_style_expression_bodied_properties      = true:suggestion
+csharp_style_expression_bodied_accessors       = true:warning
+csharp_style_expression_bodied_constructors    = when_on_single_line:warning
+csharp_style_expression_bodied_indexers        = true:warning
+csharp_style_expression_bodied_lambdas         = true:warning
+csharp_style_expression_bodied_local_functions = true:warning
+csharp_style_expression_bodied_methods         = when_on_single_line:warning
+csharp_style_expression_bodied_operators       = when_on_single_line:warning
+csharp_style_expression_bodied_properties      = true:warning
 
 ; Use simple and consise expression syntax
 csharp_prefer_simple_default_expression            = true:suggestion
@@ -401,9 +401,6 @@ dotnet_code_quality.CA2235.severity = warning ; Mark all non-serializable fields
 
 ; Attempt to autmoatically detect formating methods
 dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
-
-; Style preferences
-csharp_style_expression_bodied_properties = true
 
 ; New line preferences
 csharp_new_line_before_catch                          = true
