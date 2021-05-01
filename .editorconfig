@@ -402,6 +402,9 @@ dotnet_code_quality.CA2235.severity = warning ; Mark all non-serializable fields
 ; Attempt to autmoatically detect formating methods
 dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
 
+; Style preferences
+csharp_style_expression_bodied_properties = true
+
 ; New line preferences
 csharp_new_line_before_catch                          = true
 csharp_new_line_before_else                           = true
