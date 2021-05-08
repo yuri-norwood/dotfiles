@@ -23,4 +23,4 @@ jobs:
       # Set environment variables to allow configuration
       - name: Set env
         run: |
-          echo "GITHUB_NEW_BRANCH=GIT_000_submodule_update" >> $GITHUB_ENV
+          echo "GITHUB_NEW_BRANCH=000-git-submodule-autoupdate" >> $GITHUB_ENV
