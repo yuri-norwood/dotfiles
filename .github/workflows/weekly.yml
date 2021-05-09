@@ -12,7 +12,7 @@ on:
 # Define a job for each automatic task
 jobs:
 
-  # This job updates all submodeules
+  # This job updates all submodules
   update submodules:
     runs-on: ubuntu-latest
     steps:
