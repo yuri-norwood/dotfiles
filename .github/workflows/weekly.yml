@@ -24,3 +24,10 @@ jobs:
       - name: Set env
         run: |
           echo "GITHUB_NEW_BRANCH=000-git-submodule-autoupdate" >> $GITHUB_ENV
+
+      # Run update
+      - name: Update modules
+        run |
+          git submodule foreach --recursive git pull origin master
+          git commit -am "Updated submodules"
+
