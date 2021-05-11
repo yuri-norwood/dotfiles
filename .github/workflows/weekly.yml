@@ -40,3 +40,13 @@ jobs:
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
+      # Create new pull request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "[GIT-000]: Update Submodules"
+          assignees: yuri-norwood
+          base: main
+          branch: ${{ env.GITHUB_NEW_BRANCH }}
+          delete-branch: true
+
