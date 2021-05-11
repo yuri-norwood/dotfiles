@@ -1,0 +1,51 @@
+---
+
+# This file defines automation actions
+name: Weekly
+
+# Run automations weekly
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+
+# Define a job for each automatic task
+jobs:
+
+  # This job updates all submodules
+  update submodules:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout main code
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+
+      # Set environment variables to allow configuration
+      - name: Set env
+        run: |
+          echo "GITHUB_NEW_BRANCH=000-git-submodule-autoupdate" >> $GITHUB_ENV
+
+      # Run update
+      - name: Update modules
+        run: |
+          git submodule foreach --recursive git pull origin master
+          git commit -am "Updated submodules"
+
+      # Create new branch and push to remote
+      - name: Push branch
+        run: |
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
+          git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
+
+      # Create new pull request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "[GIT-000]: Update Submodules"
+          assignees: yuri-norwood
+          base: main
+          branch: ${{ env.GITHUB_NEW_BRANCH }}
+          delete-branch: true
