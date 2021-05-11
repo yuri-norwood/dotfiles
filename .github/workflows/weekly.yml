@@ -33,3 +33,10 @@ jobs:
           git submodule foreach --recursive git pull origin master
           git commit -am "Updated submodules"
 
+      # Create new branch and push to remote
+      - name: Push branch
+        run: |
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
+          git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
+
