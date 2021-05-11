@@ -49,4 +49,3 @@ jobs:
           base: main
           branch: ${{ env.GITHUB_NEW_BRANCH }}
           delete-branch: true
-
