@@ -21,6 +21,7 @@ jobs:
     steps:
       - uses: seferov/pr-lint-action@master
         with:
+
           # Check PR title against regex and close it if it fails
           title-regex: '^\[(VIM|XGD|GIT|HUB|ENV|COL|EDT|IDE)-\d*\]:(\ )'
           title-regex-flags: 'g'
