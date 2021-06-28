@@ -41,10 +41,6 @@ jobs:
         run: |
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
-          git config user.email "76186754+yuri-norwood@users.noreply.github.com"
-          git config user.name "Yuri Norwood"
-          echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ"): Created ${{ env.GITHUB_NEW_BRANCH }}" >> .github/workflows/log
-          git commit -m "Log checkout" .github/workflows/log
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
       # Add checkout comment to issue
@@ -56,14 +52,3 @@ jobs:
             git fetch && git checkout "${{ env.GITHUB_NEW_BRANCH }}"
             ```
             ([Go to branch](https://github.com/${{ github.repository }}/tree/${{ env.GITHUB_NEW_BRANCH }}))
-
-      # Create PR
-      - name: Create pull request
-        uses: thomaseizinger/create-pull-request@master
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: ${{ env.GITHUB_NEW_BRANCH }}
-          base: main
-          draft: true
-          title: "[WIP-${{ github.event.issue.number }}]: ${{ github.event.issue.title }}"
-          body: "# Resolves #${{ github.event.issue.number }}"
