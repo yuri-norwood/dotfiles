@@ -44,7 +44,7 @@ jobs:
           git config user.email "76186754+yuri-norwood@users.noreply.github.com"
           git config user.name "Yuri Norwood"
           echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ"): Created ${{ env.GITHUB_NEW_BRANCH }}" >> .github/workflows/log
-          git commit -m "Log checkout"
+          git commit -m "Log checkout" .github/workflows/log
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
       # Add checkout comment to issue
