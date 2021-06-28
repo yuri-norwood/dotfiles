@@ -41,6 +41,8 @@ jobs:
         run: |
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
+          echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ"): Created ${{ env.GITHUB_NEW_BRANCH }}" >> .github/workflows/log
+          git commit -m "Log checkout"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
       # Create PR
