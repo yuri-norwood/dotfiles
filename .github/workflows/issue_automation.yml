@@ -43,6 +43,17 @@ jobs:
           git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
           git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
+      # Create PR
+      - name: Create pull request
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: ${{ env.GITHUB_NEW_BRANCH }}
+          base: main
+          draft: true
+          title: "[WIP-${{ github.event.issue.number }}]: ${{ github.event.issue.title }}"
+          body: "# Resolves #${{ github.event.issue.number }}"
+
       # Add checkout comment to issue
       - name: Add issue comment
         uses: KeisukeYamashita/create-comment@v1
