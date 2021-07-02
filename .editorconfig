@@ -60,8 +60,13 @@ indent_size  = 4
 indent_style = space
 indent_size  = 2
 
+; VS config files
+[{appsettings,packages,Web,Web.Debug,Web.Production,Web.Release}.config]
+indent_style = space
+indent_size  = 2
+
 ; XML files
-[*.xml]
+[*.{xml,xsd,runsettings}]
 indent_style = space
 indent_size  = 2
 
