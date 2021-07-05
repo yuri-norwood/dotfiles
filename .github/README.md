@@ -123,3 +123,5 @@ You can tell a lot about a hacker by their `.profile`, if you see something you
 like, please help yourself :)
 
 See [LICENSE](LICENSE) for terms.
+
+[![Public Domain](https://licensebuttons.net/p/mark/1.0/80x15.png)](https://unlicense.org/)
