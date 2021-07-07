@@ -13,7 +13,7 @@ on:
 jobs:
 
   # This job updates all submodules
-  update submodules:
+  update-submodules:
     runs-on: ubuntu-latest
     steps:
 
@@ -25,7 +25,7 @@ jobs:
       # Set environment variables to allow configuration
       - name: Set env
         run: |
-          echo "GITHUB_NEW_BRANCH=000-git-submodule-autoupdate" >> $GITHUB_ENV
+          echo "GITHUB_NEW_BRANCH=000-git-submodule-auto-update" >> $GITHUB_ENV
 
       # Run update
       - name: Update modules
