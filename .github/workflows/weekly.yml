@@ -30,6 +30,8 @@ jobs:
       # Run update
       - name: Update modules
         run: |
+          git config --global user.email "Yuri Norwood"
+          git config --global user.name "76186754+yuri-norwood@users.noreply.github.com"
           git submodule foreach --recursive git pull origin master
           git commit -am "Updated submodules"
 
