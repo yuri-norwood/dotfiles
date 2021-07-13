@@ -15,7 +15,7 @@ configs that can hypothetically be used on OpenBSD, *must* work on OpenBSD.
   * `~/.surf` moved to [`${XDG_DATA_HOME}/suckless/surf`](https://github.com/yuri-norwood/dotfiles/blob/1dd9cc9c032f23e01b3365a57d58ec522727670d/.local/share/suckless/surf/config.h#L4)
   * etc
 
-* All top level files and directories *must* start with a `.`, this are
+* All top level files and directories *must* start with a `.`, these are
   [`dotfiles`](https://github.com/yuri-norwood/dotfiles) after all.
 
 * Shellscripts must use `#!/bin/sh` and pass shellchecks
