@@ -221,7 +221,6 @@ dotnet_diagnostic.RCS1010.severity                = warning ; Use 'var' instead 
 dotnet_diagnostic.RCS1013.severity                = warning ; Use predefined type
 dotnet_diagnostic.RCS1014.severity                = warning ; Use explicitly typed array (or vice versa)
 roslynator.RCS1014.invert                         = true    ; Use implicitly typed array
-roslynator.RCS1014.use_implicit_type_when_obvious = true    ; Use implicitly typed array (when type is obvious)
 dotnet_diagnostic.RCS1015.severity                = warning ; Use nameof operator
 dotnet_diagnostic.RCS1016.severity                = warning ; Convert block body to expression-body (or vice versa)
 dotnet_diagnostic.RCS1018.severity                = warning ; Add accessibility modifiers (or vice versa)
