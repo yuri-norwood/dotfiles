@@ -27,6 +27,13 @@ jobs:
         run: |
           echo "GITHUB_NEW_BRANCH=000-git-submodule-auto-update" >> $GITHUB_ENV
 
+      # Create new branch and push to remote
+      - name: Push branch
+        run: |
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
+          git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
+
       # Run update
       - name: Update modules
         run: |
@@ -41,13 +48,6 @@ jobs:
           commit_user_email: 76186754+yuri-norwood@users.noreply.github.com
           commit_author: Yuri Norwood <76186754+yuri-norwood@users.noreply.github.com>
           branch: ${{ env.GITHUB_NEW_BRANCH }}
-
-      # Create new branch and push to remote
-      - name: Push branch
-        run: |
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git checkout -b "${{ env.GITHUB_NEW_BRANCH }}"
-          git push -u origin "${{ env.GITHUB_NEW_BRANCH }}"
 
       # Create new pull request
       - name: Create Pull Request
