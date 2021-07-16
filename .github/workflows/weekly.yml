@@ -30,10 +30,16 @@ jobs:
       # Run update
       - name: Update modules
         run: |
-          git config --global user.email "Yuri Norwood"
-          git config --global user.name "76186754+yuri-norwood@users.noreply.github.com"
           git submodule foreach --recursive git pull origin master
-          git commit -am "Updated submodules" || echo "Nothing to commit"
+
+      # Auto commit changes
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated submodules
+          commit_user_name: Yuri Norwood
+          commit_user_email: 76186754+yuri-norwood@users.noreply.github.com
+          commit_author: Yuri Norwood <76186754+yuri-norwood@users.noreply.github.com>
+          branch: ${{ env.GITHUB_NEW_BRANCH }}
 
       # Create new branch and push to remote
       - name: Push branch
