@@ -41,7 +41,8 @@ jobs:
           git submodule foreach --recursive git pull origin master
 
       # Auto commit changes
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updated submodules
           commit_user_name: Yuri Norwood
@@ -51,10 +52,9 @@ jobs:
 
       # Create new pull request
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: thomaseizinger/create-pull-request@1.1.0
         with:
-          title: "[GIT-000]: Update Submodules"
-          assignees: yuri-norwood
           base: main
-          branch: ${{ env.GITHUB_NEW_BRANCH }}
-          delete-branch: true
+          head: ${{ github.ref }}
+          title: "[GIT-000]: Update Submodules"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
