@@ -58,9 +58,6 @@
 [submodule ".config/vim/pack/colours/start/solarized"]
 	path = .config/vim/pack/colours/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".local/share/suckless/dwm/src"]
-	path = .local/share/suckless/dwm/src
-	url = https://git.suckless.org/dwm
 [submodule ".config/vim/pack/colours/start/flattened"]
 	path = .config/vim/pack/colours/start/flattened
 	url = https://github.com/romainl/flattened
@@ -85,15 +82,6 @@
 [submodule ".config/vim/pack/git/start/syntax"]
 	path = .config/vim/pack/git/start/syntax
 	url = https://github.com/tpope/vim-git
-[submodule ".local/share/suckless/surf/src"]
-	path = .local/share/suckless/surf/src
-	url = https://git.suckless.org/surf
-[submodule ".local/share/suckless/st/src"]
-	path = .local/share/suckless/st/src
-	url = https://git.suckless.org/st
-[submodule ".local/share/suckless/dmenu/src"]
-	path = .local/share/suckless/dmenu/src
-	url = https://git.suckless.org/dmenu
 [submodule ".config/vim/pack/markdown/start/syntax"]
 	path = .config/vim/pack/markdown/start/syntax
 	url = https://github.com/plasticboy/vim-markdown
