@@ -55,6 +55,6 @@ jobs:
         uses: thomaseizinger/create-pull-request@1.1.0
         with:
           base: main
-          head: ${{ github.ref }}
+          head: ${{ env.GITHUB_NEW_BRANCH }}
           title: "[GIT-000]: Update Submodules"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
