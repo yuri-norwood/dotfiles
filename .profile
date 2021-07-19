@@ -34,6 +34,8 @@ path_add() {
 
 # Helper functions }}}
 
+# XDG Directories {{{
+
 # Set standard XDG directories
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -42,16 +44,18 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 # Set nonstandard and pseudo XDG directories
 export XDG_BIN_HOME="${HOME}/.local/bin"
 
+# XDG Directories }}}
+
+# Import external scripts {{{
+
 # Include alias definitions
 include "aliases/ls"
 include "aliases/mkdir"
 include "aliases/cd"
 
-# Add scripts to PATH, its tools may be accessed after this
-path_add "scripts"
+# Import external scripts }}}
 
-# Add pfetch to PATH
-path_add "pfetch"
+# Export external variables {{{
 
 # Set editor commands.
 export VISUAL="$(command -v vim 2>/dev/null)"
@@ -79,9 +83,6 @@ export NUGET_PACKAGES="${DOTNET_ROOT}/nuget/packages"
 export DOTNET_NOLOGO="true"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 
-# Add dotnet tools to PATH
-path_add "${DOTNET_TOOLS}"
-
 # Set pfetch startup script
 export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 
@@ -89,13 +90,6 @@ export PF_SOURCE="${XDG_CONFIG_HOME}/pfetch/config"
 export GOROOT="/usr/local/go"
 export GOBIN="${XDG_BIN_HOME}/go/bin"
 export GOPATH="${XDG_BIN_HOME}/go:${HOME}/going-gophers:${HOME}/bfk"
-
-# Add go lang tools to PATH
-path_add "${GOROOT}/bin"
-path_add "${GOBIN}"
-
-# Add OS specific scripts to PATH
-path_add "$(uname | tr '[:upper:]' '[:lower:]')"
 
 # Set X11 init script
 export XINITRC="${XDG_CONFIG_HOME}/X11/xinitrc"
@@ -110,9 +104,34 @@ export LESSHISTFILE="${XDG_CACHE_HOME}/less.history"
 # Move wgetrc to XDG_CONFIG
 export WGETRC="$XDG_CONFIG_HOME/wget/config"
 
+# Export external variables }}}
+
+# Update PATH {{{
+
+# Add scripts to PATH, its tools may be accessed after this
+path_add "scripts"
+
+# Add pfetch to PATH
+path_add "pfetch"
+
+# Add dotnet tools to PATH
+path_add "${DOTNET_TOOLS}"
+
+# Add go lang tools to PATH
+path_add "${GOROOT}/bin"
+path_add "${GOBIN}"
+
+# Add OS specific scripts to PATH
+path_add "$(uname | tr '[:upper:]' '[:lower:]')"
+
+# Update PATH }}}
+
+# Run startup scripts {{{
+
 # Startup ssh-agent(1)
 if [ -z "$SSH_AUTH_SOCK" ]
 then
 	eval "$(ssh-agent -s)" >/dev/null 2>&1
 fi
 
+# Run startup scripts }}}
